@@ -1,0 +1,52 @@
+name: Companies House API Rate Limits
+description: >
+  The Companies House API enforces rate limits to ensure fair use and system stability.
+  The Public Data API allows up to 600 requests per 5-minute window per API key.
+  The Streaming API limits accounts to 2 concurrent connections. Exceeding either
+  limit results in HTTP 429 responses. Applications that consistently bypass or
+  attempt to circumvent rate limits may be banned without prior notice.
+specificationVersion: '0.1'
+rateLimits:
+  - name: Public Data API Request Rate Limit
+    description: >
+      Each API key may make up to 600 HTTP requests within any rolling 5-minute
+      window. Once the limit is reached, all subsequent requests return HTTP 429
+      Too Many Requests until the window resets. The limit resets automatically
+      at the end of the 5-minute period.
+    scope: per API key
+    limit: 600
+    period: 5 minutes
+    periodUnit: minutes
+    periodValue: 5
+    enforcement:
+      httpStatusCode: 429
+      message: Too Many Requests
+      resetBehavior: Automatic reset at end of 5-minute window
+    notes: >
+      Developers requiring higher limits may contact Companies House directly to
+      request an increased threshold. Applications that repeatedly exceed or attempt
+      to circumvent limits may be banned without prior notice.
+    documentation: https://developer-specs.company-information.service.gov.uk/guides/rateLimiting
+
+  - name: Streaming API Concurrent Connection Limit
+    description: >
+      Each registered account is limited to 2 concurrent long-running HTTP connections
+      to the Streaming API. Attempting to open a third connection will cause the
+      oldest active connection to be terminated automatically.
+    scope: per account
+    limit: 2
+    period: concurrent
+    enforcement:
+      behavior: Oldest active connection is terminated when limit is exceeded
+    notes: >
+      Clients should implement reconnection logic with backoff strategies. Excessive
+      reconnection attempts trigger HTTP 429 responses and the client IP may be blocked.
+      After a 429, clients must wait at least 1 minute before retrying. For other
+      retryable errors, wait at least 10 seconds before reconnecting.
+    documentation: https://developer-specs.company-information.service.gov.uk/streaming-api/guides/overview
+
+headers:
+  notes: >
+    The Companies House API documentation does not specify explicit rate-limit
+    response headers (such as X-RateLimit-Limit or X-RateLimit-Remaining).
+    Developers should implement client-side request tracking to avoid reaching limits.

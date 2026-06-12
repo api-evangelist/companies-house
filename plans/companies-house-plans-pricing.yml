@@ -1,0 +1,64 @@
+name: Companies House API Plans and Pricing
+description: >
+  The Companies House REST API is provided free of charge as a public service by
+  the UK government. All developers can register for a free API key and access the
+  full range of public company data at no cost. There is a single free tier with
+  a default rate limit, and developers who require higher throughput may contact
+  Companies House to request an increased limit.
+specificationVersion: '0.1'
+plans:
+  - name: Free
+    description: >
+      Full access to the Companies House Public Data API and Streaming API at no
+      cost. Includes all public company data endpoints covering company profiles,
+      officers, filing history, charges, insolvency, persons of significant control,
+      and advanced search. Requires registration for an API key on the Companies House
+      Developer Hub.
+    url: https://developer.company-information.service.gov.uk/overview
+    isFree: true
+    hasTrial: false
+    price:
+      amount: 0
+      currency: GBP
+      period: monthly
+    rateLimits:
+      - type: requests
+        limit: 600
+        period: 5 minutes
+        scope: per API key
+    features:
+      - Public Data API access
+      - Streaming API access (2 concurrent connections)
+      - Company profiles and registered office addresses
+      - Officer appointments and disqualifications
+      - Persons with significant control
+      - Filing history and documents
+      - Charges and mortgages
+      - Insolvency records
+      - Advanced company search
+      - Alphabetical and dissolved company search
+      - JSON responses
+      - HTTPS / TLS 1.2+
+
+  - name: Elevated Rate Limit (by request)
+    description: >
+      Developers or organisations with high-throughput requirements may contact
+      Companies House directly to request an elevated rate limit above the default
+      600 requests per 5 minutes. This is granted on a case-by-case basis and remains
+      free of charge.
+    url: https://forum.companieshouse.gov.uk/t/increasing-api-rate-limit/4531
+    isFree: true
+    hasTrial: false
+    price:
+      amount: 0
+      currency: GBP
+      period: monthly
+    rateLimits:
+      - type: requests
+        limit: variable
+        period: 5 minutes
+        scope: per API key
+        notes: Limit set by agreement with Companies House on a case-by-case basis
+    features:
+      - All features of the Free plan
+      - Higher request throughput by arrangement

@@ -1,0 +1,90 @@
+name: Companies House API FinOps
+description: >
+  FinOps Framework 1.0 FOCUS-aligned cost and usage profile for the Companies House
+  REST API. The API is provided free of charge by the UK government as a public service.
+  All direct API usage costs are zero. Organisational cost considerations are limited
+  to infrastructure, engineering effort, and indirect operational expenses.
+specificationVersion: '1.0'
+provider:
+  name: Companies House
+  url: https://www.gov.uk/government/organisations/companies-house
+  type: UK Government Executive Agency
+  billingModel: Free public service — no charges for API access
+
+costModel:
+  directCosts:
+    - name: API Access Fee
+      description: There is no charge to access the Companies House Public Data API or Streaming API.
+      unitCost: 0
+      currency: GBP
+      unit: per request
+    - name: Registration Fee
+      description: Registering for an API key on the Companies House Developer Hub is free.
+      unitCost: 0
+      currency: GBP
+      unit: one-time
+
+  indirectCosts:
+    - name: Engineering Integration
+      description: >
+        Developer time to integrate the Companies House API, implement authentication
+        (HTTP Basic Auth with API key), handle rate limits (600 req / 5 min), and
+        manage JSON response parsing.
+      category: engineering
+      estimatedEffort: low-to-medium
+    - name: Infrastructure
+      description: >
+        Hosting, compute, and networking costs for the consuming application that
+        calls the Companies House API. These depend on call volume and the consumer's
+        cloud or on-premises environment.
+      category: infrastructure
+      variableBy: request volume
+    - name: Streaming API Infrastructure
+      description: >
+        Maintaining persistent long-running HTTP connections to the Streaming API
+        requires continuously running processes and stable network connectivity.
+        Infrastructure costs are borne entirely by the consumer.
+      category: infrastructure
+      variableBy: number of concurrent streams (max 2 per account)
+    - name: Data Storage
+      description: >
+        Costs associated with storing and indexing Companies House data retrieved
+        via the API or Streaming API within the consumer's own systems.
+      category: storage
+      variableBy: data volume retained
+
+usage:
+  rateLimit:
+    requests: 600
+    period: 5 minutes
+    overageBehavior: HTTP 429 returned; no overage charge — access is simply throttled
+  streamingConnections:
+    max: 2
+    scope: per account
+
+optimization:
+  recommendations:
+    - description: >
+        Cache company profile data locally where possible to avoid redundant API calls,
+        since Companies House data changes infrequently for most companies.
+      category: caching
+    - description: >
+        Use the Streaming API for bulk change tracking rather than polling individual
+        company endpoints, reducing per-request call volume and API key consumption.
+      category: architecture
+    - description: >
+        Monitor request volume client-side to stay below 600 requests per 5-minute
+        window and avoid 429 throttling, which wastes retry engineering effort.
+      category: rate-limit-management
+    - description: >
+        Use the advanced search and alphabetical search endpoints to minimise lookup
+        calls when working with large datasets, rather than iterating company numbers.
+      category: efficiency
+
+compliance:
+  notes: >
+    Companies House API terms require adherence to developer guidelines published at
+    developer-specs.company-information.service.gov.uk. Applications that systematically
+    exceed or circumvent rate limits may be banned. API keys must be kept secure and
+    rotated regularly per the Companies House developer security guidelines.
+  termsUrl: https://developer-specs.company-information.service.gov.uk/guides/developerGuidelines

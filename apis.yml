@@ -1,0 +1,113 @@
+aid: https://raw.githubusercontent.com/api-evangelist/companies-house/refs/heads/main/apis.yml
+name: Companies House
+description: >
+  Companies House is the UK government executive agency and trading fund responsible
+  for incorporating and dissolving limited companies and registering company information
+  in Great Britain. The Companies House REST API provides a free, open, and standardised
+  way to search and retrieve company registration data, including company profiles,
+  officer appointments, persons of significant control, filing history, charges, and
+  insolvency records. Developers can also access a real-time Streaming API that delivers
+  changes to Companies House data as they happen, enabling applications to stay up-to-date
+  without polling. Authentication is handled via API key using HTTP Basic Auth, and all
+  access is provided free of charge with a generous rate limit.
+type: Index
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+url: https://raw.githubusercontent.com/api-evangelist/companies-house/refs/heads/main/apis.yml
+created: '2026-06-12'
+modified: '2026-06-12'
+specificationVersion: '0.19'
+tags:
+  - Companies
+  - UK Government
+  - Business Registration
+  - Company Search
+  - Officers
+  - Filing History
+  - Insolvency
+  - Charges
+  - Persons of Significant Control
+  - Open Data
+apis:
+  - name: Companies House Public Data API
+    description: >
+      The Companies House Public Data API provides read access to all publicly
+      available company information registered at Companies House. It covers company
+      profiles, registered office addresses, officer appointments, persons with significant
+      control, filing history, charges, insolvency, and advanced search across all
+      registered UK companies. Access is free and requires only an API key obtained
+      from the Companies House Developer Hub.
+    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    humanURL: https://developer.company-information.service.gov.uk/overview
+    baseURL: https://api.company-information.service.gov.uk
+    tags:
+      - Companies
+      - Officers
+      - Filing History
+      - Charges
+      - Insolvency
+      - PSC
+      - Search
+    properties:
+      - type: Documentation
+        url: https://developer-specs.company-information.service.gov.uk/companies-house-public-data-api/reference
+      - type: OpenAPI
+        url: https://github.com/companieshouse/specs.developer.ch.gov.uk
+    contact:
+      - FN: Companies House Developer Forum
+        url: https://forum.companieshouse.gov.uk/
+
+  - name: Companies House Streaming API
+    description: >
+      The Companies House Streaming API delivers real-time changes to Companies House
+      data via long-running HTTP connections. It streams updates across nine data
+      categories including company information, filing history, insolvency, charges,
+      officers, persons with significant control, disqualified officers, exemptions,
+      and PSC statements. Each account is limited to two concurrent streaming connections
+      and requires an API key for authentication.
+    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    humanURL: https://developer-specs.company-information.service.gov.uk/streaming-api/guides/overview
+    baseURL: https://stream.companieshouse.gov.uk
+    tags:
+      - Streaming
+      - Real-Time
+      - Companies
+      - Officers
+      - Filing History
+    properties:
+      - type: Documentation
+        url: https://developer-specs.company-information.service.gov.uk/streaming-api/guides/overview
+    contact:
+      - FN: Companies House Developer Forum
+        url: https://forum.companieshouse.gov.uk/
+
+common:
+  - type: Website
+    url: https://www.gov.uk/government/organisations/companies-house
+  - type: Documentation
+    url: https://developer.company-information.service.gov.uk/overview
+  - type: GitHubOrg
+    url: https://github.com/companieshouse
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/companies-house
+  - type: Blog
+    url: https://companieshouse.blog.gov.uk
+  - type: Pricing
+    url: https://developer.company-information.service.gov.uk/overview
+  - type: StatusPage
+    url: https://forum.companieshouse.gov.uk/c/api-changes/7
+  - type: X
+    url: https://x.com/CompaniesHouse
+  - type: Forum
+    url: https://forum.companieshouse.gov.uk
+  - type: Authentication
+    url: https://developer-specs.company-information.service.gov.uk/guides/authorisation
+  - type: Plans
+    url: plans/companies-house-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/companies-house-rate-limits.yml
+  - type: FinOps
+    url: finops/companies-house-finops.yml
+
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
