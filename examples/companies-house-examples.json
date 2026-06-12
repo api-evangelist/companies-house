@@ -1,0 +1,333 @@
+{
+  "get_company_{companyNumber}_registered-office-address": {
+    "description": "Registered Office Address",
+    "method": "GET",
+    "path": "/company/{companyNumber}/registered-office-address",
+    "operationId": "get_company_{companyNumber}_registered-office-address",
+    "parameters": {
+      "company_number": "<company_number>"
+    },
+    "response_schema": {
+      "$ref": "http://127.0.0.1:10000/api.ch.gov.uk-specifications/swagger-2.0/models/registeredOfficeAddress.json#/definitions/registeredOfficeAddress"
+    }
+  },
+  "get_search": {
+    "description": "Search All",
+    "method": "GET",
+    "path": "/search",
+    "operationId": "get_search",
+    "parameters": {},
+    "response_schema": {
+      "$ref": "http://127.0.0.1:10000/api.ch.gov.uk-specifications/swagger-2.0/spec/search.json#/definitions/Search"
+    }
+  },
+  "get_search_companies": {
+    "description": "Search companies",
+    "method": "GET",
+    "path": "/search/companies",
+    "operationId": "get_search_companies",
+    "parameters": {},
+    "response_schema": {
+      "$ref": "http://127.0.0.1:10000/api.ch.gov.uk-specifications/swagger-2.0/spec/search.json#/definitions/CompanySearch"
+    }
+  },
+  "get_search_officers": {
+    "description": "Search company officers",
+    "method": "GET",
+    "path": "/search/officers",
+    "operationId": "get_search_officers",
+    "parameters": {},
+    "response_schema": {
+      "$ref": "http://127.0.0.1:10000/api.ch.gov.uk-specifications/swagger-2.0/spec/search.json#/definitions/OfficerSearch"
+    }
+  },
+  "get_search_disqualified-officers": {
+    "description": "Search disqualified officers",
+    "method": "GET",
+    "path": "/search/disqualified-officers",
+    "operationId": "get_search_disqualified-officers",
+    "parameters": {},
+    "response_schema": {
+      "$ref": "http://127.0.0.1:10000/api.ch.gov.uk-specifications/swagger-2.0/spec/search.json#/definitions/DisqualifiedOfficerSearch"
+    }
+  },
+  "get_dissolved-search_companies": {
+    "description": "Search for a dissolved company",
+    "method": "GET",
+    "path": "/dissolved-search/companies",
+    "operationId": "get_dissolved-search_companies",
+    "parameters": {},
+    "response_schema": {
+      "$ref": "http://127.0.0.1:10000/api.ch.gov.uk-specifications/swagger-2.0/spec/search-companies.json#/definitions/dissolvedCompanySearch"
+    }
+  },
+  "get_alphabetical-search_companies": {
+    "description": "Search for a company",
+    "method": "GET",
+    "path": "/alphabetical-search/companies",
+    "operationId": "get_alphabetical-search_companies",
+    "parameters": {},
+    "response_schema": {
+      "$ref": "http://127.0.0.1:10000/api.ch.gov.uk-specifications/swagger-2.0/spec/search-companies.json#/definitions/alphabeticalCompanySearch"
+    }
+  },
+  "get_advanced-search_companies": {
+    "description": "Advanced search for a company",
+    "method": "GET",
+    "path": "/advanced-search/companies",
+    "operationId": "get_advanced-search_companies",
+    "parameters": {},
+    "response_schema": {
+      "$ref": "http://127.0.0.1:10000/api.ch.gov.uk-specifications/swagger-2.0/spec/search-companies.json#/definitions/advancedCompanySearch"
+    }
+  },
+  "get_company_{company_number}_officers": {
+    "description": "Company Officers",
+    "method": "GET",
+    "path": "/company/{company_number}/officers",
+    "operationId": "get_company_{company_number}_officers",
+    "parameters": {
+      "company_number": "<company_number>"
+    },
+    "response_schema": {
+      "$ref": "http://127.0.0.1:10000/api.ch.gov.uk-specifications/swagger-2.0/spec/companyOfficerList.json#/definitions/officerList"
+    }
+  },
+  "get_company_{company_number}_appointments_{appointment_id}": {
+    "description": "Get a company officer appointment",
+    "method": "GET",
+    "path": "/company/{company_number}/appointments/{appointment_id}",
+    "operationId": "get_company_{company_number}_appointments_{appointment_id}",
+    "parameters": {
+      "company_number": "<company_number>",
+      "appointment_id": "<appointment_id>"
+    },
+    "response_schema": {
+      "$ref": "http://127.0.0.1:10000/api.ch.gov.uk-specifications/swagger-2.0/spec/companyOfficerList.json#/definitions/officerSummary"
+    }
+  },
+  "get_company_{company_number}_filing-history_{transaction_id}": {
+    "description": "filingHistoryItem resource",
+    "method": "GET",
+    "path": "/company/{company_number}/filing-history/{transaction_id}",
+    "operationId": "get_company_{company_number}_filing-history_{transaction_id}",
+    "parameters": {
+      "company_number": "<company_number>",
+      "transaction_id": "<transaction_id>"
+    },
+    "response_schema": {
+      "$ref": "http://127.0.0.1:10000/api.ch.gov.uk-specifications/swagger-2.0/spec/filingHistory.json#/definitions/filingHistoryItem"
+    }
+  },
+  "get_company_{company_number}_filing-history": {
+    "description": "filingHistoryList resource",
+    "method": "GET",
+    "path": "/company/{company_number}/filing-history",
+    "operationId": "get_company_{company_number}_filing-history",
+    "parameters": {
+      "company_number": "<company_number>"
+    },
+    "response_schema": {
+      "$ref": "http://127.0.0.1:10000/api.ch.gov.uk-specifications/swagger-2.0/spec/filingHistory.json#/definitions/filingHistoryList"
+    }
+  },
+  "get_disqualified-officers_natural_{officer_id}": {
+    "description": "Get natural officers disqualifications",
+    "method": "GET",
+    "path": "/disqualified-officers/natural/{officer_id}",
+    "operationId": "get_disqualified-officers_natural_{officer_id}",
+    "parameters": {
+      "officer_id": "<officer_id>"
+    },
+    "response_schema": {
+      "$ref": "http://127.0.0.1:10000/api.ch.gov.uk-specifications/swagger-2.0/spec/disqualifications.json#/definitions/naturalDisqualification"
+    }
+  },
+  "get_disqualified-officers_corporate_{officer_id}": {
+    "description": "Get a corporate officers disqualifications",
+    "method": "GET",
+    "path": "/disqualified-officers/corporate/{officer_id}",
+    "operationId": "get_disqualified-officers_corporate_{officer_id}",
+    "parameters": {
+      "officer_id": "<officer_id>"
+    },
+    "response_schema": {
+      "$ref": "http://127.0.0.1:10000/api.ch.gov.uk-specifications/swagger-2.0/spec/disqualifications.json#/definitions/corporateDisqualification"
+    }
+  },
+  "get_company_{company_number}_charges": {
+    "description": "Charges",
+    "method": "GET",
+    "path": "/company/{company_number}/charges",
+    "operationId": "get_company_{company_number}_charges",
+    "parameters": {
+      "company_number": "<company_number>"
+    },
+    "response_schema": {
+      "$ref": "http://127.0.0.1:10000/api.ch.gov.uk-specifications/swagger-2.0/spec/charges.json#/definitions/chargeList"
+    }
+  },
+  "get_company_{company_number}_charges_{charge_id}": {
+    "description": "Individual charge information for company.",
+    "method": "GET",
+    "path": "/company/{company_number}/charges/{charge_id}",
+    "operationId": "get_company_{company_number}_charges_{charge_id}",
+    "parameters": {},
+    "response_schema": {
+      "$ref": "http://127.0.0.1:10000/api.ch.gov.uk-specifications/swagger-2.0/spec/charges.json#/definitions/chargeDetails"
+    }
+  },
+  "get_company_{company_number}_insolvency": {
+    "description": "Company insolvency information",
+    "method": "GET",
+    "path": "/company/{company_number}/insolvency",
+    "operationId": "get_company_{company_number}_insolvency",
+    "parameters": {
+      "company_number": "<company_number>"
+    },
+    "response_schema": {
+      "$ref": "http://127.0.0.1:10000/api.ch.gov.uk-specifications/swagger-2.0/spec/insolvency.json#/definitions/companyInsolvency"
+    }
+  },
+  "get_company_{company_number}_persons-with-significant-control": {
+    "description": "List the company persons with significant control",
+    "method": "GET",
+    "path": "/company/{company_number}/persons-with-significant-control",
+    "operationId": "get_company_{company_number}_persons-with-significant-control",
+    "parameters": {
+      "company_number": "<company_number>"
+    },
+    "response_schema": {
+      "$ref": "http://127.0.0.1:10000/api.ch.gov.uk-specifications/swagger-2.0/spec/pscModels.json#/definitions/list"
+    }
+  },
+  "get_company_{company_number}_persons-with-significant-control_individual_{notification_id}": {
+    "description": "Get the individual person with significant control notification",
+    "method": "GET",
+    "path": "/company/{company_number}/persons-with-significant-control/individual/{notification_id}",
+    "operationId": "get_company_{company_number}_persons-with-significant-control_individual_{notification_id}",
+    "parameters": {
+      "company_number": "<company_number>",
+      "notification_id": "<notification_id>"
+    },
+    "response_schema": {
+      "$ref": "http://127.0.0.1:10000/api.ch.gov.uk-specifications/swagger-2.0/spec/pscModels.json#/definitions/individual"
+    }
+  },
+  "get_company_{company_number}_persons-with-significant-control_individual-beneficial-owner_{notification_id}": {
+    "description": "Get the individual beneficial owner notification",
+    "method": "GET",
+    "path": "/company/{company_number}/persons-with-significant-control/individual-beneficial-owner/{notification_id}",
+    "operationId": "get_company_{company_number}_persons-with-significant-control_individual-beneficial-owner_{notification_id}",
+    "parameters": {
+      "company_number": "<company_number>",
+      "notification_id": "<notification_id>"
+    },
+    "response_schema": {
+      "$ref": "http://127.0.0.1:10000/api.ch.gov.uk-specifications/swagger-2.0/spec/pscModels.json#/definitions/individualBeneficialOwner"
+    }
+  },
+  "get_company_{company_number}_persons-with-significant-control_corporate-entity_{notification_id}": {
+    "description": "Get the corporate entity with significant control notification",
+    "method": "GET",
+    "path": "/company/{company_number}/persons-with-significant-control/corporate-entity/{notification_id}",
+    "operationId": "get_company_{company_number}_persons-with-significant-control_corporate-entity_{notification_id}",
+    "parameters": {
+      "company_number": "<company_number>",
+      "notification_id": "<notification_id>"
+    },
+    "response_schema": {
+      "$ref": "http://127.0.0.1:10000/api.ch.gov.uk-specifications/swagger-2.0/spec/pscModels.json#/definitions/corporateEntity"
+    }
+  },
+  "get_company_{company_number}_persons-with-significant-control_corporate-entity-beneficial-owner_{notification_id}": {
+    "description": "Get the corporate entity beneficial owner notification",
+    "method": "GET",
+    "path": "/company/{company_number}/persons-with-significant-control/corporate-entity-beneficial-owner/{notification_id}",
+    "operationId": "get_company_{company_number}_persons-with-significant-control_corporate-entity-beneficial-owner_{notification_id}",
+    "parameters": {
+      "company_number": "<company_number>",
+      "notification_id": "<notification_id>"
+    },
+    "response_schema": {
+      "$ref": "http://127.0.0.1:10000/api.ch.gov.uk-specifications/swagger-2.0/spec/pscModels.json#/definitions/corporateEntityBeneficialOwner"
+    }
+  },
+  "get_company_{company_number}_persons-with-significant-control_legal-person_{notification_id}": {
+    "description": "Get the legal person with significant control notification",
+    "method": "GET",
+    "path": "/company/{company_number}/persons-with-significant-control/legal-person/{notification_id}",
+    "operationId": "get_company_{company_number}_persons-with-significant-control_legal-person_{notification_id}",
+    "parameters": {
+      "company_number": "<company_number>",
+      "notification_id": "<notification_id>"
+    },
+    "response_schema": {
+      "$ref": "http://127.0.0.1:10000/api.ch.gov.uk-specifications/swagger-2.0/spec/pscModels.json#/definitions/legalPerson"
+    }
+  },
+  "get_company_{company_number}_persons-with-significant-control_legal-person-beneficial-owner_{notification_id}": {
+    "description": "Get the legal person beneficial owner notification",
+    "method": "GET",
+    "path": "/company/{company_number}/persons-with-significant-control/legal-person-beneficial-owner/{notification_id}",
+    "operationId": "get_company_{company_number}_persons-with-significant-control_legal-person-beneficial-owner_{notification_id}",
+    "parameters": {
+      "company_number": "<company_number>",
+      "notification_id": "<notification_id>"
+    },
+    "response_schema": {
+      "$ref": "http://127.0.0.1:10000/api.ch.gov.uk-specifications/swagger-2.0/spec/pscModels.json#/definitions/legalPersonBeneficialOwner"
+    }
+  },
+  "get_company_{company_number}_persons-with-significant-control-statements": {
+    "description": "List the company persons with significant control statements",
+    "method": "GET",
+    "path": "/company/{company_number}/persons-with-significant-control-statements",
+    "operationId": "get_company_{company_number}_persons-with-significant-control-statements",
+    "parameters": {
+      "company_number": "<company_number>"
+    },
+    "response_schema": {
+      "$ref": "http://127.0.0.1:10000/api.ch.gov.uk-specifications/swagger-2.0/spec/pscModels.json#/definitions/statementList"
+    }
+  },
+  "get_company_{company_number}_persons-with-significant-control-statements_{statement_id}": {
+    "description": "Get the person with significant control statement",
+    "method": "GET",
+    "path": "/company/{company_number}/persons-with-significant-control-statements/{statement_id}",
+    "operationId": "get_company_{company_number}_persons-with-significant-control-statements_{statement_id}",
+    "parameters": {
+      "company_number": "<company_number>",
+      "statement_id": "<statement_id>"
+    },
+    "response_schema": {
+      "$ref": "http://127.0.0.1:10000/api.ch.gov.uk-specifications/swagger-2.0/spec/pscModels.json#/definitions/statement"
+    }
+  },
+  "get_company_{company_number}_persons-with-significant-control_super-secure_{super_secure_id}": {
+    "description": "Get the super secure person with significant control",
+    "method": "GET",
+    "path": "/company/{company_number}/persons-with-significant-control/super-secure/{super_secure_id}",
+    "operationId": "get_company_{company_number}_persons-with-significant-control_super-secure_{super_secure_id}",
+    "parameters": {
+      "company_number": "<company_number>",
+      "super_secure_id": "<super_secure_id>"
+    },
+    "response_schema": {
+      "$ref": "http://127.0.0.1:10000/api.ch.gov.uk-specifications/swagger-2.0/spec/pscModels.json#/definitions/superSecure"
+    }
+  },
+  "get_company_{company_number}_persons-with-significant-control_super-secure-beneficial-owner_{super_secure_id}": {
+    "description": "Get the super secure beneficial owner",
+    "method": "GET",
+    "path": "/company/{company_number}/persons-with-significant-control/super-secure-beneficial-owner/{super_secure_id}",
+    "operationId": "get_company_{company_number}_persons-with-significant-control_super-secure-beneficial-owner_{super_secure_id}",
+    "parameters": {
+      "company_number": "<company_number>",
+      "super_secure_id": "<super_secure_id>"
+    },
+    "response_schema": {
+      "$ref": "http://127.0.0.1:10000/api.ch.gov.uk-specifications/swagger-2.0/spec/pscModels.json#/definitions/superSecureBeneficialOwner"
+    }
+  }
+}

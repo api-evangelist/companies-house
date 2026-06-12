@@ -1,0 +1,31 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "permission_to_act",
+  "required": [
+    "expires_on",
+    "granted_on"
+  ],
+  "properties": {
+    "company_names": {
+      "description": "The companies for which the disqualified officer has permission to act.",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "court_name": {
+      "description": "The name of the court that granted the permission to act.",
+      "type": "string"
+    },
+    "expires_on": {
+      "description": "The date that the permission ends.",
+      "type": "string",
+      "format": "date"
+    },
+    "granted_on": {
+      "description": "The date that the permission starts.",
+      "type": "string",
+      "format": "date"
+    }
+  }
+}

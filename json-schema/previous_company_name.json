@@ -1,0 +1,24 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Previous company name",
+  "properties": {
+    "company_number": {
+      "type": "string",
+      "description": "The company number of the dissolved company"
+    },
+    "ceased_on": {
+      "type": "string",
+      "format": "date",
+      "description": "The date that the company ceased being known under the company name"
+    },
+    "effective_from": {
+      "type": "string",
+      "format": "date",
+      "description": "The date that the company started being known under the company name"
+    },
+    "name": {
+      "type": "string",
+      "description": "The previous name of the company"
+    }
+  }
+}

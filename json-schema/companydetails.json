@@ -1,0 +1,35 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "companyDetails",
+  "required": [
+    "company_number",
+    "company_name",
+    "company_status",
+    "links"
+  ],
+  "properties": {
+    "company_number": {
+      "type": "string",
+      "description": "The number of the company."
+    },
+    "company_name": {
+      "type": "string",
+      "description": "The name of the company."
+    },
+    "company_status": {
+      "type": "string",
+      "description": "Company status."
+    },
+    "locality": {
+      "type": "string",
+      "description": "The locality e.g London."
+    },
+    "links": {
+      "description": "Resources related to this company.",
+      "type": "object",
+      "items": {
+        "$ref": "http://127.0.0.1:10000/api.ch.gov.uk-specifications/swagger-2.0/spec/companyUKEstablishments.json#/definitions/links"
+      }
+    }
+  }
+}

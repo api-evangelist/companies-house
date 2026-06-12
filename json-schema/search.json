@@ -1,0 +1,25 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Search",
+  "allOf": [
+    {
+      "$ref": "http://127.0.0.1:10000/api.ch.gov.uk-specifications/swagger-2.0/spec/search.json#/definitions/CommonSearch"
+    }
+  ],
+  "properties": {
+    "kind": {
+      "type": "string",
+      "description": "The type of search response returned.",
+      "enum": [
+        "search#all"
+      ]
+    },
+    "items": {
+      "type": "array",
+      "description": "The results of the completed search. See `items.kind` for details of each specific result resource returned.,",
+      "items": {
+        "$ref": "http://127.0.0.1:10000/api.ch.gov.uk-specifications/swagger-2.0/spec/search.json#/definitions/SearchItems"
+      }
+    }
+  }
+}

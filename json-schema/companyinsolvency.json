@@ -1,0 +1,36 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "companyInsolvency",
+  "required": [
+    "etag",
+    "cases"
+  ],
+  "properties": {
+    "etag": {
+      "description": "The ETag of the resource.",
+      "type": "string"
+    },
+    "cases": {
+      "type": "array",
+      "description": "List of insolvency cases.",
+      "items": {
+        "$ref": "http://127.0.0.1:10000/api.ch.gov.uk-specifications/swagger-2.0/spec/insolvency.json#/definitions/case"
+      }
+    },
+    "status": {
+      "type": "string",
+      "description": "Company insolvency status details",
+      "enum": [
+        "administration-order",
+        "administrative-receiver",
+        "in-administration",
+        "liquidation",
+        "live-receiver-manager-on-at-least-one-charge",
+        "receivership",
+        "receiver-manager",
+        "voluntary-arrangement",
+        "voluntary-arrangement-receivership"
+      ]
+    }
+  }
+}

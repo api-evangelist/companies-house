@@ -1,0 +1,13 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "officerLinkTypes",
+  "required": [
+    "appointments"
+  ],
+  "properties": {
+    "appointments": {
+      "description": "Link to the officer appointment resource that this appointment is associated with.",
+      "type": "string"
+    }
+  }
+}

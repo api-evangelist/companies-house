@@ -1,0 +1,26 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "nextAccounts",
+  "type": "object",
+  "properties": {
+    "due_on": {
+      "description": "The date the next company accounts are due",
+      "type": "string",
+      "format": "date"
+    },
+    "overdue": {
+      "description": "Flag indicating if the company accounts are overdue.",
+      "type": "boolean"
+    },
+    "period_end_on": {
+      "description": "The last day of the next accounting period to be filed.",
+      "type": "string",
+      "format": "date"
+    },
+    "period_start_on": {
+      "description": "The first day of the next accounting period to be filed.",
+      "type": "string",
+      "format": "date"
+    }
+  }
+}

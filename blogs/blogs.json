@@ -1,0 +1,24 @@
+{
+  "name": "Companies House Blog",
+  "description": "Official blog from Companies House covering product updates, company information, and regulatory changes.",
+  "url": "https://companieshouse.blog.gov.uk",
+  "rss": "https://companieshouse.blog.gov.uk/feed/",
+  "last_fetched": "2026-06-12",
+  "entries": [
+    {
+      "title": "Keeping your standard industrial classification (SIC) code accurate",
+      "url": "https://companieshouse.blog.gov.uk/2026/05/28/keeping-your-standard-industrial-classification-sic-code-accurate/",
+      "date": "2026-05-28"
+    },
+    {
+      "title": "Companies House business plan: our commitment to improving customer experience",
+      "url": "https://companieshouse.blog.gov.uk/2026/05/20/companies-house-business-plan-our-commitment-to-improving-customer-experience/",
+      "date": "2026-05-20"
+    },
+    {
+      "title": "Being an intelligence analyst at Companies House",
+      "url": "https://companieshouse.blog.gov.uk/2026/02/25/being-an-intelligence-analyst-at-companies-house/",
+      "date": "2026-02-25"
+    }
+  ]
+}

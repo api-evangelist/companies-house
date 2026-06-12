@@ -1,0 +1,60 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "corporateDisqualification",
+  "required": [
+    "disqualifications",
+    "etag",
+    "kind",
+    "links",
+    "name"
+  ],
+  "properties": {
+    "company_number": {
+      "description": "The registration number of the disqualified officer.",
+      "type": "string"
+    },
+    "country_of_registration": {
+      "description": "The country in which the disqualified officer was registered.",
+      "type": "string"
+    },
+    "etag": {
+      "description": "The ETag of the resource.",
+      "type": "string"
+    },
+    "kind": {
+      "type": "string",
+      "enum": [
+        "corporate-disqualification"
+      ]
+    },
+    "name": {
+      "description": "The name of the disqualified officer.",
+      "type": "string"
+    },
+    "links": {
+      "description": "Links to other resources associated with this officer disqualification resource.",
+      "type": "object",
+      "items": {
+        "$ref": "http://127.0.0.1:10000/api.ch.gov.uk-specifications/swagger-2.0/spec/disqualifications.json#/definitions/links"
+      }
+    },
+    "disqualifications": {
+      "description": "The officer's disqualifications.",
+      "type": "array",
+      "items": {
+        "$ref": "http://127.0.0.1:10000/api.ch.gov.uk-specifications/swagger-2.0/spec/disqualifications.json#/definitions/disqualification"
+      }
+    },
+    "permissions_to_act": {
+      "description": "Permissions that the disqualified officer has to act outside of their disqualification.",
+      "type": "array",
+      "items": {
+        "$ref": "http://127.0.0.1:10000/api.ch.gov.uk-specifications/swagger-2.0/spec/disqualifications.json#/definitions/permission_to_act"
+      }
+    },
+    "person_number": {
+      "description": "The disqualified officer's person number.",
+      "type": "string"
+    }
+  }
+}

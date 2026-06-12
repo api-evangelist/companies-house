@@ -1,0 +1,23 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "corporateAnnotation",
+  "properties": {
+    "created_on": {
+      "description": "The date on which the corporate annotation was created.",
+      "type": "string",
+      "format": "date"
+    },
+    "description": {
+      "description": "The details of a corporate annotation which has a corporate_annotation.type of \u201cother\u201d.",
+      "type": "string"
+    },
+    "type": {
+      "description": "The type of corporate annotation.  \n For enumeration descriptions see `corporate_annotation_type` section in the [enumeration mappings] (https://github.com/companieshouse/api-enumerations/blob/master/constants.yml).  ",
+      "type": "string"
+    }
+  },
+  "required": [
+    "created_on",
+    "type"
+  ]
+}

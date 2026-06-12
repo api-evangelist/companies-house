@@ -1,0 +1,14 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "formerNames",
+  "properties": {
+    "forenames": {
+      "description": "Former forenames of the officer.",
+      "type": "string"
+    },
+    "surname": {
+      "description": "Former surnames of the officer.",
+      "type": "string"
+    }
+  }
+}

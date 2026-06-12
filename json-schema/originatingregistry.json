@@ -1,0 +1,14 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "originatingRegistry",
+  "properties": {
+    "country": {
+      "description": "Country in which company was incorporated.",
+      "type": "string"
+    },
+    "name": {
+      "description": "Identity of register in country of incorporation.",
+      "type": "string"
+    }
+  }
+}

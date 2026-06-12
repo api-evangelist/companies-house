@@ -1,0 +1,25 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "previousCompanyNames",
+  "properties": {
+    "name": {
+      "description": "The previous company name",
+      "type": "string"
+    },
+    "effective_from": {
+      "description": "The date from which the company name was effective.",
+      "type": "string",
+      "format": "date"
+    },
+    "ceased_on": {
+      "description": "The date on which the company name ceased.",
+      "type": "string",
+      "format": "date"
+    }
+  },
+  "required": [
+    "name",
+    "effective_from",
+    "ceased_on"
+  ]
+}

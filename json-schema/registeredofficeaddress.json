@@ -1,0 +1,51 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "registeredOfficeAddress",
+  "properties": {
+    "care_of": {
+      "description": "The care of name.",
+      "type": "string"
+    },
+    "address_line_1": {
+      "description": "The first line of the address.",
+      "type": "string"
+    },
+    "address_line_2": {
+      "description": "The second line of the address.",
+      "type": "string"
+    },
+    "country": {
+      "description": "The country.",
+      "enum": [
+        "Wales",
+        "England",
+        "Scotland",
+        "Great Britain",
+        "Not specified",
+        "United Kingdom",
+        "Northern Ireland"
+      ],
+      "type": "string"
+    },
+    "locality": {
+      "description": "The locality e.g London.",
+      "type": "string"
+    },
+    "po_box": {
+      "description": "The post-office box number.",
+      "type": "string"
+    },
+    "postal_code": {
+      "description": "The postal code e.g CF14 3UZ.",
+      "type": "string"
+    },
+    "premises": {
+      "description": "The property name or number.",
+      "type": "string"
+    },
+    "region": {
+      "description": "The region e.g Surrey.",
+      "type": "string"
+    }
+  }
+}

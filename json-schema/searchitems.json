@@ -1,0 +1,62 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "SearchItems",
+  "allOf": [
+    {
+      "$ref": "http://127.0.0.1:10000/api.ch.gov.uk-specifications/swagger-2.0/spec/search.json#/definitions/CommonSearchItems"
+    }
+  ],
+  "required": [
+    "kind",
+    "title",
+    "address_snippet",
+    "links",
+    "address"
+  ],
+  "properties": {
+    "kind": {
+      "type": "string",
+      "description": "The type of search result. Refer to the full resource descriptions [CompanySearch resource](api/docs/company/company_number/CompanySearch-resource.html)  [OfficerSearch resource] (api/docs/company/company_number/OfficerSearch-resource.html) and [DisqualifiedOfficerSearch resource](api/docs/company/company_number/DisqualifiedOfficerSearch-resource.html) for the full list of members returned.",
+      "enum": [
+        "searchresults#company",
+        "searchresults#officer",
+        "searchresults#persons-with-significant-control",
+        "searchresults#disqualified-officer"
+      ]
+    },
+    "description_identifier": {
+      "items": {
+        "type": "string",
+        "enum": [
+          "incorporated-on",
+          "registered-on",
+          "formed-on",
+          "dissolved-on",
+          "converted-closed-on",
+          "closed-on",
+          "closed",
+          "first-uk-establishment-opened-on",
+          "opened-on",
+          "voluntary-arrangement",
+          "receivership",
+          "insolvency-proceedings",
+          "liquidation",
+          "administration",
+          "appointment-count",
+          "born-on",
+          "registered",
+          "removed"
+        ]
+      },
+      "type": "array",
+      "description": "An array of enumeration types that make up the search description. See search_descriptions_raw.yaml in api-enumerations"
+    },
+    "address": {
+      "description": "The address of the company's registered office.",
+      "type": "object",
+      "items": {
+        "$ref": "http://127.0.0.1:10000/api.ch.gov.uk-specifications/swagger-2.0/spec/search.json#/definitions/registeredOfficeAddress"
+      }
+    }
+  }
+}

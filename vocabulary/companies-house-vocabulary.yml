@@ -1,0 +1,229 @@
+vocabulary:
+  name: Companies House Vocabulary
+  description: >
+    Domain vocabulary for the Companies House Public Data API covering UK company
+    registration data, officer appointments, persons of significant control,
+    filing history, charges, and insolvency.
+  url: https://developer.company-information.service.gov.uk/overview
+  version: "1.0.0"
+
+terms:
+
+  - term: companyNumber
+    label: Company Number
+    description: >
+      The unique identifier assigned to a company by Companies House upon
+      incorporation (e.g. 00000001). Always 8 characters, zero-padded.
+    type: string
+    example: "00445790"
+
+  - term: companyName
+    label: Company Name
+    description: The registered name of a company as recorded at Companies House.
+    type: string
+    example: "COMPANIES HOUSE"
+
+  - term: companyStatus
+    label: Company Status
+    description: >
+      The current operational status of a company. Common values include
+      active, dissolved, liquidation, receivership, administration, voluntary-arrangement.
+    type: string
+    enum:
+      - active
+      - dissolved
+      - liquidation
+      - administration
+      - receivership
+      - voluntary-arrangement
+      - converted-closed
+      - insolvency-proceedings
+
+  - term: companyType
+    label: Company Type
+    description: >
+      The legal type of company. Examples include ltd (private limited),
+      plc (public limited), llp (limited liability partnership).
+    type: string
+    enum:
+      - ltd
+      - plc
+      - llp
+      - private-unlimited
+      - old-public-company
+      - private-limited-guarant-nsc-limited-exemption
+      - limited-partnership
+      - royal-charter
+      - investment-company-with-variable-capital
+      - assurance-company
+      - oversea-company
+      - eeig
+      - icvc-securities
+      - icvc-warrant
+      - icvc-umbrella
+      - industrial-and-provident-society
+      - northern-ireland
+      - northern-ireland-other
+      - llp
+      - registered-society-non-jurisdictional
+      - scottish-charitable-incorporated-organisation
+      - further-education-or-sixth-form-college-corporation
+      - uk-establishment
+      - charitable-incorporated-organisation
+
+  - term: registeredOfficeAddress
+    label: Registered Office Address
+    description: >
+      The official address of a company as registered with Companies House.
+      All legal correspondence is directed to this address.
+    type: object
+    properties:
+      - addressLine1
+      - addressLine2
+      - careOf
+      - country
+      - locality
+      - poBox
+      - postalCode
+      - premises
+      - region
+
+  - term: officer
+    label: Officer
+    description: >
+      A person or corporate body holding an official role at a company,
+      such as director, secretary, or LLP member.
+    type: object
+    properties:
+      - name
+      - officerRole
+      - appointedOn
+      - resignedOn
+      - nationality
+      - occupation
+      - dateOfBirth
+      - countryOfResidence
+
+  - term: officerRole
+    label: Officer Role
+    description: The role held by an officer at a company.
+    type: string
+    enum:
+      - director
+      - secretary
+      - llp-member
+      - llp-designated-member
+      - corporate-director
+      - corporate-secretary
+      - corporate-llp-member
+      - corporate-llp-designated-member
+      - nominee-director
+      - nominee-secretary
+      - judicial-factor
+      - receiver-and-manager
+      - cic-manager
+      - managing-officer
+
+  - term: personWithSignificantControl
+    label: Person with Significant Control (PSC)
+    description: >
+      An individual or entity that owns or controls more than 25% of shares or
+      voting rights in a company, or otherwise exercises significant influence
+      or control over it.
+    type: object
+    properties:
+      - name
+      - naturesOfControl
+      - notifiedOn
+      - ceasedOn
+      - nationality
+      - countryOfResidence
+      - dateOfBirth
+
+  - term: naturesOfControl
+    label: Natures of Control
+    description: >
+      The ways in which a PSC exercises control over a company, including
+      ownership of shares, voting rights, or appointment of directors.
+    type: array
+    items: string
+    examples:
+      - ownership-of-shares-25-to-50-percent
+      - ownership-of-shares-50-to-75-percent
+      - ownership-of-shares-75-to-100-percent
+      - voting-rights-25-to-50-percent
+      - voting-rights-50-to-75-percent
+      - voting-rights-75-to-100-percent
+      - right-to-appoint-and-remove-directors
+      - significant-influence-or-control
+
+  - term: filingHistory
+    label: Filing History
+    description: >
+      A record of documents and forms filed with Companies House by a company,
+      including annual returns, accounts, and event notifications.
+    type: object
+    properties:
+      - transactionId
+      - type
+      - date
+      - description
+      - actionDate
+      - category
+      - subcategory
+
+  - term: charge
+    label: Charge
+    description: >
+      A form of security interest granted by a company over its assets in
+      favour of a creditor, registered at Companies House.
+    type: object
+    properties:
+      - chargeCode
+      - status
+      - createdOn
+      - deliveredOn
+      - satisfiedOn
+      - assetsIncludedInCharge
+      - particulars
+      - securedDetails
+
+  - term: chargeStatus
+    label: Charge Status
+    description: The current status of a registered charge.
+    type: string
+    enum:
+      - outstanding
+      - fully-satisfied
+      - part-satisfied
+      - satisfied
+
+  - term: insolvency
+    label: Insolvency
+    description: >
+      Information about insolvency proceedings affecting a company,
+      including administration, liquidation, or receivership cases.
+    type: object
+    properties:
+      - cases
+      - status
+      - practitioners
+
+  - term: exemptions
+    label: Exemptions
+    description: >
+      Regulatory exemptions held by a company, such as exemption from
+      filing PSC information or audit requirements.
+    type: object
+
+  - term: ukEstablishment
+    label: UK Establishment
+    description: >
+      A UK branch of an overseas company registered at Companies House
+      as a UK establishment.
+    type: object
+    properties:
+      - companyNumber
+      - companyName
+      - companyStatus
+      - locality

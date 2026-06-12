@@ -1,0 +1,14 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "transaction_links",
+  "properties": {
+    "filing": {
+      "type": "string",
+      "description": "Link to the charge filing data"
+    },
+    "insolvency_case": {
+      "type": "string",
+      "description": "Link to the insolvency case related to this filing"
+    }
+  }
+}

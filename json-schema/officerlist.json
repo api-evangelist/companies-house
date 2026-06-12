@@ -1,0 +1,61 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "officerList",
+  "properties": {
+    "active_count": {
+      "description": "The number of active officers in this result set.",
+      "type": "integer"
+    },
+    "etag": {
+      "description": "The ETag of the resource.",
+      "type": "string"
+    },
+    "items": {
+      "description": "The list of officers.",
+      "items": {
+        "$ref": "http://127.0.0.1:10000/api.ch.gov.uk-specifications/swagger-2.0/spec/companyOfficerList.json#/definitions/officerSummary"
+      },
+      "type": "array"
+    },
+    "items_per_page": {
+      "description": "The number of officers to return per page.",
+      "type": "integer"
+    },
+    "kind": {
+      "enum": [
+        "officer-list"
+      ],
+      "type": "string"
+    },
+    "links": {
+      "description": "Links to other resources associated with this officer list resource.",
+      "items": {
+        "$ref": "http://127.0.0.1:10000/api.ch.gov.uk-specifications/swagger-2.0/spec/companyOfficerList.json#/definitions/linkTypes"
+      },
+      "type": "object"
+    },
+    "resigned_count": {
+      "description": "The number of resigned officers in this result set.",
+      "type": "integer"
+    },
+    "start_index": {
+      "description": "The offset into the entire result set that this page starts.",
+      "type": "integer"
+    },
+    "total_results": {
+      "description": "The total number of officers in this result set.",
+      "type": "integer"
+    }
+  },
+  "required": [
+    "etag",
+    "items_per_page",
+    "kind",
+    "links",
+    "items",
+    "start_index",
+    "total_results",
+    "active_count",
+    "resigned_count"
+  ]
+}

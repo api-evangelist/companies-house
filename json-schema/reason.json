@@ -1,0 +1,26 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "reason",
+  "properties": {
+    "description_identifier": {
+      "description": "An enumeration type that provides the description for the reason of disqualification.\n For enumeration descriptions see `description_identifier` section in the [enumeration mappings](https://github.com/companieshouse/api-enumerations/blob/master/disqualified_officer_descriptions.yml)",
+      "type": "string"
+    },
+    "act": {
+      "description": "An enumeration type that provides the law under which the disqualification was made.\n For enumeration descriptions see `act` section in the [enumeration mappings](https://github.com/companieshouse/api-enumerations/blob/master/disqualified_officer_descriptions.yml)",
+      "type": "string"
+    },
+    "article": {
+      "description": "The article of the act under which the disqualification was made.\n Only applicable if `reason.act` is `company-directors-disqualification-northern-ireland-order-2002`.",
+      "type": "string"
+    },
+    "section": {
+      "description": "The section of the act under which the disqualification was made.\n Only applicable if `reason.act` is `company-directors-disqualification-act-1986` or `sanctions-anti-money-laundering-act-2018` or `sanctions-counter-terrorism-regulations-2019`.",
+      "type": "string"
+    }
+  },
+  "required": [
+    "description_identifier",
+    "act"
+  ]
+}

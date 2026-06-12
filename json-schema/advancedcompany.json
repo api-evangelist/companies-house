@@ -1,0 +1,124 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "advancedCompany",
+  "required": [
+    "company_name",
+    "company_number",
+    "company_status",
+    "company_type",
+    "date_of_creation",
+    "kind"
+  ],
+  "properties": {
+    "company_name": {
+      "type": "string",
+      "description": "The company name associated with the company"
+    },
+    "company_number": {
+      "type": "string",
+      "description": "The company number of the company"
+    },
+    "company_status": {
+      "description": "The status of the company.  \n For enumeration descriptions see `company_status` section in the [enumeration mappings] (https://github.com/companieshouse/api-enumerations/blob/master/constants.yml)  ",
+      "type": "string",
+      "enum": [
+        "active",
+        "dissolved",
+        "open",
+        "closed",
+        "converted-closed",
+        "receivership",
+        "administration",
+        "liquidation",
+        "insolvency-proceedings",
+        "voluntary-arrangement",
+        "registered",
+        "removed"
+      ]
+    },
+    "company_type": {
+      "description": "The type of the company.  \n For enumeration descriptions see `company_type` section in the [enumeration mappings](https://github.com/companieshouse/api-enumerations/blob/master/constants.yml)    ",
+      "enum": [
+        "private-unlimited",
+        "ltd",
+        "plc",
+        "old-public-company",
+        "private-limited-guarant-nsc-limited-exemption",
+        "limited-partnership",
+        "private-limited-guarant-nsc",
+        "converted-or-closed",
+        "private-unlimited-nsc",
+        "private-limited-shares-section-30-exemption",
+        "protected-cell-company",
+        "assurance-company",
+        "oversea-company",
+        "eeig",
+        "icvc-securities",
+        "icvc-warrant",
+        "icvc-umbrella",
+        "registered-society-non-jurisdictional",
+        "industrial-and-provident-society",
+        "northern-ireland",
+        "northern-ireland-other",
+        "royal-charter",
+        "investment-company-with-variable-capital",
+        "unregistered-company",
+        "llp",
+        "other",
+        "european-public-limited-liability-company-se",
+        "uk-establishment",
+        "scottish-partnership",
+        "charitable-incorporated-organisation",
+        "scottish-charitable-incorporated-organisation",
+        "further-education-or-sixth-form-college-corporation",
+        "registered-overseas-entity"
+      ],
+      "type": "string"
+    },
+    "company_subtype": {
+      "description": "The subtype of the company.  \n For enumeration descriptions see `company_subtype` section in the [enumeration mappings](https://github.com/companieshouse/api-enumerations/blob/master/constants.yml)",
+      "type": "string",
+      "enum": [
+        "community-interest-company",
+        "private-fund-limited-partnership"
+      ]
+    },
+    "kind": {
+      "type": "string",
+      "enum": [
+        "search-results#company"
+      ],
+      "description": "The type of search result"
+    },
+    "links": {
+      "type": "object",
+      "description": "The link to the company",
+      "properties": {
+        "company_profile": {
+          "type": "string",
+          "description": "The link to the company"
+        }
+      }
+    },
+    "date_of_cessation": {
+      "type": "string",
+      "format": "date",
+      "description": "The date that the company was dissolved"
+    },
+    "date_of_creation": {
+      "type": "string",
+      "format": "date",
+      "description": "The date that the company was incorporated"
+    },
+    "registered_office_address": {
+      "$ref": "http://127.0.0.1:10000/api.ch.gov.uk-specifications/swagger-2.0/spec/search-companies.json#/definitions/advanced_company_registered_office_address"
+    },
+    "sic_codes": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array",
+      "description": "SIC codes for this company"
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "alterationsDesc",
+  "required": [
+    "type",
+    "description"
+  ],
+  "properties": {
+    "has_alterations_to_order": {
+      "type": "boolean",
+      "description": "The charge has alterations to order"
+    },
+    "has_alterations_to_prohibitions": {
+      "type": "boolean",
+      "description": "The charge has alterations to prohibitions"
+    },
+    "has_alterations_to_provisions": {
+      "type": "boolean",
+      "description": "The charge has provisions restricting the creation of further charges"
+    }
+  }
+}

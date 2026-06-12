@@ -1,0 +1,29 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "confirmationOfStatementInformation",
+  "required": [
+    "next_made_up_to",
+    "next_due"
+  ],
+  "properties": {
+    "last_made_up_to": {
+      "description": "The date to which the company last made a confirmation statement.",
+      "type": "string",
+      "format": "date"
+    },
+    "next_due": {
+      "description": "The date by which the next confimation statement must be received.",
+      "type": "string",
+      "format": "date"
+    },
+    "next_made_up_to": {
+      "description": "The date to which the company must next make a confirmation statement.",
+      "type": "string",
+      "format": "date"
+    },
+    "overdue": {
+      "description": "Flag indicating if the confirmation statement is overdue",
+      "type": "boolean"
+    }
+  }
+}

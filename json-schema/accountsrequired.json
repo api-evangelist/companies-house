@@ -1,0 +1,23 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "accountsRequired",
+  "properties": {
+    "foreign_account_type": {
+      "description": "Type of accounting requirement that applies.  \n For enumeration descriptions see `foreign_account_type` section in the [enumeration mappings] (https://github.com/companieshouse/api-enumerations/blob/master/constants.yml).  ",
+      "enum": [
+        "accounting-requirements-of-originating-country-apply",
+        "accounting-requirements-of-originating-country-do-not-apply"
+      ],
+      "type": "string"
+    },
+    "terms_of_account_publication": {
+      "description": "Describes how the publication date is derived.  \n For enumeration descriptions see `terms_of_account_publication` section in the [enumeration mappings] (https://github.com/companieshouse/api-enumerations/blob/master/constants.yml).  ",
+      "enum": [
+        "accounts-publication-date-supplied-by-company",
+        "accounting-publication-date-does-not-need-to-be-supplied-by-company",
+        "accounting-reference-date-allocated-by-companies-house"
+      ],
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "chargeList",
+  "required": [
+    "etag",
+    "items"
+  ],
+  "properties": {
+    "etag": {
+      "description": "The ETag of the resource.",
+      "type": "string"
+    },
+    "total_count": {
+      "type": "integer",
+      "description": "Total number of charges returned by the API (filtering applies)."
+    },
+    "unfiletered_count": {
+      "type": "integer",
+      "description": "Number of satisfied charges"
+    },
+    "satisfied_count": {
+      "type": "integer",
+      "description": "Number of satisfied charges"
+    },
+    "part_satisfied_count": {
+      "type": "integer",
+      "description": "Number of satisfied charges"
+    },
+    "items": {
+      "type": "array",
+      "description": "List of charges",
+      "items": {
+        "$ref": "http://127.0.0.1:10000/api.ch.gov.uk-specifications/swagger-2.0/spec/charges.json#/definitions/chargeDetails"
+      }
+    }
+  }
+}

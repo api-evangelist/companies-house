@@ -1,0 +1,45 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "practitioners",
+  "required": [
+    "name",
+    "address"
+  ],
+  "properties": {
+    "name": {
+      "description": "The name of the practitioner.",
+      "type": "string"
+    },
+    "address": {
+      "type": "array",
+      "description": "The practitioners' address.",
+      "items": {
+        "$ref": "http://127.0.0.1:10000/api.ch.gov.uk-specifications/swagger-2.0/spec/insolvency.json#/definitions/practitionerAddress"
+      }
+    },
+    "appointed_on": {
+      "type": "string",
+      "format": "date",
+      "description": "The date the practitioner was appointed on."
+    },
+    "ceased_to_act_on": {
+      "type": "string",
+      "format": "date",
+      "description": "The date the practitioner ceased to act for the case."
+    },
+    "role": {
+      "type": "string",
+      "description": "The type of role.",
+      "enum": [
+        "final-liquidator",
+        "receiver",
+        "receiver-manager",
+        "proposed-liquidator",
+        "provisional-liquidator",
+        "administrative-receiver",
+        "practitioner",
+        "interim-liquidator"
+      ]
+    }
+  }
+}

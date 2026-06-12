@@ -1,0 +1,27 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "MatchesModel",
+  "properties": {
+    "title": {
+      "items": {
+        "type": "integer"
+      },
+      "type": "array",
+      "description": "An array of character offset into the `title` string. These always occur in pairs and define the start and end of substrings in the member `title` that matched the search terms. The first character of the string is index 1."
+    },
+    "snippet": {
+      "items": {
+        "type": "integer"
+      },
+      "type": "array",
+      "description": "An array of character offset into the `snippet` string. These always occur in pairs and define the start and end of substrings in the member `snippet` that matched the search terms. The first character of the string is index 1."
+    },
+    "address_snippet": {
+      "items": {
+        "type": "integer"
+      },
+      "type": "array",
+      "description": "An array of character offset into the `address_snippet` string. These always occur in pairs and define the start and end of substrings in the member `address_snippet` that matched the search terms."
+    }
+  }
+}

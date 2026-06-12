@@ -1,0 +1,251 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "companyProfile",
+  "required": [
+    "company_name",
+    "company_number",
+    "type",
+    "can_file",
+    "links"
+  ],
+  "properties": {
+    "accounts": {
+      "description": "Company accounts information.",
+      "items": {
+        "$ref": "http://127.0.0.1:10000/api.ch.gov.uk-specifications/swagger-2.0/spec/companyProfile.json#/definitions/accountsInformation"
+      },
+      "type": "object"
+    },
+    "annual_return": {
+      "description": "Annual return information. This member is only returned if a confirmation statement has not be filed.",
+      "items": {
+        "$ref": "http://127.0.0.1:10000/api.ch.gov.uk-specifications/swagger-2.0/spec/companyProfile.json#/definitions/annualReturnInformation"
+      },
+      "type": "object"
+    },
+    "can_file": {
+      "description": "Flag indicating whether this company can file.",
+      "type": "boolean"
+    },
+    "confirmation_statement": {
+      "description": "Confirmation statement information (N.B. refers to the Annual Statement where type is registered-overseas-entity)",
+      "items": {
+        "$ref": "http://127.0.0.1:10000/api.ch.gov.uk-specifications/swagger-2.0/spec/companyProfile.json#/definitions/confirmationOfStatementInformation"
+      },
+      "type": "object"
+    },
+    "company_name": {
+      "description": "The name of the company.",
+      "type": "string"
+    },
+    "jurisdiction": {
+      "description": "The jurisdiction specifies the political body responsible for the company.",
+      "type": "string",
+      "enum": [
+        "england-wales",
+        "wales",
+        "scotland",
+        "northern-ireland",
+        "european-union",
+        "united-kingdom",
+        "england",
+        "noneu"
+      ]
+    },
+    "company_number": {
+      "description": "The number of the company.",
+      "type": "string"
+    },
+    "date_of_creation": {
+      "description": "The date when the company was created.",
+      "type": "string",
+      "format": "date"
+    },
+    "date_of_cessation": {
+      "description": "The date which the company was converted/closed, dissolved or removed. Please refer to company status to determine which.",
+      "type": "string",
+      "format": "date"
+    },
+    "etag": {
+      "description": "The ETag of the resource.",
+      "type": "string"
+    },
+    "has_been_liquidated": {
+      "description": "Deprecated. Please use links.insolvency",
+      "type": "boolean"
+    },
+    "has_charges": {
+      "description": "Deprecated. Please use links.charges",
+      "type": "boolean"
+    },
+    "is_community_interest_company": {
+      "description": "Deprecated. Please use subtype",
+      "type": "boolean"
+    },
+    "subtype": {
+      "description": "The subtype of the company. Possible values are:",
+      "enum": [
+        "community-interest-company",
+        "private-fund-limited-partnership"
+      ],
+      "type": "string"
+    },
+    "partial_data_available": {
+      "description": "Returned if Companies House is not the primary source of data for this company.\nFor enumeration descriptions see partial_data_available section in the enumeration mappings (https://github.com/companieshouse/api-enumerations/blob/master/constants.yml).",
+      "enum": [
+        "full-data-available-from-financial-conduct-authority",
+        "full-data-available-from-department-of-the-economy",
+        "full-data-available-from-the-company"
+      ],
+      "type": "string"
+    },
+    "external_registration_number": {
+      "description": "The number given by an external registration body.",
+      "type": "string"
+    },
+    "foreign_company_details": {
+      "description": "Foreign company details.",
+      "items": {
+        "$ref": "http://127.0.0.1:10000/api.ch.gov.uk-specifications/swagger-2.0/spec/companyProfile.json#/definitions/foreignCompanyDetails"
+      },
+      "type": "object"
+    },
+    "last_full_members_list_date": {
+      "description": "The date of last full members list update.",
+      "type": "string",
+      "format": "date"
+    },
+    "registered_office_address": {
+      "description": "The address of the company's registered office.",
+      "items": {
+        "$ref": "http://127.0.0.1:10000/api.ch.gov.uk-specifications/swagger-2.0/spec/companyProfile.json#/definitions/registeredOfficeAddress"
+      },
+      "type": "object"
+    },
+    "service_address": {
+      "description": "The correspondence address of a Registered overseas entity",
+      "items": {
+        "$ref": "http://127.0.0.1:10000/api.ch.gov.uk-specifications/swagger-2.0/spec/companyProfile.json#/definitions/serviceAddress"
+      },
+      "type": "object"
+    },
+    "super_secure_managing_officer_count": {
+      "description": "The total count of super secure managing officers for a `registered-overseas-entity`.",
+      "type": "integer"
+    },
+    "sic_codes": {
+      "description": "SIC codes for this company.",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "previous_company_names": {
+      "description": "The previous names of this company.",
+      "items": {
+        "$ref": "http://127.0.0.1:10000/api.ch.gov.uk-specifications/swagger-2.0/spec/companyProfile.json#/definitions/previousCompanyNames"
+      },
+      "type": "array"
+    },
+    "corporate_annotation": {
+      "description": "A corporate level message published by Companies House about a company, or situations affecting the company, or its information.",
+      "items": {
+        "$ref": "http://127.0.0.1:10000/api.ch.gov.uk-specifications/swagger-2.0/spec/companyProfile.json#/definitions/corporateAnnotation"
+      },
+      "type": "array"
+    },
+    "company_status": {
+      "description": "The status of the company.  \n For enumeration descriptions see `company_status` section in the [enumeration mappings] (https://github.com/companieshouse/api-enumerations/blob/master/constants.yml)  ",
+      "type": "string",
+      "enum": [
+        "active",
+        "dissolved",
+        "liquidation",
+        "receivership",
+        "administration",
+        "voluntary-arrangement",
+        "converted-closed",
+        "insolvency-proceedings",
+        "registered",
+        "removed",
+        "closed",
+        "open"
+      ]
+    },
+    "company_status_detail": {
+      "description": "Extra details about the status of the company.  \n For enumeration descriptions see `company_status_detail` section in the [enumeration mappings](https://github.com/companieshouse/api-enumerations/blob/master/constants.yml).  ",
+      "enum": [
+        "transferred-from-uk",
+        "active-proposal-to-strike-off",
+        "petition-to-restore-dissolved",
+        "transformed-to-se",
+        "converted-to-plc"
+      ],
+      "type": "string"
+    },
+    "type": {
+      "description": "The type of the company.  \n For enumeration descriptions see `company_type` section in the [enumeration mappings](https://github.com/companieshouse/api-enumerations/blob/master/constants.yml)    ",
+      "enum": [
+        "private-unlimited",
+        "ltd",
+        "plc",
+        "old-public-company",
+        "private-limited-guarant-nsc-limited-exemption",
+        "limited-partnership",
+        "private-limited-guarant-nsc",
+        "converted-or-closed",
+        "private-unlimited-nsc",
+        "private-limited-shares-section-30-exemption",
+        "protected-cell-company",
+        "assurance-company",
+        "oversea-company",
+        "eeig",
+        "icvc-securities",
+        "icvc-warrant",
+        "icvc-umbrella",
+        "registered-society-non-jurisdictional",
+        "industrial-and-provident-society",
+        "northern-ireland",
+        "northern-ireland-other",
+        "royal-charter",
+        "investment-company-with-variable-capital",
+        "unregistered-company",
+        "llp",
+        "other",
+        "european-public-limited-liability-company-se",
+        "uk-establishment",
+        "scottish-partnership",
+        "charitable-incorporated-organisation",
+        "scottish-charitable-incorporated-organisation",
+        "further-education-or-sixth-form-college-corporation",
+        "registered-overseas-entity"
+      ],
+      "type": "string"
+    },
+    "has_insolvency_history": {
+      "description": "Deprecated. Please use links.insolvency",
+      "type": "boolean"
+    },
+    "undeliverable_registered_office_address": {
+      "description": "Flag indicating whether post can be delivered to the registered office.",
+      "type": "boolean"
+    },
+    "registered_office_is_in_dispute": {
+      "description": "Flag indicating registered office address as been replaced.",
+      "type": "boolean"
+    },
+    "branch_company_details": {
+      "description": "UK branch of a foreign company.",
+      "items": {
+        "$ref": "http://127.0.0.1:10000/api.ch.gov.uk-specifications/swagger-2.0/spec/companyProfile.json#/definitions/branchCompanyDetails"
+      }
+    },
+    "links": {
+      "description": "A set of URLs related to the resource, including self.",
+      "items": {
+        "$ref": "http://127.0.0.1:10000/api.ch.gov.uk-specifications/swagger-2.0/spec/companyProfile.json#/definitions/linksType"
+      },
+      "type": "object"
+    }
+  }
+}

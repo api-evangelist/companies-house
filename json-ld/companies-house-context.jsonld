@@ -1,0 +1,247 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "schema": "https://schema.org/",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "ch": "https://api.company-information.service.gov.uk/vocab#",
+
+    "companyNumber": {
+      "@id": "ch:companyNumber",
+      "@type": "xsd:string"
+    },
+    "companyName": {
+      "@id": "schema:name",
+      "@type": "xsd:string"
+    },
+    "companyStatus": {
+      "@id": "ch:companyStatus",
+      "@type": "xsd:string"
+    },
+    "companyType": {
+      "@id": "ch:companyType",
+      "@type": "xsd:string"
+    },
+    "dateOfCreation": {
+      "@id": "schema:foundingDate",
+      "@type": "xsd:date"
+    },
+    "dateOfCessation": {
+      "@id": "schema:dissolutionDate",
+      "@type": "xsd:date"
+    },
+    "registeredOfficeAddress": {
+      "@id": "schema:address",
+      "@type": "schema:PostalAddress"
+    },
+    "addressLine1": {
+      "@id": "schema:streetAddress",
+      "@type": "xsd:string"
+    },
+    "addressLine2": {
+      "@id": "ch:addressLine2",
+      "@type": "xsd:string"
+    },
+    "locality": {
+      "@id": "schema:addressLocality",
+      "@type": "xsd:string"
+    },
+    "region": {
+      "@id": "schema:addressRegion",
+      "@type": "xsd:string"
+    },
+    "country": {
+      "@id": "schema:addressCountry",
+      "@type": "xsd:string"
+    },
+    "postalCode": {
+      "@id": "schema:postalCode",
+      "@type": "xsd:string"
+    },
+    "premises": {
+      "@id": "ch:premises",
+      "@type": "xsd:string"
+    },
+    "poBox": {
+      "@id": "ch:poBox",
+      "@type": "xsd:string"
+    },
+    "careOf": {
+      "@id": "ch:careOf",
+      "@type": "xsd:string"
+    },
+
+    "officers": {
+      "@id": "ch:officers",
+      "@container": "@list"
+    },
+    "officer": {
+      "@id": "ch:Officer"
+    },
+    "officerRole": {
+      "@id": "ch:officerRole",
+      "@type": "xsd:string"
+    },
+    "appointedOn": {
+      "@id": "ch:appointedOn",
+      "@type": "xsd:date"
+    },
+    "resignedOn": {
+      "@id": "ch:resignedOn",
+      "@type": "xsd:date"
+    },
+    "nationality": {
+      "@id": "ch:nationality",
+      "@type": "xsd:string"
+    },
+    "occupation": {
+      "@id": "schema:hasOccupation",
+      "@type": "xsd:string"
+    },
+    "countryOfResidence": {
+      "@id": "ch:countryOfResidence",
+      "@type": "xsd:string"
+    },
+    "dateOfBirth": {
+      "@id": "schema:birthDate",
+      "@type": "xsd:gYearMonth"
+    },
+
+    "personsWithSignificantControl": {
+      "@id": "ch:personsWithSignificantControl",
+      "@container": "@list"
+    },
+    "personWithSignificantControl": {
+      "@id": "ch:PersonWithSignificantControl"
+    },
+    "naturesOfControl": {
+      "@id": "ch:naturesOfControl",
+      "@container": "@list"
+    },
+    "notifiedOn": {
+      "@id": "ch:notifiedOn",
+      "@type": "xsd:date"
+    },
+    "ceasedOn": {
+      "@id": "ch:ceasedOn",
+      "@type": "xsd:date"
+    },
+
+    "filingHistory": {
+      "@id": "ch:filingHistory",
+      "@container": "@list"
+    },
+    "filing": {
+      "@id": "ch:Filing"
+    },
+    "transactionId": {
+      "@id": "ch:transactionId",
+      "@type": "xsd:string"
+    },
+    "filingType": {
+      "@id": "ch:filingType",
+      "@type": "xsd:string"
+    },
+    "actionDate": {
+      "@id": "ch:actionDate",
+      "@type": "xsd:date"
+    },
+    "category": {
+      "@id": "ch:category",
+      "@type": "xsd:string"
+    },
+    "subcategory": {
+      "@id": "ch:subcategory",
+      "@type": "xsd:string"
+    },
+    "description": {
+      "@id": "schema:description",
+      "@type": "xsd:string"
+    },
+
+    "charges": {
+      "@id": "ch:charges",
+      "@container": "@list"
+    },
+    "charge": {
+      "@id": "ch:Charge"
+    },
+    "chargeCode": {
+      "@id": "ch:chargeCode",
+      "@type": "xsd:string"
+    },
+    "chargeStatus": {
+      "@id": "ch:chargeStatus",
+      "@type": "xsd:string"
+    },
+    "createdOn": {
+      "@id": "ch:createdOn",
+      "@type": "xsd:date"
+    },
+    "deliveredOn": {
+      "@id": "ch:deliveredOn",
+      "@type": "xsd:date"
+    },
+    "satisfiedOn": {
+      "@id": "ch:satisfiedOn",
+      "@type": "xsd:date"
+    },
+
+    "insolvency": {
+      "@id": "ch:insolvency"
+    },
+    "insolvencyCase": {
+      "@id": "ch:InsolvencyCase"
+    },
+    "insolvencyStatus": {
+      "@id": "ch:insolvencyStatus",
+      "@type": "xsd:string"
+    },
+    "practitioners": {
+      "@id": "ch:practitioners",
+      "@container": "@list"
+    },
+
+    "accounts": {
+      "@id": "ch:accounts"
+    },
+    "annualReturn": {
+      "@id": "ch:annualReturn"
+    },
+    "confirmationStatement": {
+      "@id": "ch:confirmationStatement"
+    },
+    "sicCodes": {
+      "@id": "ch:sicCodes",
+      "@container": "@list"
+    },
+    "hasBeenLiquidated": {
+      "@id": "ch:hasBeenLiquidated",
+      "@type": "xsd:boolean"
+    },
+    "hasInsolvencyHistory": {
+      "@id": "ch:hasInsolvencyHistory",
+      "@type": "xsd:boolean"
+    },
+    "hasCharges": {
+      "@id": "ch:hasCharges",
+      "@type": "xsd:boolean"
+    },
+    "isCommunityInterestCompany": {
+      "@id": "ch:isCommunityInterestCompany",
+      "@type": "xsd:boolean"
+    },
+    "jurisdiction": {
+      "@id": "ch:jurisdiction",
+      "@type": "xsd:string"
+    },
+
+    "links": {
+      "@id": "ch:links"
+    },
+    "etag": {
+      "@id": "ch:etag",
+      "@type": "xsd:string"
+    }
+  }
+}

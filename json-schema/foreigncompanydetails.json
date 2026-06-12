@@ -1,0 +1,47 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "foreignCompanyDetails",
+  "properties": {
+    "originating_registry": {
+      "description": "Company origin informations",
+      "type": "object",
+      "items": {
+        "$ref": "http://127.0.0.1:10000/api.ch.gov.uk-specifications/swagger-2.0/spec/companyProfile.json#/definitions/originatingRegistry"
+      }
+    },
+    "registration_number": {
+      "description": "Registration number in company of incorporation.",
+      "type": "string"
+    },
+    "governed_by": {
+      "description": "Law governing the company in country of incorporation.",
+      "type": "string"
+    },
+    "company_type": {
+      "description": "Legal form of the company in the country of incorporation.",
+      "type": "string"
+    },
+    "is_a_credit_finance_institution": {
+      "description": "Is it a financial or credit institution.",
+      "type": "boolean"
+    },
+    "accounts": {
+      "description": "Foreign company account information.",
+      "items": {
+        "$ref": "http://127.0.0.1:10000/api.ch.gov.uk-specifications/swagger-2.0/spec/companyProfile.json#/definitions/accountInformation"
+      },
+      "type": "object"
+    },
+    "business_activity": {
+      "description": "Type of business undertaken by the company.",
+      "type": "string"
+    },
+    "accounting_requirement": {
+      "description": "Accounts requirement.",
+      "items": {
+        "$ref": "http://127.0.0.1:10000/api.ch.gov.uk-specifications/swagger-2.0/spec/companyProfile.json#/definitions/accountsRequired"
+      },
+      "type": "object"
+    }
+  }
+}

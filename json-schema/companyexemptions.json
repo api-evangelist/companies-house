@@ -1,0 +1,35 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "companyExemptions",
+  "required": [
+    "links",
+    "kind",
+    "etag",
+    "exemptions"
+  ],
+  "properties": {
+    "links": {
+      "description": "A set of URLs related to the resource, including self.",
+      "items": {
+        "$ref": "http://127.0.0.1:10000/api.ch.gov.uk-specifications/swagger-2.0/spec/exemptions.json#/definitions/linksType"
+      },
+      "type": "array"
+    },
+    "kind": {
+      "type": "string",
+      "enum": [
+        "exemptions"
+      ]
+    },
+    "etag": {
+      "type": "string",
+      "description": "The ETag of the resource."
+    },
+    "exemptions": {
+      "description": "Company exemptions information.",
+      "items": {
+        "$ref": "http://127.0.0.1:10000/api.ch.gov.uk-specifications/swagger-2.0/spec/exemptions.json#/definitions/exemptions"
+      }
+    }
+  }
+}

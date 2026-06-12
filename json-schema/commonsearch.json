@@ -1,0 +1,22 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "CommonSearch",
+  "properties": {
+    "total_results": {
+      "type": "integer",
+      "description": "The number of further search results available for the current search."
+    },
+    "start_index": {
+      "type": "integer",
+      "description": "The index into the entire result set that this result page starts."
+    },
+    "items_per_page": {
+      "type": "integer",
+      "description": "The number of search items returned per page."
+    },
+    "etag": {
+      "type": "string",
+      "description": "The ETag of the resource"
+    }
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "A list of companies",
+  "type": "object",
+  "required": [
+    "top_hit",
+    "items",
+    "kind",
+    "hits"
+  ],
+  "allOf": [
+    {
+      "properties": {
+        "etag": {
+          "type": "string"
+        },
+        "items": {
+          "type": "array",
+          "items": {
+            "$ref": "http://127.0.0.1:10000/api.ch.gov.uk-specifications/swagger-2.0/spec/search-companies.json#/definitions/advancedCompany"
+          }
+        },
+        "kind": {
+          "type": "string",
+          "enum": [
+            "search#advanced-search"
+          ]
+        },
+        "top_hit": {
+          "allOf": [
+            {
+              "$ref": "http://127.0.0.1:10000/api.ch.gov.uk-specifications/swagger-2.0/spec/search-companies.json#/definitions/advanced_top_hit"
+            },
+            {
+              "description": "The best matching company in an advanced search results"
+            }
+          ]
+        },
+        "hits": {
+          "type": "string",
+          "description": "The number of matches found using advanced search"
+        }
+      }
+    }
+  ]
+}

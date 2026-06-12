@@ -1,0 +1,24 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "diclosureTransparencyRulesChapterFiveAppliesItem",
+  "properties": {
+    "items": {
+      "description": "List of exemption periods.",
+      "items": {
+        "$ref": "http://127.0.0.1:10000/api.ch.gov.uk-specifications/swagger-2.0/spec/exemptions.json#/definitions/exemptionItem"
+      },
+      "type": "array"
+    },
+    "exemption_type": {
+      "description": "The exemption type.",
+      "enum": [
+        "disclosure-transparency-rules-chapter-five-applies"
+      ],
+      "type": "string"
+    }
+  },
+  "required": [
+    "exemption_type",
+    "items"
+  ]
+}

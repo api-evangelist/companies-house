@@ -1,0 +1,30 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "registerListLLPUsualResidentialAddress",
+  "properties": {
+    "register_type": {
+      "description": "The register type.",
+      "enum": [
+        "llp-usual-residential-address"
+      ],
+      "type": "string"
+    },
+    "items": {
+      "items": {
+        "$ref": "http://127.0.0.1:10000/api.ch.gov.uk-specifications/swagger-2.0/spec/companyRegisters.json#/definitions/registeredItems"
+      },
+      "type": "array"
+    },
+    "links": {
+      "description": "A set of URLs related to the resource.",
+      "items": {
+        "$ref": "http://127.0.0.1:10000/api.ch.gov.uk-specifications/swagger-2.0/spec/companyRegisters.json#/definitions/linksListLLPUsualResidentialAddress"
+      },
+      "type": "object"
+    }
+  },
+  "required": [
+    "register_type",
+    "items"
+  ]
+}

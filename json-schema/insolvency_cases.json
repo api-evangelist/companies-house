@@ -1,0 +1,17 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "insolvency_cases",
+  "properties": {
+    "case_number": {
+      "type": "string",
+      "description": "The number of this insolvency case"
+    },
+    "links": {
+      "type": "array",
+      "description": "The resources related to this insolvency case",
+      "items": {
+        "$ref": "http://127.0.0.1:10000/api.ch.gov.uk-specifications/swagger-2.0/spec/charges.json#/definitions/insolvency_case_links"
+      }
+    }
+  }
+}

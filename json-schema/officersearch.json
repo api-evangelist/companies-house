@@ -1,0 +1,28 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "OfficerSearch",
+  "allOf": [
+    {
+      "$ref": "http://127.0.0.1:10000/api.ch.gov.uk-specifications/swagger-2.0/spec/search.json#/definitions/CommonSearch"
+    }
+  ],
+  "required": [
+    "kind"
+  ],
+  "properties": {
+    "kind": {
+      "type": "string",
+      "description": "The type of response returned.",
+      "enum": [
+        "search#officers"
+      ]
+    },
+    "items": {
+      "type": "array",
+      "description": "The results of the completed search.",
+      "items": {
+        "$ref": "http://127.0.0.1:10000/api.ch.gov.uk-specifications/swagger-2.0/spec/search.json#/definitions/OfficerSearchItems"
+      }
+    }
+  }
+}

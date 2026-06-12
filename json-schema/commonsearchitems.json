@@ -1,0 +1,36 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "CommonSearchItems",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "The title of the search result."
+    },
+    "address_snippet": {
+      "type": "string",
+      "description": "A single line address. This will be the address that matched within the indexed document or the primary address otherwise (as returned by the `address` member)."
+    },
+    "links": {
+      "type": "object",
+      "description": "The URL of the search result.",
+      "items": {
+        "$ref": "http://127.0.0.1:10000/api.ch.gov.uk-specifications/swagger-2.0/spec/search.json#/definitions/LinksModel"
+      }
+    },
+    "description": {
+      "type": "string",
+      "description": "The result description."
+    },
+    "snippet": {
+      "type": "string",
+      "description": "Summary information for the result showing additional details that have matched."
+    },
+    "matches": {
+      "type": "object",
+      "description": "A list of members and arrays of character offset defining substrings that matched the search terms.",
+      "items": {
+        "$ref": "http://127.0.0.1:10000/api.ch.gov.uk-specifications/swagger-2.0/spec/search.json#/definitions/MatchesModel"
+      }
+    }
+  }
+}

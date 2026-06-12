@@ -1,0 +1,27 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "accountInformation",
+  "properties": {
+    "account_period_from:": {
+      "description": "Date account period starts under parent law.",
+      "items": {
+        "$ref": "http://127.0.0.1:10000/api.ch.gov.uk-specifications/swagger-2.0/spec/companyProfile.json#/definitions/accountPeriodFrom"
+      },
+      "type": "object"
+    },
+    "account_period_to": {
+      "description": "Date account period ends under parent law.",
+      "items": {
+        "$ref": "http://127.0.0.1:10000/api.ch.gov.uk-specifications/swagger-2.0/spec/companyProfile.json#/definitions/accountPeriodTo"
+      },
+      "type": "object"
+    },
+    "must_file_within": {
+      "description": "Time allowed from period end for disclosure of accounts under parent law.",
+      "items": {
+        "$ref": "http://127.0.0.1:10000/api.ch.gov.uk-specifications/swagger-2.0/spec/companyProfile.json#/definitions/fileWithin"
+      },
+      "type": "object"
+    }
+  }
+}

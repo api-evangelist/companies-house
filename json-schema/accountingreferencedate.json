@@ -1,0 +1,19 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "accountingReferenceDate",
+  "type": "object",
+  "required": [
+    "day",
+    "month"
+  ],
+  "properties": {
+    "day": {
+      "type": "integer",
+      "description": "The Accounting Reference Date (ARD) day."
+    },
+    "month": {
+      "type": "integer",
+      "description": "The Accounting Reference Date (ARD) month."
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "registerListDirectors",
+  "required": [
+    "register_type",
+    "items"
+  ],
+  "properties": {
+    "register_type": {
+      "description": "The register type.",
+      "enum": [
+        "directors"
+      ],
+      "type": "string"
+    },
+    "items": {
+      "items": {
+        "$ref": "http://127.0.0.1:10000/api.ch.gov.uk-specifications/swagger-2.0/spec/companyRegisters.json#/definitions/registeredItems"
+      },
+      "type": "array"
+    },
+    "links": {
+      "description": "A set of URLs related to the resource.",
+      "type": "object",
+      "items": {
+        "$ref": "http://127.0.0.1:10000/api.ch.gov.uk-specifications/swagger-2.0/spec/companyRegisters.json#/definitions/linksDirectorsRegister"
+      }
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "companyUKEstablishments",
+  "required": [
+    "etag",
+    "kind",
+    "items"
+  ],
+  "properties": {
+    "etag": {
+      "type": "string",
+      "description": "The ETag of the resource."
+    },
+    "kind": {
+      "type": "string",
+      "description": "UK Establishment companies.",
+      "enum": [
+        "ukestablishment-companies"
+      ]
+    },
+    "links": {
+      "type": "object",
+      "description": "UK Establishment Resources related to this company.",
+      "items": {
+        "$ref": "http://127.0.0.1:10000/api.ch.gov.uk-specifications/swagger-2.0/spec/companyUKEstablishments.json#/definitions/self_links"
+      }
+    },
+    "items": {
+      "type": "array",
+      "description": "List of UK Establishment companies.",
+      "items": {
+        "$ref": "http://127.0.0.1:10000/api.ch.gov.uk-specifications/swagger-2.0/spec/companyUKEstablishments.json#/definitions/companyDetails"
+      }
+    }
+  }
+}

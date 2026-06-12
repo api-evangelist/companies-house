@@ -1,0 +1,40 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "companyRegister",
+  "type": "object",
+  "required": [
+    "links",
+    "company_number",
+    "kind",
+    "registers"
+  ],
+  "properties": {
+    "links": {
+      "type": "object",
+      "description": "A set of URLs related to the resource, including self.",
+      "items": {
+        "$ref": "http://127.0.0.1:10000/api.ch.gov.uk-specifications/swagger-2.0/spec/companyRegisters.json#/definitions/linksType"
+      }
+    },
+    "company_number": {
+      "type": "string",
+      "description": "The number of the company."
+    },
+    "kind": {
+      "enum": [
+        "registers"
+      ],
+      "type": "string"
+    },
+    "registers": {
+      "description": "company registers information.",
+      "items": {
+        "$ref": "http://127.0.0.1:10000/api.ch.gov.uk-specifications/swagger-2.0/spec/companyRegisters.json#/definitions/registers"
+      }
+    },
+    "etag": {
+      "description": "The ETag of the resource.",
+      "type": "string"
+    }
+  }
+}

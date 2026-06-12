@@ -1,0 +1,57 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Dissolved company",
+  "required": [
+    "company_name",
+    "company_number",
+    "date_of_cessation",
+    "date_of_creation"
+  ],
+  "properties": {
+    "company_name": {
+      "type": "string",
+      "description": "The company name associated with the dissolved company"
+    },
+    "company_number": {
+      "type": "string",
+      "description": "The company number of the dissolved company"
+    },
+    "company_status": {
+      "type": "string",
+      "description": "The status of the company"
+    },
+    "ordered_alpha_key_with_id": {
+      "type": "string",
+      "description": "The alphakey with it's id associated with the dissolved company"
+    },
+    "kind": {
+      "type": "string",
+      "enum": [
+        "search-results#dissolved-company"
+      ],
+      "description": "The type of search result"
+    },
+    "date_of_cessation": {
+      "type": "string",
+      "format": "date",
+      "description": "The date that the company was dissolved"
+    },
+    "date_of_creation": {
+      "type": "string",
+      "format": "date",
+      "description": "The date that the company was incorporated"
+    },
+    "registered_office_address": {
+      "$ref": "http://127.0.0.1:10000/api.ch.gov.uk-specifications/swagger-2.0/spec/search-companies.json#/definitions/dissolved_company_registered_office_address"
+    },
+    "previous_company_names": {
+      "type": "array",
+      "items": {
+        "$ref": "http://127.0.0.1:10000/api.ch.gov.uk-specifications/swagger-2.0/spec/search-companies.json#/definitions/previous_company_name"
+      }
+    },
+    "matched_previous_company_name": {
+      "$ref": "http://127.0.0.1:10000/api.ch.gov.uk-specifications/swagger-2.0/spec/search-companies.json#/definitions/previous_company_name"
+    }
+  }
+}

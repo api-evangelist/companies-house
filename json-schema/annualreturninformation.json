@@ -1,0 +1,26 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "annualReturnInformation",
+  "type": "object",
+  "properties": {
+    "last_made_up_to": {
+      "description": "The date the last annual return was made up to.",
+      "type": "string",
+      "format": "date"
+    },
+    "next_due": {
+      "description": "The date the next annual return is due. This member will only be returned if a confirmation statement has not been filed and the date is before 28th July 2016, otherwise refer to `confirmation_statement.next_due`",
+      "type": "string",
+      "format": "date"
+    },
+    "next_made_up_to": {
+      "description": "The date the next annual return should be made up to. This member will only be returned if a confirmation statement has not been filed and the date is before 30th July 2016, otherwise refer to `confirmation_statement.next_made_up_to`",
+      "type": "string",
+      "format": "date"
+    },
+    "overdue": {
+      "description": "Flag indicating if the annual return is overdue.",
+      "type": "boolean"
+    }
+  }
+}

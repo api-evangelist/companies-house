@@ -1,0 +1,68 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "appointmentList",
+  "properties": {
+    "date_of_birth": {
+      "description": "The officer's date of birth details.",
+      "items": {
+        "$ref": "http://127.0.0.1:10000/api.ch.gov.uk-specifications/swagger-2.0/spec/officerAppointmentList.json#/definitions/dateOfBirth"
+      },
+      "type": "object"
+    },
+    "etag": {
+      "description": "The ETag of the resource.",
+      "type": "string"
+    },
+    "is_corporate_officer": {
+      "description": "Indicator representing if the officer is a corporate body.",
+      "type": "boolean"
+    },
+    "items": {
+      "description": "The list of officer appointments.",
+      "type": "array",
+      "items": {
+        "$ref": "http://127.0.0.1:10000/api.ch.gov.uk-specifications/swagger-2.0/spec/officerAppointmentList.json#/definitions/officerAppointmentSummary"
+      }
+    },
+    "items_per_page": {
+      "description": "The number of officer appointments to return per page.",
+      "type": "integer"
+    },
+    "kind": {
+      "enum": [
+        "personal-appointment"
+      ],
+      "type": "string"
+    },
+    "links": {
+      "description": "Links to other resources associated with this officer appointment resource.",
+      "items": {
+        "$ref": "http://127.0.0.1:10000/api.ch.gov.uk-specifications/swagger-2.0/spec/officerAppointmentList.json#/definitions/officerLinkTypes"
+      },
+      "type": "object"
+    },
+    "name": {
+      "description": "The corporate or natural officer name.",
+      "type": "string"
+    },
+    "start_index": {
+      "description": "The first row of data to retrieve, starting at 0. Use this parameter as a pagination mechanism along with the `items_per_page` parameter.",
+      "type": "integer"
+    },
+    "total_results": {
+      "description": "The total number of officer appointments in this result set.",
+      "type": "integer"
+    }
+  },
+  "required": [
+    "etag",
+    "is_corporate_officer",
+    "items",
+    "items_per_page",
+    "kind",
+    "links",
+    "name",
+    "start_index",
+    "total_results"
+  ]
+}

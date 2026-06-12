@@ -1,0 +1,18 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "PersonswithsignificantcontrolDateOfBirth",
+  "required": [
+    "month",
+    "year"
+  ],
+  "properties": {
+    "month": {
+      "description": "The month the person with significant control was born in.",
+      "type": "integer"
+    },
+    "year": {
+      "description": "The year the person with significant control was born in.",
+      "type": "integer"
+    }
+  }
+}

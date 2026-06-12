@@ -1,0 +1,14 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "accountPeriodFrom",
+  "properties": {
+    "day": {
+      "description": "Day on which accounting period starts under parent law.",
+      "type": "integer"
+    },
+    "month": {
+      "description": "Month in which accounting period starts under parent law.",
+      "type": "integer"
+    }
+  }
+}

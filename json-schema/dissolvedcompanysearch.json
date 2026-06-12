@@ -1,0 +1,42 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "List of dissolved companies",
+  "type": "object",
+  "allOf": [
+    {
+      "properties": {
+        "etag": {
+          "type": "string"
+        },
+        "items": {
+          "type": "array",
+          "items": {
+            "$ref": "http://127.0.0.1:10000/api.ch.gov.uk-specifications/swagger-2.0/spec/search-companies.json#/definitions/dissolvedCompany"
+          }
+        },
+        "kind": {
+          "type": "string",
+          "enum": [
+            "search#alphabetical-dissolved",
+            "search#dissolved",
+            "search#previous-name-dissolved"
+          ]
+        },
+        "top_hit": {
+          "allOf": [
+            {
+              "$ref": "http://127.0.0.1:10000/api.ch.gov.uk-specifications/swagger-2.0/spec/search-companies.json#/definitions/dissolved_top_hit"
+            },
+            {
+              "description": "The best matching company in dissolved search results"
+            }
+          ]
+        },
+        "hits": {
+          "type": "string",
+          "description": "The number of hits returned on a best-match or previous-company-names search"
+        }
+      }
+    }
+  ]
+}

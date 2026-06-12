@@ -1,0 +1,22 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "securedDetailsDesc",
+  "required": [
+    "type",
+    "description"
+  ],
+  "properties": {
+    "type": {
+      "enum": [
+        "amount-secured",
+        "obligations-secured"
+      ],
+      "type": "string",
+      "description": "The type of secured details.\n For enumeration descriptions see `secured-details-description` section in the [enumeration mappings](https://github.com/companieshouse/api-enumerations/blob/master/mortgage_descriptions.yml)"
+    },
+    "description": {
+      "type": "string",
+      "description": "Details of the amount or obligation secured by the charge"
+    }
+  }
+}

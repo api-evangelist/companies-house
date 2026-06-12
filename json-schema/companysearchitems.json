@@ -1,0 +1,123 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "CompanySearchItems",
+  "allOf": [
+    {
+      "$ref": "http://127.0.0.1:10000/api.ch.gov.uk-specifications/swagger-2.0/spec/search.json#/definitions/CommonSearchItems"
+    }
+  ],
+  "required": [
+    "kind",
+    "title",
+    "address_snippet",
+    "links",
+    "company_number",
+    "date_of_creation",
+    "company_type",
+    "company_status",
+    "address"
+  ],
+  "properties": {
+    "kind": {
+      "type": "string",
+      "description": "The type of search result.",
+      "enum": [
+        "searchresults#company"
+      ]
+    },
+    "description_identifier": {
+      "items": {
+        "type": "string",
+        "enum": [
+          "incorporated-on",
+          "registered-on",
+          "formed-on",
+          "dissolved-on",
+          "converted-closed-on",
+          "closed-on",
+          "closed",
+          "first-uk-establishment-opened-on",
+          "opened-on",
+          "voluntary-arrangement",
+          "receivership",
+          "insolvency-proceedings",
+          "liquidation",
+          "administration",
+          "registered",
+          "removed"
+        ]
+      },
+      "type": "array",
+      "description": "An array of enumeration types that make up the search description. See search_descriptions_raw.yaml in api-enumerations"
+    },
+    "company_number": {
+      "type": "string",
+      "description": "The company registration / incorporation number of the company."
+    },
+    "date_of_creation": {
+      "type": "string",
+      "format": "date",
+      "description": "The date the company was created."
+    },
+    "date_of_cessation": {
+      "type": "string",
+      "format": "date",
+      "description": "The date the company ended."
+    },
+    "company_type": {
+      "type": "string",
+      "enum": [
+        "private-unlimited",
+        "ltd",
+        "plc",
+        "old-public-company",
+        "private-limited-guarant-nsc-limited-exemption",
+        "limited-partnership",
+        "private-limited-guarant-nsc",
+        "converted-or-closed",
+        "private-unlimited-nsc",
+        "private-limited-shares-section-30-exemption",
+        "assurance-company",
+        "oversea-company",
+        "eeig",
+        "icvc-securities",
+        "icvc-warrant",
+        "icvc-umbrella",
+        "industrial-and-provident-society",
+        "northern-ireland",
+        "northern-ireland-other",
+        "royal-charter",
+        "investment-company-with-variable-capital",
+        "unregistered-company",
+        "llp",
+        "other",
+        "european-public-limited-liability-company-se",
+        "registered-overseas-entity"
+      ],
+      "description": "The company type."
+    },
+    "company_status": {
+      "type": "string",
+      "enum": [
+        "active",
+        "dissolved",
+        "liquidation",
+        "receivership",
+        "administration",
+        "voluntary-arrangement",
+        "converted-closed",
+        "insolvency-proceedings",
+        "registered",
+        "removed"
+      ],
+      "description": "The company status."
+    },
+    "address": {
+      "description": "The address of the company's registered office.",
+      "type": "object",
+      "items": {
+        "$ref": "http://127.0.0.1:10000/api.ch.gov.uk-specifications/swagger-2.0/spec/search.json#/definitions/registeredOfficeAddress"
+      }
+    }
+  }
+}

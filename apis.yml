@@ -52,6 +52,12 @@ apis:
         url: https://developer-specs.company-information.service.gov.uk/companies-house-public-data-api/reference
       - type: OpenAPI
         url: https://github.com/companieshouse/specs.developer.ch.gov.uk
+      - type: OpenAPI
+        url: openapi/companies-house-public-data-openapi.yml
+      - type: JSONSchema
+        url: json-schema/
+      - type: Examples
+        url: examples/companies-house-examples.json
     contact:
       - FN: Companies House Developer Forum
         url: https://forum.companieshouse.gov.uk/
@@ -107,6 +113,14 @@ common:
     url: rate-limits/companies-house-rate-limits.yml
   - type: FinOps
     url: finops/companies-house-finops.yml
+  - type: Vocabulary
+    url: vocabulary/companies-house-vocabulary.yml
+  - type: JSONLDContext
+    url: json-ld/companies-house-context.jsonld
+  - type: BlogRSS
+    url: https://companieshouse.blog.gov.uk/feed/
+  - type: BlogIndex
+    url: blogs/blogs.json
 
 maintainers:
   - FN: Kin Lane

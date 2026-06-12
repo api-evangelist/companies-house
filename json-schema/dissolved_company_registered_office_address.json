@@ -1,0 +1,23 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Registered Office Address",
+  "description": "This will only appear if there are ROA details in the company record",
+  "properties": {
+    "address_line_1": {
+      "type": "string",
+      "description": "The first line of the address e.g Crown Way"
+    },
+    "address_line_2": {
+      "type": "string",
+      "description": "The second line of the address"
+    },
+    "locality": {
+      "type": "string",
+      "description": "The town associated to the ROA e.g Cardiff"
+    },
+    "postal_code": {
+      "type": "string",
+      "description": "The postal code e.g CF14 3UZ"
+    }
+  }
+}

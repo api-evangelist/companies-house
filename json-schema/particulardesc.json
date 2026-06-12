@@ -1,0 +1,44 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "particularDesc",
+  "required": [
+    "type",
+    "description"
+  ],
+  "properties": {
+    "type": {
+      "enum": [
+        "short-particulars",
+        "charged-property-description",
+        "charged-property-or-undertaking-description",
+        "brief-description"
+      ],
+      "type": "string",
+      "description": "The type of charge particulars.\n For enumeration descriptions see `particular-description` section in the [enumeration mappings](https://github.com/companieshouse/api-enumerations/blob/master/mortgage_descriptions.yml)"
+    },
+    "description": {
+      "type": "string",
+      "description": "Details of charge particulars"
+    },
+    "contains_floating_charge": {
+      "type": "boolean",
+      "description": "The charge contains a floating charge"
+    },
+    "contains_fixed_charge": {
+      "type": "boolean",
+      "description": "The charge contains a fixed charge"
+    },
+    "floating_charge_covers_all": {
+      "type": "boolean",
+      "description": "The floating charge covers all the property or undertaking or the company"
+    },
+    "contains_negative_pledge": {
+      "type": "boolean",
+      "description": "The charge contains a negative pledge"
+    },
+    "chargor_acting_as_bare_trustee": {
+      "type": "boolean",
+      "description": "The chargor is acting as a bare trustee for the property"
+    }
+  }
+}

@@ -1,0 +1,142 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "officerAppointmentSummary",
+  "properties": {
+    "address": {
+      "description": "The correspondence address of the officer.",
+      "items": {
+        "$ref": "http://127.0.0.1:10000/api.ch.gov.uk-specifications/swagger-2.0/spec/officerAppointmentList.json#/definitions/address"
+      },
+      "type": "object"
+    },
+    "appointed_before": {
+      "description": "The date the officer was appointed before. Only present when the `is_pre_1992_appointment` attribute is `true`.",
+      "type": "string",
+      "format": "date"
+    },
+    "appointed_on": {
+      "description": "The date on which the officer was appointed. For the officer roles of `corporate-managing-officer` and `managing-officer` this is the date on which Companies House was notified about the officer.",
+      "type": "string",
+      "format": "date"
+    },
+    "appointed_to": {
+      "description": "The company information of the appointment.",
+      "items": {
+        "$ref": "http://127.0.0.1:10000/api.ch.gov.uk-specifications/swagger-2.0/spec/officerAppointmentList.json#/definitions/appointedTo"
+      },
+      "type": "object"
+    },
+    "contact_details": {
+      "description": "The contact at the `corporate-managing-officer` of a `registered-overseas-entity`.",
+      "items": {
+        "$ref": "http://127.0.0.1:10000/api.ch.gov.uk-specifications/swagger-2.0/spec/officerAppointmentList.json#/definitions/contactDetails"
+      },
+      "type": "object"
+    },
+    "name": {
+      "description": "The full name of the officer.",
+      "type": "string"
+    },
+    "country_of_residence": {
+      "description": "The officer's country of residence.",
+      "type": "string"
+    },
+    "former_names": {
+      "description": "Former names for the officer, if there are any.",
+      "items": {
+        "$ref": "http://127.0.0.1:10000/api.ch.gov.uk-specifications/swagger-2.0/spec/officerAppointmentList.json#/definitions/formerNames"
+      },
+      "type": "array"
+    },
+    "identification": {
+      "description": "Only one from `eea`, `non-eea`, `uk-limited-company`, `other-corporate-body-or-firm` or `registered-overseas-entity-corporate-managing-officer` can be supplied, not multiples of them.",
+      "items": {
+        "$ref": "http://127.0.0.1:10000/api.ch.gov.uk-specifications/swagger-2.0/spec/officerAppointmentList.json#/definitions/corporateIdent"
+      },
+      "type": "object"
+    },
+    "identity_verification_details": {
+      "description": "Information relating to the identity verification of the officer",
+      "items": {
+        "$ref": "http://127.0.0.1:10000/api.ch.gov.uk-specifications/swagger-2.0/models/officerChanges.json#/definitions/identityVerificationDetails"
+      },
+      "type": "object"
+    },
+    "is_pre_1992_appointment": {
+      "description": "Indicator representing if the officer was appointed before their appointment date.",
+      "type": "boolean"
+    },
+    "links": {
+      "description": "Links to other resources associated with this officer appointment item.",
+      "type": "object",
+      "items": {
+        "$ref": "http://127.0.0.1:10000/api.ch.gov.uk-specifications/swagger-2.0/spec/officerAppointmentList.json#/definitions/appointmentLinkTypes"
+      }
+    },
+    "name_elements": {
+      "description": "A document encapsulating the separate elements of a natural officer's name.",
+      "type": "object",
+      "items": {
+        "$ref": "http://127.0.0.1:10000/api.ch.gov.uk-specifications/swagger-2.0/spec/officerAppointmentList.json#/definitions/nameElements"
+      }
+    },
+    "nationality": {
+      "description": "The officer's nationality.",
+      "type": "string"
+    },
+    "occupation": {
+      "description": "The officer's occupation.",
+      "type": "string"
+    },
+    "officer_role": {
+      "enum": [
+        "cic-manager",
+        "corporate-director",
+        "corporate-llp-designated-member",
+        "corporate-llp-member",
+        "corporate-managing-officer",
+        "corporate-member-of-a-management-organ",
+        "corporate-member-of-a-supervisory-organ",
+        "corporate-member-of-an-administrative-organ",
+        "corporate-nominee-director",
+        "corporate-nominee-secretary",
+        "corporate-secretary",
+        "director",
+        "judicial-factor",
+        "llp-designated-member",
+        "llp-member",
+        "managing-officer",
+        "member-of-a-management-organ",
+        "member-of-a-supervisory-organ",
+        "member-of-an-administrative-organ",
+        "nominee-director",
+        "nominee-secretary",
+        "receiver-and-manager",
+        "secretary"
+      ],
+      "type": "string"
+    },
+    "principal_office_address": {
+      "description": "The principal/registered office address of a `corporate-managing-officer` of a `registered-overseas-entity`.",
+      "items": {
+        "$ref": "http://127.0.0.1:10000/api.ch.gov.uk-specifications/swagger-2.0/spec/officerAppointmentList.json#/definitions/address"
+      },
+      "type": "object"
+    },
+    "resigned_on": {
+      "description": "The date the officer was resigned. For the officer roles of `corporate-managing-officer` and `managing-officer` this is the date on which Companies House was notified about the officers cessation.",
+      "type": "string",
+      "format": "date"
+    },
+    "responsibilities": {
+      "description": "The responsibilities of the managing officer of a `registered-overseas-entity`.",
+      "type": "string"
+    }
+  },
+  "required": [
+    "appointed_to",
+    "links",
+    "name",
+    "officer_role"
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "registers",
+  "description": "Registered company information",
+  "type": "object",
+  "required": [
+    "directors",
+    "secretaries",
+    "persons_with_significant_control",
+    "usual_residential_address",
+    "members"
+  ],
+  "properties": {
+    "directors": {
+      "description": "List of registered company directors.",
+      "items": {
+        "$ref": "http://127.0.0.1:10000/api.ch.gov.uk-specifications/swagger-2.0/spec/companyRegisters.json#/definitions/registerListDirectors"
+      }
+    },
+    "secretaries": {
+      "description": "List of registered company secretaries.",
+      "items": {
+        "$ref": "http://127.0.0.1:10000/api.ch.gov.uk-specifications/swagger-2.0/spec/companyRegisters.json#/definitions/registerListSecretaries"
+      }
+    },
+    "persons_with_significant_control": {
+      "description": "List of registered company persons with significant control.",
+      "items": {
+        "$ref": "http://127.0.0.1:10000/api.ch.gov.uk-specifications/swagger-2.0/spec/companyRegisters.json#/definitions/registerListPersonsWithSignificantControl"
+      }
+    },
+    "usual_residential_address": {
+      "description": "List of register addresses.",
+      "items": {
+        "$ref": "http://127.0.0.1:10000/api.ch.gov.uk-specifications/swagger-2.0/spec/companyRegisters.json#/definitions/registerListUsualResidentialAddress"
+      }
+    },
+    "llp_usual_residential_address": {
+      "description": "List of register addresses.",
+      "items": {
+        "$ref": "http://127.0.0.1:10000/api.ch.gov.uk-specifications/swagger-2.0/spec/companyRegisters.json#/definitions/registerListLLPUsualResidentialAddress"
+      }
+    },
+    "members": {
+      "description": "List of registered company members..",
+      "items": {
+        "$ref": "http://127.0.0.1:10000/api.ch.gov.uk-specifications/swagger-2.0/spec/companyRegisters.json#/definitions/registerListMembers"
+      }
+    },
+    "llp_members": {
+      "description": "List of registered llp members.",
+      "items": {
+        "$ref": "http://127.0.0.1:10000/api.ch.gov.uk-specifications/swagger-2.0/spec/companyRegisters.json#/definitions/registerListLLPMembers"
+      }
+    }
+  }
+}

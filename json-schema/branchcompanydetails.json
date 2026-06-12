@@ -1,0 +1,18 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "branchCompanyDetails",
+  "properties": {
+    "business_activity": {
+      "description": "Type of business undertaken by the UK establishment.",
+      "type": "string"
+    },
+    "parent_company_number": {
+      "description": "Parent company number.",
+      "type": "string"
+    },
+    "parent_company_name": {
+      "description": "Parent company name.",
+      "type": "string"
+    }
+  }
+}

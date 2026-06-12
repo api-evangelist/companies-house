@@ -1,0 +1,22 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "classificationDesc",
+  "required": [
+    "type",
+    "description"
+  ],
+  "properties": {
+    "type": {
+      "enum": [
+        "charge-description",
+        "nature-of-charge"
+      ],
+      "type": "string",
+      "description": "The type of charge classication.\n For enumeration descriptions see `classificationDesc` section in the [enumeration mappings](https://github.com/companieshouse/api-enumerations/blob/master/mortgage_descriptions.yml)"
+    },
+    "description": {
+      "type": "string",
+      "description": "Details of the charge classification"
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "corporateIdent",
+  "properties": {
+    "identification_type": {
+      "description": "The officer's identity type",
+      "enum": [
+        "eea",
+        "non-eea",
+        "uk-limited-company",
+        "other-corporate-body-or-firm",
+        "registered-overseas-entity-corporate-managing-officer"
+      ],
+      "type": "string"
+    },
+    "legal_authority": {
+      "description": "The legal authority supervising the company.",
+      "type": "string"
+    },
+    "legal_form": {
+      "description": "The legal form of the company as defined by its country of registration.",
+      "type": "string"
+    },
+    "place_registered": {
+      "description": "Place registered.",
+      "type": "string"
+    },
+    "registration_number": {
+      "description": "Company registration number.",
+      "type": "string"
+    }
+  }
+}

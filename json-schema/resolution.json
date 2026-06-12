@@ -1,0 +1,44 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "resolution",
+  "required": [
+    "category",
+    "description",
+    "receive_date",
+    "subcategory",
+    "type"
+  ],
+  "properties": {
+    "category": {
+      "description": "The category of the resolution filed.",
+      "enum": [
+        "miscellaneous"
+      ],
+      "type": "string"
+    },
+    "description": {
+      "description": "A description of the associated filing.\n For enumeration descriptions see `description` section in the [enumeration mappings] (https://github.com/companieshouse/api-enumerations/blob/master/filing_history_descriptions.yml) file.",
+      "type": "string"
+    },
+    "document_id": {
+      "description": "The document id of the resolution.",
+      "type": "string"
+    },
+    "receive_date": {
+      "description": "The date the resolution was processed.",
+      "type": "string",
+      "format": "date"
+    },
+    "subcategory": {
+      "description": "The sub-category of the document filed.",
+      "enum": [
+        "resolution"
+      ],
+      "type": "string"
+    },
+    "type": {
+      "description": "The type of the associated filing.",
+      "type": "string"
+    }
+  }
+}

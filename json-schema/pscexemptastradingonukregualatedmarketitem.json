@@ -1,0 +1,24 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "pscExemptAsTradingOnUkRegualatedMarketItem",
+  "required": [
+    "exemption_type",
+    "items"
+  ],
+  "properties": {
+    "items": {
+      "description": "List of dates",
+      "type": "array",
+      "items": {
+        "$ref": "http://127.0.0.1:10000/api.ch.gov.uk-specifications/swagger-2.0/spec/exemptions.json#/definitions/exemptionItem"
+      }
+    },
+    "exemption_type": {
+      "description": "The exemption type.",
+      "enum": [
+        "psc-exempt-as-trading-on-uk-regulated-market"
+      ],
+      "type": "string"
+    }
+  }
+}

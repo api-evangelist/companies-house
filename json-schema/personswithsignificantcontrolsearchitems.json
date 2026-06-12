@@ -1,0 +1,54 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "PersonswithsignificantcontrolSearchItems",
+  "allOf": [
+    {
+      "$ref": "http://127.0.0.1:10000/api.ch.gov.uk-specifications/swagger-2.0/spec/search.json#/definitions/CommonSearchItems"
+    }
+  ],
+  "required": [
+    "notification_count",
+    "description",
+    "kind",
+    "title",
+    "address_snippet",
+    "address"
+  ],
+  "properties": {
+    "kind": {
+      "type": "string",
+      "description": "Describes the type of result returned.",
+      "enum": [
+        "searchresults#persons-with-significant-control"
+      ]
+    },
+    "notification_count": {
+      "type": "integer",
+      "description": "The total number of notifications the person with significant control has."
+    },
+    "date_of_birth": {
+      "description": "The person with significant control date of birth details.",
+      "items": {
+        "$ref": "http://127.0.0.1:10000/api.ch.gov.uk-specifications/swagger-2.0/spec/search.json#/definitions/PersonsWithSignificantControlDateOfBirth"
+      }
+    },
+    "description_identifiers": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "notification-count",
+          "born-on"
+        ]
+      },
+      "description": "An array of enumeration types that make up the search description. See search_descriptions_raw.yaml in api-enumerations."
+    },
+    "address": {
+      "type": "object",
+      "description": "The service address of the person with significant control.",
+      "items": {
+        "$ref": "http://127.0.0.1:10000/api.ch.gov.uk-specifications/swagger-2.0/spec/search.json#/definitions/PersonsWithSignificantControlAddress"
+      }
+    }
+  }
+}

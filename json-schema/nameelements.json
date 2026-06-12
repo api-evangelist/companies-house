@@ -1,0 +1,29 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "nameElements",
+  "properties": {
+    "forename": {
+      "description": "The forename of the officer.",
+      "type": "string"
+    },
+    "title": {
+      "description": "Title of the officer.",
+      "type": "string"
+    },
+    "other_forenames": {
+      "description": "Other forenames of the officer.",
+      "type": "string"
+    },
+    "surname": {
+      "description": "The surname of the officer.",
+      "type": "string"
+    },
+    "honours": {
+      "description": "Honours an officer might have.",
+      "type": "string"
+    }
+  },
+  "required": [
+    "surname"
+  ]
+}

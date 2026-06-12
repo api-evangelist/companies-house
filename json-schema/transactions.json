@@ -1,0 +1,26 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "transactions",
+  "properties": {
+    "filing_type": {
+      "type": "string",
+      "description": "Filing type which created, updated or satisfied the charge"
+    },
+    "delivered_on": {
+      "type": "string",
+      "format": "date",
+      "description": "The date the filing was submitted to Companies House"
+    },
+    "insolvency_case_number": {
+      "type": "string",
+      "description": "The insolvency case related to this filing"
+    },
+    "links": {
+      "type": "array",
+      "description": "The resources related to this filing",
+      "items": {
+        "$ref": "http://127.0.0.1:10000/api.ch.gov.uk-specifications/swagger-2.0/spec/charges.json#/definitions/transaction_links"
+      }
+    }
+  }
+}

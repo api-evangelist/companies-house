@@ -1,0 +1,54 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "OfficerSearchItems",
+  "allOf": [
+    {
+      "$ref": "http://127.0.0.1:10000/api.ch.gov.uk-specifications/swagger-2.0/spec/search.json#/definitions/CommonSearchItems"
+    }
+  ],
+  "required": [
+    "appointment_count",
+    "description",
+    "kind",
+    "title",
+    "address_snippet",
+    "address"
+  ],
+  "properties": {
+    "kind": {
+      "type": "string",
+      "description": "Describes the type of result returned.",
+      "enum": [
+        "searchresults#officer"
+      ]
+    },
+    "date_of_birth": {
+      "description": "The officer date of birth details.",
+      "items": {
+        "$ref": "http://127.0.0.1:10000/api.ch.gov.uk-specifications/swagger-2.0/spec/search.json#/definitions/OfficerDateOfBirth"
+      }
+    },
+    "appointment_count": {
+      "type": "integer",
+      "description": "The total number of appointments the officer has."
+    },
+    "description_identifiers": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "appointment-count",
+          "born-on"
+        ]
+      },
+      "description": "An array of enumeration types that make up the search description. See search_descriptions_raw.yaml in api-enumerations."
+    },
+    "address": {
+      "type": "object",
+      "description": "The service address of the officer.",
+      "items": {
+        "$ref": "http://127.0.0.1:10000/api.ch.gov.uk-specifications/swagger-2.0/spec/search.json#/definitions/OfficerAddress"
+      }
+    }
+  }
+}

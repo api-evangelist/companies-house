@@ -1,0 +1,47 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "accountsInformation",
+  "type": "object",
+  "required": [
+    "overdue",
+    "next_made_up_to",
+    "accounting_reference_date"
+  ],
+  "properties": {
+    "accounting_reference_date": {
+      "description": "The Accounting Reference Date (ARD) of the company.",
+      "type": "object",
+      "items": {
+        "$ref": "http://127.0.0.1:10000/api.ch.gov.uk-specifications/swagger-2.0/spec/companyProfile.json#/definitions/accountingReferenceDate"
+      }
+    },
+    "last_accounts": {
+      "description": "The last company accounts filed.",
+      "type": "object",
+      "items": {
+        "$ref": "http://127.0.0.1:10000/api.ch.gov.uk-specifications/swagger-2.0/spec/companyProfile.json#/definitions/lastAccounts"
+      }
+    },
+    "next_due": {
+      "description": "Deprecated. Please use accounts.next_accounts.due_on",
+      "type": "string",
+      "format": "date"
+    },
+    "next_made_up_to": {
+      "description": "Deprecated. Please use accounts.next_accounts.period_end_on",
+      "type": "string",
+      "format": "date"
+    },
+    "overdue": {
+      "type": "boolean",
+      "description": "Deprecated. Please use accounts.next_accounts.overdue"
+    },
+    "next_accounts": {
+      "description": "The next company accounts filed.",
+      "type": "object",
+      "items": {
+        "$ref": "http://127.0.0.1:10000/api.ch.gov.uk-specifications/swagger-2.0/spec/companyProfile.json#/definitions/nextAccounts"
+      }
+    }
+  }
+}

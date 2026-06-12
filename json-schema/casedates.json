@@ -1,0 +1,36 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "caseDates",
+  "required": [
+    "type",
+    "date"
+  ],
+  "properties": {
+    "type": {
+      "type": "string",
+      "description": "Describes what date is represented by the associated `date` element.\n For enumeration descriptions see `insolvency_case_date_type` section in the [enumeration mappings] (https://github.com/companieshouse/api-enumerations/blob/master/constants.yml).",
+      "enum": [
+        "instrumented-on",
+        "administration-started-on",
+        "administration-discharged-on",
+        "administration-ended-on",
+        "concluded-winding-up-on",
+        "petitioned-on",
+        "ordered-to-wind-up-on",
+        "due-to-be-dissolved-on",
+        "case-end-on",
+        "wound-up-on",
+        "voluntary-arrangement-started-on",
+        "voluntary-arrangement-ended-on",
+        "moratorium-started-on",
+        "moratorium-ended-on",
+        "declaration-solvent-on"
+      ]
+    },
+    "date": {
+      "type": "string",
+      "format": "date",
+      "description": "The case date, described by `date_type`."
+    }
+  }
+}

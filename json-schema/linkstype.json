@@ -1,0 +1,53 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "linksType",
+  "required": [
+    "self"
+  ],
+  "properties": {
+    "self": {
+      "description": "The URL of the resource.",
+      "type": "string"
+    },
+    "persons_with_significant_control": {
+      "description": "The URL of the persons with significant control list resource.",
+      "type": "string"
+    },
+    "persons_with_significant_control_statements": {
+      "description": "The URL of the persons with significant control statements list resource.",
+      "type": "string"
+    },
+    "registers": {
+      "description": "The URL of the registers resource for this company",
+      "type": "string"
+    },
+    "uk-establishments": {
+      "description": "The URL of the uk establishments list resource for this company.",
+      "type": "string"
+    },
+    "overseas": {
+      "description": "The URL of the overseas details resource for this company.",
+      "type": "string"
+    },
+    "officers": {
+      "description": "The URL of the company's officer list resource.",
+      "type": "string"
+    },
+    "insolvency": {
+      "description": "The URL of the company's insolvency list resource.",
+      "type": "string"
+    },
+    "filing_history": {
+      "description": "The URL of the company's filing history list resource.",
+      "type": "string"
+    },
+    "charges": {
+      "description": "The URL of the company's charges list resource.",
+      "type": "string"
+    },
+    "exemptions": {
+      "description": "The URL of the company's exemptions list resource.",
+      "type": "string"
+    }
+  }
+}

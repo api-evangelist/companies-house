@@ -1,0 +1,19 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "last_variation",
+  "properties": {
+    "varied_on": {
+      "description": "The date the variation was made against the disqualification.",
+      "type": "string",
+      "format": "date"
+    },
+    "case_identifier": {
+      "description": "The case identifier of the variation.",
+      "type": "string"
+    },
+    "court_name": {
+      "description": "The name of the court that handled the variation case.",
+      "type": "string"
+    }
+  }
+}
