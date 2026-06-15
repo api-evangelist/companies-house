@@ -20,5 +20,24 @@
       "url": "https://companieshouse.blog.gov.uk/2026/02/25/being-an-intelligence-analyst-at-companies-house/",
       "date": "2026-02-25"
     }
-  ]
+  ],
+  "repo": "companies-house",
+  "feeds": [
+    {
+      "source": "https://www.linkedin.com/company/companies-house",
+      "feed_url": "https://www.linkedin.com/company/companies-house",
+      "title": "",
+      "saved": 0,
+      "method": "none"
+    },
+    {
+      "source": "https://companieshouse.blog.gov.uk/feed/",
+      "feed_url": "https://companieshouse.blog.gov.uk/feed/",
+      "title": "",
+      "saved": 0,
+      "method": "feed"
+    }
+  ],
+  "post_count": 0,
+  "fetched": "2026-06-14T20:42:17Z"
 }
