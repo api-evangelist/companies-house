@@ -11,7 +11,7 @@ description: >
   without polling. Authentication is handled via API key using HTTP Basic Auth, and all
   access is provided free of charge with a generous rate limit.
 type: Index
-image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 url: https://raw.githubusercontent.com/api-evangelist/companies-house/refs/heads/main/apis.yml
 created: '2026-06-12'
 modified: '2026-06-12'
@@ -36,7 +36,7 @@ apis:
       control, filing history, charges, insolvency, and advanced search across all
       registered UK companies. Access is free and requires only an API key obtained
       from the Companies House Developer Hub.
-    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     humanURL: https://developer.company-information.service.gov.uk/overview
     baseURL: https://api.company-information.service.gov.uk
     tags:
@@ -70,7 +70,7 @@ apis:
       officers, persons with significant control, disqualified officers, exemptions,
       and PSC statements. Each account is limited to two concurrent streaming connections
       and requires an API key for authentication.
-    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     humanURL: https://developer-specs.company-information.service.gov.uk/streaming-api/guides/overview
     baseURL: https://stream.companieshouse.gov.uk
     tags:
