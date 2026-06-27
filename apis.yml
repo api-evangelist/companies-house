@@ -103,7 +103,7 @@ common:
     url: https://forum.companieshouse.gov.uk/c/api-changes/7
   - type: X
     url: https://x.com/CompaniesHouse
-  - type: Forum
+  - type: Forums
     url: https://forum.companieshouse.gov.uk
   - type: Authentication
     url: https://developer-specs.company-information.service.gov.uk/guides/authorisation
