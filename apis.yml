@@ -87,6 +87,12 @@ apis:
         url: https://forum.companieshouse.gov.uk/
 
 common:
+  - type: VulnerabilityDisclosure
+    url: security/companies-house-vulnerability-disclosure.yml
+  - type: DomainSecurity
+    url: security/companies-house-domain-security.yml
+  - type: Authentication
+    url: authentication/companies-house-authentication.yml
   - type: Website
     url: https://www.gov.uk/government/organisations/companies-house
   - type: Documentation

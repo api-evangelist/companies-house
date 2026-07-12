@@ -1,0 +1,15 @@
+generated: '2026-07-11'
+method: derived
+source: openapi/companies-house-public-data-openapi.yml
+summary:
+  types:
+  - apiKey
+  api_key_in:
+  - header
+schemes:
+- name: api_key
+  type: apiKey
+  in: header
+  parameter: api_key
+  sources:
+  - openapi/companies-house-public-data-openapi.yml
