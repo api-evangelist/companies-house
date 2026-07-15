@@ -87,6 +87,8 @@ apis:
         url: https://forum.companieshouse.gov.uk/
 
 common:
+  - type: AgenticAccess
+    url: agentic-access/companies-house-agentic-access.yml
   - type: VulnerabilityDisclosure
     url: security/companies-house-vulnerability-disclosure.yml
   - type: DomainSecurity
