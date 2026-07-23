@@ -1,0 +1,101 @@
+openapi: 3.0.0
+info:
+  version: 1.0.0
+  title: Companies House Public Data charges filingHistory API
+  description: An API suite providing read only access to search and retrieve public company data
+servers:
+- url: https://api.company-information.service.gov.uk
+- url: http://api.company-information.service.gov.uk
+security:
+- api_key: []
+tags:
+- name: filingHistory
+  description: Filing history
+paths:
+  /company/{company_number}/filing-history/{transaction_id}:
+    get:
+      summary: filingHistoryItem resource
+      description: Get the filing history item of a company
+      tags:
+      - filingHistory
+      parameters:
+      - name: company_number
+        in: path
+        description: The company number that the single filing is required for.
+        required: true
+        schema:
+          type: string
+      - name: transaction_id
+        in: path
+        description: The transaction id that the filing history is required for.
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Filing history items resource returned
+          content:
+            application/json:
+              schema:
+                $ref: http://127.0.0.1:10000/api.ch.gov.uk-specifications/swagger-2.0/spec/filingHistory.json#/definitions/filingHistoryItem
+        '401':
+          description: Unauthorised
+          content:
+            application/json:
+              schema:
+                $ref: http://127.0.0.1:10000/api.ch.gov.uk-specifications/swagger-2.0/spec/errorModel.json#/definitions/error
+        '404':
+          description: Filing history not available for this company
+  /company/{company_number}/filing-history:
+    get:
+      summary: filingHistoryList resource
+      description: Get the filing history list of a company
+      x-operationName: list
+      tags:
+      - filingHistory
+      parameters:
+      - name: category
+        in: query
+        description: One or more comma-separated categories to filter by (inclusive).
+        required: false
+        schema:
+          type: string
+      - name: company_number
+        in: path
+        description: The company number that the filing history is required for.
+        required: true
+        schema:
+          type: string
+      - name: items_per_page
+        in: query
+        description: The number of filing history items to return per page.
+        required: false
+        schema:
+          type: integer
+      - name: start_index
+        in: query
+        description: The index into the entire result set that this result page starts.
+        required: false
+        schema:
+          type: integer
+      responses:
+        '200':
+          description: Filing history items resource returned
+          content:
+            application/json:
+              schema:
+                $ref: http://127.0.0.1:10000/api.ch.gov.uk-specifications/swagger-2.0/spec/filingHistory.json#/definitions/filingHistoryList
+        '401':
+          description: Unauthorised
+          content:
+            application/json:
+              schema:
+                $ref: http://127.0.0.1:10000/api.ch.gov.uk-specifications/swagger-2.0/spec/errorModel.json#/definitions/error
+        '404':
+          description: Filing history not available for this company
+components:
+  securitySchemes:
+    api_key:
+      type: apiKey
+      name: api_key
+      in: header

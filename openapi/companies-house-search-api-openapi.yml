@@ -1,0 +1,361 @@
+openapi: 3.0.0
+info:
+  version: 1.0.0
+  title: Companies House Public Data charges search API
+  description: An API suite providing read only access to search and retrieve public company data
+servers:
+- url: https://api.company-information.service.gov.uk
+- url: http://api.company-information.service.gov.uk
+security:
+- api_key: []
+tags:
+- name: search
+  description: Search
+paths:
+  /search:
+    get:
+      summary: Search All
+      description: Search companies, officers and disqualified officers
+      x-operationName: search all
+      tags:
+      - search
+      parameters:
+      - name: q
+        in: query
+        description: The term being searched for.
+        required: true
+        schema:
+          type: string
+      - name: items_per_page
+        in: query
+        description: The number of search results to return per page.
+        required: false
+        schema:
+          type: integer
+      - name: start_index
+        in: query
+        description: The index of the first result item to return.
+        required: false
+        schema:
+          type: integer
+      responses:
+        '200':
+          description: Search all
+          content:
+            application/json:
+              schema:
+                $ref: http://127.0.0.1:10000/api.ch.gov.uk-specifications/swagger-2.0/spec/search.json#/definitions/Search
+        '401':
+          description: Not authorised
+  /search/companies:
+    get:
+      summary: Search companies
+      description: Search company information
+      x-operationName: search companies
+      tags:
+      - search
+      parameters:
+      - name: q
+        in: query
+        description: The term being searched for.
+        required: true
+        schema:
+          type: string
+      - name: items_per_page
+        in: query
+        description: The number of search results to return per page.
+        required: false
+        schema:
+          type: integer
+      - name: start_index
+        in: query
+        description: The index of the first result item to return.
+        required: false
+        schema:
+          type: integer
+      - name: restrictions
+        in: query
+        description: Enumerable options to restrict search results. Space separate multiple restriction options to combine functionality. For a "company name availability" search use "active-companies legally-equivalent-company-name" together.
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Search company
+          content:
+            application/json:
+              schema:
+                $ref: http://127.0.0.1:10000/api.ch.gov.uk-specifications/swagger-2.0/spec/search.json#/definitions/CompanySearch
+        '401':
+          description: Not authorised
+  /search/officers:
+    get:
+      summary: Search company officers
+      description: Search for officer information
+      x-operationName: search officers
+      tags:
+      - search
+      parameters:
+      - name: q
+        in: query
+        description: The term being searched for.
+        required: true
+        schema:
+          type: string
+      - name: items_per_page
+        in: query
+        description: The number of search results to return per page.
+        required: false
+        schema:
+          type: integer
+      - name: start_index
+        in: query
+        description: The index of the first result item to return.
+        required: false
+        schema:
+          type: integer
+      responses:
+        '200':
+          description: Search officer
+          content:
+            application/json:
+              schema:
+                $ref: http://127.0.0.1:10000/api.ch.gov.uk-specifications/swagger-2.0/spec/search.json#/definitions/OfficerSearch
+        '401':
+          description: Not authorised
+  /search/disqualified-officers:
+    get:
+      summary: Search disqualified officers
+      description: Search for disqualified officer information
+      x-operationName: search disqualified officers
+      tags:
+      - search
+      parameters:
+      - name: q
+        in: query
+        description: The term being searched for.
+        required: true
+        schema:
+          type: string
+      - name: items_per_page
+        in: query
+        description: The number of search results to return per page.
+        required: false
+        schema:
+          type: integer
+      - name: start_index
+        in: query
+        description: The index of the first result item to return.
+        required: false
+        schema:
+          type: integer
+      responses:
+        '200':
+          description: Search all
+          content:
+            application/json:
+              schema:
+                $ref: http://127.0.0.1:10000/api.ch.gov.uk-specifications/swagger-2.0/spec/search.json#/definitions/DisqualifiedOfficerSearch
+        '401':
+          description: Not authorised
+  /dissolved-search/companies:
+    get:
+      summary: Search for a dissolved company
+      description: Search for a dissolved company
+      x-operationName: search dissolved companies
+      tags:
+      - search
+      parameters:
+      - name: q
+        in: query
+        description: The company name being searched for
+        required: true
+        schema:
+          type: string
+      - name: search_type
+        in: query
+        description: Determines type of search. Options are alphabetical, best-match, previous-name-dissolved
+        required: true
+        schema:
+          type: string
+      - name: search_above
+        in: query
+        description: The ordered_alpha_key_with_id used for alphabetical paging
+        required: false
+        schema:
+          type: string
+      - name: search_below
+        in: query
+        description: The ordered_alpha_key_with_id used for alphabetical paging
+        required: false
+        schema:
+          type: string
+      - name: size
+        in: query
+        description: The maximum number of results matching the search term(s) to return with a range of 1 to 100
+        required: false
+        schema:
+          type: string
+      - name: start_index
+        in: query
+        description: Used in best-match and previous-name-dissolved search-type
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: A list of dissolved companies
+          content:
+            application/json:
+              schema:
+                $ref: http://127.0.0.1:10000/api.ch.gov.uk-specifications/swagger-2.0/spec/search-companies.json#/definitions/dissolvedCompanySearch
+        '404':
+          description: No companies found
+        '422':
+          description: Invalid size parameter, size must be greater than zero and not greater than 100
+  /alphabetical-search/companies:
+    get:
+      summary: Search for a company
+      description: Search for a company
+      x-operationName: search companies alphabetically
+      tags:
+      - search
+      parameters:
+      - name: q
+        in: query
+        description: The company name being searched for
+        required: true
+        schema:
+          type: string
+      - name: search_above
+        in: query
+        description: The ordered_alpha_key_with_id used for paging
+        required: false
+        schema:
+          type: string
+      - name: search_below
+        in: query
+        description: The ordered_alpha_key_with_id used for paging
+        required: false
+        schema:
+          type: string
+      - name: size
+        in: query
+        description: The maximum number of results matching the search term(s) to return with a range of 1 to 100
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: A list of companies
+          content:
+            application/json:
+              schema:
+                $ref: http://127.0.0.1:10000/api.ch.gov.uk-specifications/swagger-2.0/spec/search-companies.json#/definitions/alphabeticalCompanySearch
+        '404':
+          description: No companies found
+        '422':
+          description: Invalid size parameter, size must be greater than zero and not greater than 100
+  /advanced-search/companies:
+    get:
+      summary: Advanced search for a company
+      description: Advanced search for a company
+      x-operationName: advanced company search
+      tags:
+      - search
+      parameters:
+      - name: company_name_includes
+        in: query
+        description: The company name includes advanced search filter
+        required: false
+        schema:
+          type: string
+      - name: company_name_excludes
+        in: query
+        description: The company name excludes advanced search filter
+        required: false
+        schema:
+          type: string
+      - name: company_status
+        in: query
+        description: The company status advanced search filter. To search using multiple values, use a comma delimited list or multiple of the same key i.e. company_status=xxx&company_status=yyy
+        required: false
+        schema:
+          type: list
+      - name: company_subtype
+        in: query
+        description: The company subtype advanced search filter. To search using multiple values, use a comma delimited list or multiple of the same key i.e. company_subtype=xxx&company_subtype=yyy
+        required: false
+        schema:
+          type: string
+      - name: company_type
+        in: query
+        description: The company type advanced search filter. To search using multiple values, use a comma delimited list or multiple of the same key i.e. company_type=xxx&company_type=yyy
+        required: false
+        schema:
+          type: list
+      - name: dissolved_from
+        in: query
+        description: The dissolved from date advanced search filter
+        required: false
+        schema:
+          type: date
+      - name: dissolved_to
+        in: query
+        description: The dissolved to date advanced search filter
+        required: false
+        schema:
+          type: date
+      - name: incorporated_from
+        in: query
+        description: The incorporated from date advanced search filter
+        required: false
+        schema:
+          type: date
+      - name: incorporated_to
+        in: query
+        description: The incorporated to date advanced search filter
+        required: false
+        schema:
+          type: date
+      - name: location
+        in: query
+        description: The location advanced search filter
+        required: false
+        schema:
+          type: string
+      - name: sic_codes
+        in: query
+        description: The SIC codes advanced search filter. To search using multiple values, use a comma delimited list or multiple of the same key i.e. sic_codes=xxx&sic_codes=yyy
+        required: false
+        schema:
+          type: list
+      - name: size
+        in: query
+        description: The maximum number of results matching the search term(s) to return with a range of 1 to 5000
+        required: false
+        schema:
+          type: string
+      - name: start_index
+        in: query
+        description: The point at which results will start from i.e show search results from result 20 (used for paging)
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: A list of companies
+          content:
+            application/json:
+              schema:
+                $ref: http://127.0.0.1:10000/api.ch.gov.uk-specifications/swagger-2.0/spec/search-companies.json#/definitions/advancedCompanySearch
+        '400':
+          description: Bad request
+        '404':
+          description: No companies found
+components:
+  securitySchemes:
+    api_key:
+      type: apiKey
+      name: api_key
+      in: header

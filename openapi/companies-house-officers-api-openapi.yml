@@ -1,0 +1,129 @@
+openapi: 3.0.0
+info:
+  version: 1.0.0
+  title: Companies House Public Data charges officers API
+  description: An API suite providing read only access to search and retrieve public company data
+servers:
+- url: https://api.company-information.service.gov.uk
+- url: http://api.company-information.service.gov.uk
+security:
+- api_key: []
+tags:
+- name: officers
+  description: Officers
+paths:
+  /company/{company_number}/officers:
+    get:
+      summary: Company Officers
+      description: List of all company officers
+      x-operationName: list
+      tags:
+      - officers
+      parameters:
+      - name: company_number
+        in: path
+        description: The company number of the officer list being requested.
+        required: true
+        schema:
+          type: string
+      - name: items_per_page
+        in: query
+        description: The number of officers to return per page.
+        schema:
+          type: integer
+      - name: register_type
+        in: query
+        description: The register_type determines which officer type is returned for the registers view.The register_type field will only work if registers_view is set to true
+        schema:
+          type: string
+          enum:
+          - directors
+          - secretaries
+          - llp_members
+      - name: register_view
+        in: query
+        description: Display register specific information. If given register is held at Companies House, registers_view set to true and correct register_type specified, only active officers will be returned. Defaults to false
+        schema:
+          type: string
+          enum:
+          - 'true'
+          - 'false'
+      - name: start_index
+        in: query
+        description: The offset into the entire result set that this page starts.
+        schema:
+          type: integer
+      - name: order_by
+        in: query
+        description: The field by which to order the result set.
+        schema:
+          type: string
+          enum:
+          - appointed_on
+          - resigned_on
+          - surname
+      responses:
+        '200':
+          description: List the company officers
+          headers:
+            ETag:
+              description: The ETag of the resource.
+              schema:
+                type: string
+          content:
+            application/json:
+              schema:
+                $ref: http://127.0.0.1:10000/api.ch.gov.uk-specifications/swagger-2.0/spec/companyOfficerList.json#/definitions/officerList
+        '400':
+          description: Bad request
+          content:
+            application/json:
+              schema:
+                $ref: http://127.0.0.1:10000/api.ch.gov.uk-specifications/swagger-2.0/spec/errorModel.json#/definitions/error
+        '401':
+          description: Unauthorised
+  /company/{company_number}/appointments/{appointment_id}:
+    get:
+      summary: Get a company officer appointment
+      description: Get details of an individual company officer appointment
+      tags:
+      - officers
+      parameters:
+      - name: company_number
+        in: path
+        description: The company number of the officer list being requested.
+        required: true
+        schema:
+          type: string
+      - name: appointment_id
+        in: path
+        description: The appointment id of the company officer appointment being requested.
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Get a company officer appointment
+          headers:
+            ETag:
+              description: The ETag of the resource.
+              schema:
+                type: string
+          content:
+            application/json:
+              schema:
+                $ref: http://127.0.0.1:10000/api.ch.gov.uk-specifications/swagger-2.0/spec/companyOfficerList.json#/definitions/officerSummary
+        '400':
+          description: Bad request
+          content:
+            application/json:
+              schema:
+                $ref: http://127.0.0.1:10000/api.ch.gov.uk-specifications/swagger-2.0/spec/errorModel.json#/definitions/error
+        '401':
+          description: Unauthorised
+components:
+  securitySchemes:
+    api_key:
+      type: apiKey
+      name: api_key
+      in: header

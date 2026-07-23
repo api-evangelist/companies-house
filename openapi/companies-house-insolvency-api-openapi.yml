@@ -1,0 +1,43 @@
+openapi: 3.0.0
+info:
+  version: 1.0.0
+  title: Companies House Public Data charges insolvency API
+  description: An API suite providing read only access to search and retrieve public company data
+servers:
+- url: https://api.company-information.service.gov.uk
+- url: http://api.company-information.service.gov.uk
+security:
+- api_key: []
+tags:
+- name: insolvency
+  description: Insolvency
+paths:
+  /company/{company_number}/insolvency:
+    get:
+      description: Company insolvency information
+      tags:
+      - insolvency
+      parameters:
+      - name: company_number
+        in: path
+        description: The company number of the basic information to return.
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Company insolvency resource returned
+          content:
+            application/json:
+              schema:
+                $ref: http://127.0.0.1:10000/api.ch.gov.uk-specifications/swagger-2.0/spec/insolvency.json#/definitions/companyInsolvency
+        '401':
+          description: Unauthorized
+        '404':
+          description: Resource not found
+components:
+  securitySchemes:
+    api_key:
+      type: apiKey
+      name: api_key
+      in: header

@@ -1,0 +1,83 @@
+openapi: 3.0.0
+info:
+  version: 1.0.0
+  title: Companies House Public Data charges API
+  description: An API suite providing read only access to search and retrieve public company data
+servers:
+- url: https://api.company-information.service.gov.uk
+- url: http://api.company-information.service.gov.uk
+security:
+- api_key: []
+tags:
+- name: charges
+  description: Charges
+paths:
+  /company/{company_number}/charges:
+    get:
+      summary: Charges
+      description: List of charges for a company.
+      x-operationName: list
+      tags:
+      - charges
+      parameters:
+      - name: company_number
+        in: path
+        description: The company number that the charge list is required for.
+        paramType: path
+        required: true
+        schema:
+          type: string
+      - title: items_per_page
+        description: The number of charges to return per page.
+        paramType: query
+        required: false
+      - title: start_index
+        description: The index into the entire result set that this result page starts.
+        paramType: query
+        required: false
+      responses:
+        '200':
+          description: Resource returned
+          content:
+            application/json:
+              schema:
+                $ref: http://127.0.0.1:10000/api.ch.gov.uk-specifications/swagger-2.0/spec/charges.json#/definitions/chargeList
+        '401':
+          description: Unauthorised
+        '404':
+          description: Resource not found
+  /company/{company_number}/charges/{charge_id}:
+    get:
+      description: Individual charge information for company.
+      tags:
+      - charges
+      parameters:
+      - name: company_number
+        description: The company number that the charge is required for.
+        paramType: path
+        required: true
+        schema:
+          type: string
+      - name: charge_id
+        description: The id of the charge details that are required.
+        paramType: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Resource returned
+          content:
+            application/json:
+              schema:
+                $ref: http://127.0.0.1:10000/api.ch.gov.uk-specifications/swagger-2.0/spec/charges.json#/definitions/chargeDetails
+        '401':
+          description: Unauthorised
+        '404':
+          description: Resource not found
+components:
+  securitySchemes:
+    api_key:
+      type: apiKey
+      name: api_key
+      in: header
