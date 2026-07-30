@@ -11,7 +11,20 @@ description: >
   without polling. Authentication is handled via API key using HTTP Basic Auth, and all
   access is provided free of charge with a generous rate limit.
 type: Index
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: free
+  onboarding: self-serve
+  trial: false
+  try_now: true
+  public: false
+  label: Free · Self-serve signup
+  confidence: high
+  source:
+  - plans
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/companies-house.png
 url: https://raw.githubusercontent.com/api-evangelist/companies-house/refs/heads/main/apis.yml
 created: '2026-06-12'
 modified: '2026-06-12'
@@ -28,64 +41,164 @@ tags:
   - Persons of Significant Control
   - Open Data
 apis:
-  - name: Companies House Public Data API
-    description: >
-      The Companies House Public Data API provides read access to all publicly
-      available company information registered at Companies House. It covers company
-      profiles, registered office addresses, officer appointments, persons with significant
-      control, filing history, charges, insolvency, and advanced search across all
-      registered UK companies. Access is free and requires only an API key obtained
-      from the Companies House Developer Hub.
-    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
-    humanURL: https://developer.company-information.service.gov.uk/overview
-    baseURL: https://api.company-information.service.gov.uk
-    tags:
-      - Companies
-      - Officers
-      - Filing History
-      - Charges
-      - Insolvency
-      - PSC
-      - Search
-    properties:
-      - type: Documentation
-        url: https://developer-specs.company-information.service.gov.uk/companies-house-public-data-api/reference
-      - type: OpenAPI
-        url: https://github.com/companieshouse/specs.developer.ch.gov.uk
-      - type: OpenAPI
-        url: openapi/companies-house-public-data-openapi.yml
-      - type: JSONSchema
-        url: json-schema/
-      - type: Examples
-        url: examples/companies-house-examples.json
-    contact:
-      - FN: Companies House Developer Forum
-        url: https://forum.companieshouse.gov.uk/
-
-  - name: Companies House Streaming API
-    description: >
-      The Companies House Streaming API delivers real-time changes to Companies House
-      data via long-running HTTP connections. It streams updates across nine data
-      categories including company information, filing history, insolvency, charges,
-      officers, persons with significant control, disqualified officers, exemptions,
-      and PSC statements. Each account is limited to two concurrent streaming connections
-      and requires an API key for authentication.
-    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
-    humanURL: https://developer-specs.company-information.service.gov.uk/streaming-api/guides/overview
-    baseURL: https://stream.companieshouse.gov.uk
-    tags:
-      - Streaming
-      - Real-Time
-      - Companies
-      - Officers
-      - Filing History
-    properties:
-      - type: Documentation
-        url: https://developer-specs.company-information.service.gov.uk/streaming-api/guides/overview
-    contact:
-      - FN: Companies House Developer Forum
-        url: https://forum.companieshouse.gov.uk/
-
+- name: Companies House Streaming API
+  description: >
+    The Companies House Streaming API delivers real-time changes to Companies House data via long-running
+    HTTP connections. It streams updates across nine data categories including company information, filing
+    history, insolvency, charges, officers, persons with significant control, disqualified officers, exemptions,
+    and PSC statements. Each account is limited to two concurrent streaming connections and requires an
+    API key for authentication.
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://developer-specs.company-information.service.gov.uk/streaming-api/guides/overview
+  baseURL: https://stream.companieshouse.gov.uk
+  tags:
+  - Streaming
+  - Real-Time
+  - Companies
+  - Officers
+  - Filing History
+  properties:
+  - type: Documentation
+    url: https://developer-specs.company-information.service.gov.uk/streaming-api/guides/overview
+  contact:
+  - FN: Companies House Developer Forum
+    url: https://forum.companieshouse.gov.uk/
+- aid: companies-house:companies-house-charges-api
+  name: Companies House charges API
+  description: Charges
+  humanURL: https://developer.company-information.service.gov.uk/overview
+  baseURL: https://api.company-information.service.gov.uk
+  tags:
+  - charges
+  properties:
+  - type: OpenAPI
+    url: openapi/companies-house-charges-api-openapi.yml
+  - type: Documentation
+    url: >-
+      https://developer-specs.company-information.service.gov.uk/companies-house-public-data-api/reference
+  - type: JSONSchema
+    url: json-schema/
+  - type: Examples
+    url: examples/companies-house-examples.json
+- aid: companies-house:companies-house-filinghistory-api
+  name: Companies House filingHistory API
+  description: Filing history
+  humanURL: https://developer.company-information.service.gov.uk/overview
+  baseURL: https://api.company-information.service.gov.uk
+  tags:
+  - filingHistory
+  properties:
+  - type: OpenAPI
+    url: openapi/companies-house-filinghistory-api-openapi.yml
+  - type: Documentation
+    url: >-
+      https://developer-specs.company-information.service.gov.uk/companies-house-public-data-api/reference
+  - type: JSONSchema
+    url: json-schema/
+  - type: Examples
+    url: examples/companies-house-examples.json
+- aid: companies-house:companies-house-insolvency-api
+  name: Companies House insolvency API
+  description: Insolvency
+  humanURL: https://developer.company-information.service.gov.uk/overview
+  baseURL: https://api.company-information.service.gov.uk
+  tags:
+  - insolvency
+  properties:
+  - type: OpenAPI
+    url: openapi/companies-house-insolvency-api-openapi.yml
+  - type: Documentation
+    url: >-
+      https://developer-specs.company-information.service.gov.uk/companies-house-public-data-api/reference
+  - type: JSONSchema
+    url: json-schema/
+  - type: Examples
+    url: examples/companies-house-examples.json
+- aid: companies-house:companies-house-officerdisqualifications-api
+  name: Companies House officerDisqualifications API
+  description: Officer disqualifications
+  humanURL: https://developer.company-information.service.gov.uk/overview
+  baseURL: https://api.company-information.service.gov.uk
+  tags:
+  - officerDisqualifications
+  properties:
+  - type: OpenAPI
+    url: openapi/companies-house-officerdisqualifications-api-openapi.yml
+  - type: Documentation
+    url: >-
+      https://developer-specs.company-information.service.gov.uk/companies-house-public-data-api/reference
+  - type: JSONSchema
+    url: json-schema/
+  - type: Examples
+    url: examples/companies-house-examples.json
+- aid: companies-house:companies-house-officers-api
+  name: Companies House officers API
+  description: Officers
+  humanURL: https://developer.company-information.service.gov.uk/overview
+  baseURL: https://api.company-information.service.gov.uk
+  tags:
+  - officers
+  properties:
+  - type: OpenAPI
+    url: openapi/companies-house-officers-api-openapi.yml
+  - type: Documentation
+    url: >-
+      https://developer-specs.company-information.service.gov.uk/companies-house-public-data-api/reference
+  - type: JSONSchema
+    url: json-schema/
+  - type: Examples
+    url: examples/companies-house-examples.json
+- aid: companies-house:companies-house-personswithsignificantcontrol-api
+  name: Companies House personsWithSignificantControl API
+  description: Persons with significant control
+  humanURL: https://developer.company-information.service.gov.uk/overview
+  baseURL: https://api.company-information.service.gov.uk
+  tags:
+  - personsWithSignificantControl
+  properties:
+  - type: OpenAPI
+    url: openapi/companies-house-personswithsignificantcontrol-api-openapi.yml
+  - type: Documentation
+    url: >-
+      https://developer-specs.company-information.service.gov.uk/companies-house-public-data-api/reference
+  - type: JSONSchema
+    url: json-schema/
+  - type: Examples
+    url: examples/companies-house-examples.json
+- aid: companies-house:companies-house-registeredofficeaddress-api
+  name: Companies House registeredOfficeAddress API
+  description: Registered office address
+  humanURL: https://developer.company-information.service.gov.uk/overview
+  baseURL: https://api.company-information.service.gov.uk
+  tags:
+  - registeredOfficeAddress
+  properties:
+  - type: OpenAPI
+    url: openapi/companies-house-registeredofficeaddress-api-openapi.yml
+  - type: Documentation
+    url: >-
+      https://developer-specs.company-information.service.gov.uk/companies-house-public-data-api/reference
+  - type: JSONSchema
+    url: json-schema/
+  - type: Examples
+    url: examples/companies-house-examples.json
+- aid: companies-house:companies-house-search-api
+  name: Companies House search API
+  description: Search
+  humanURL: https://developer.company-information.service.gov.uk/overview
+  baseURL: https://api.company-information.service.gov.uk
+  tags:
+  - search
+  properties:
+  - type: OpenAPI
+    url: openapi/companies-house-search-api-openapi.yml
+  - type: Documentation
+    url: >-
+      https://developer-specs.company-information.service.gov.uk/companies-house-public-data-api/reference
+  - type: JSONSchema
+    url: json-schema/
+  - type: Examples
+    url: examples/companies-house-examples.json
 common:
   - type: AgenticAccess
     url: agentic-access/companies-house-agentic-access.yml
