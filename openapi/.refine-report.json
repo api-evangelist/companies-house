@@ -1,0 +1,28 @@
+{
+  "provider": "companies-house",
+  "sources": [
+    "companies-house-charges-api-openapi.yml",
+    "companies-house-filinghistory-api-openapi.yml",
+    "companies-house-insolvency-api-openapi.yml",
+    "companies-house-officerdisqualifications-api-openapi.yml",
+    "companies-house-officers-api-openapi.yml",
+    "companies-house-personswithsignificantcontrol-api-openapi.yml",
+    "companies-house-registeredofficeaddress-api-openapi.yml",
+    "companies-house-search-api-openapi.yml"
+  ],
+  "outputs": [
+    "companies-house-charges-api-openapi.yml",
+    "companies-house-filinghistory-api-openapi.yml",
+    "companies-house-insolvency-api-openapi.yml",
+    "companies-house-officerdisqualifications-api-openapi.yml",
+    "companies-house-officers-api-openapi.yml",
+    "companies-house-personswithsignificantcontrol-api-openapi.yml",
+    "companies-house-registeredofficeaddress-api-openapi.yml",
+    "companies-house-search-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
