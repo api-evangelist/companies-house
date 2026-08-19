@@ -1,0 +1,64 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Companies House Public Data charges officerDisqualifications API",
+    "version": "1.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "api_key",
+      "value": "{{api_key}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "officerDisqualifications",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get natural officers disqualifications",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.company-information.service.gov.uk/disqualified-officers/natural/:officer_id",
+            "params": [
+              {
+                "name": "officer_id",
+                "value": "",
+                "type": "path",
+                "description": "The disqualified officer's id."
+              }
+            ]
+          },
+          "docs": "Get a natural officer's disqualifications"
+        },
+        {
+          "info": {
+            "name": "Get a corporate officers disqualifications",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.company-information.service.gov.uk/disqualified-officers/corporate/:officer_id",
+            "params": [
+              {
+                "name": "officer_id",
+                "value": "",
+                "type": "path",
+                "description": "The disqualified officer id."
+              }
+            ]
+          },
+          "docs": "Get a corporate officer's disqualifications"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

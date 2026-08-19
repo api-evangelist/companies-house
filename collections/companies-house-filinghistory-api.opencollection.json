@@ -1,0 +1,88 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Companies House Public Data charges filingHistory API",
+    "version": "1.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "api_key",
+      "value": "{{api_key}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "filingHistory",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "filingHistoryItem resource",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.company-information.service.gov.uk/company/:company_number/filing-history/:transaction_id",
+            "params": [
+              {
+                "name": "company_number",
+                "value": "",
+                "type": "path",
+                "description": "The company number that the single filing is required for."
+              },
+              {
+                "name": "transaction_id",
+                "value": "",
+                "type": "path",
+                "description": "The transaction id that the filing history is required for."
+              }
+            ]
+          },
+          "docs": "Get the filing history item of a company"
+        },
+        {
+          "info": {
+            "name": "filingHistoryList resource",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.company-information.service.gov.uk/company/:company_number/filing-history",
+            "params": [
+              {
+                "name": "category",
+                "value": "",
+                "type": "query",
+                "description": "One or more comma-separated categories to filter by (inclusive)."
+              },
+              {
+                "name": "company_number",
+                "value": "",
+                "type": "path",
+                "description": "The company number that the filing history is required for."
+              },
+              {
+                "name": "items_per_page",
+                "value": "",
+                "type": "query",
+                "description": "The number of filing history items to return per page."
+              },
+              {
+                "name": "start_index",
+                "value": "",
+                "type": "query",
+                "description": "The index into the entire result set that this result page starts."
+              }
+            ]
+          },
+          "docs": "Get the filing history list of a company"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

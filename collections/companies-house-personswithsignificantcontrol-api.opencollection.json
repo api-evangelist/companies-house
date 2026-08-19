@@ -1,0 +1,325 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Companies House Public Data charges personsWithSignificantControl API",
+    "version": "1.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "api_key",
+      "value": "{{api_key}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "personsWithSignificantControl",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List the company persons with significant control",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.company-information.service.gov.uk/company/:company_number/persons-with-significant-control",
+            "params": [
+              {
+                "name": "company_number",
+                "value": "",
+                "type": "path",
+                "description": "The company number of the persons with significant control list being requested."
+              },
+              {
+                "name": "items_per_page",
+                "value": "",
+                "type": "query",
+                "description": "The number of persons with significant control to return per page."
+              },
+              {
+                "name": "start_index",
+                "value": "",
+                "type": "query",
+                "description": "The offset into the entire result set that this page starts."
+              },
+              {
+                "name": "register_view",
+                "value": "",
+                "type": "query",
+                "description": "Display register specific information. If register is held at Companies House and register_view is set to true, only PSCs which are active or were terminated during election period are shown. Accepted values are: -`true`  \n -`false`  \n Defaults to false."
+              }
+            ]
+          },
+          "docs": "List of all persons with significant control (not statements)"
+        },
+        {
+          "info": {
+            "name": "Get the individual person with significant control notification",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.company-information.service.gov.uk/company/:company_number/persons-with-significant-control/individual/:notification_id",
+            "params": [
+              {
+                "name": "company_number",
+                "value": "",
+                "type": "path",
+                "description": "The company number of the person with significant control details being requested."
+              },
+              {
+                "name": "notification_id",
+                "value": "",
+                "type": "path",
+                "description": "The notification id of the person with significant control notification being requested."
+              }
+            ]
+          },
+          "docs": "Get details of the individual person with significant control notification"
+        },
+        {
+          "info": {
+            "name": "Get the individual beneficial owner notification",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.company-information.service.gov.uk/company/:company_number/persons-with-significant-control/individual-beneficial-owner/:notification_id",
+            "params": [
+              {
+                "name": "company_number",
+                "value": "",
+                "type": "path",
+                "description": "The company number of the individual beneficial owner details being requested."
+              },
+              {
+                "name": "notification_id",
+                "value": "",
+                "type": "path",
+                "description": "The notification id of the individual beneficial owner notification being requested."
+              }
+            ]
+          },
+          "docs": "Get details of an individual beneficial owner notification"
+        },
+        {
+          "info": {
+            "name": "Get the corporate entity with significant control notification",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.company-information.service.gov.uk/company/:company_number/persons-with-significant-control/corporate-entity/:notification_id",
+            "params": [
+              {
+                "name": "company_number",
+                "value": "",
+                "type": "path",
+                "description": "The company number of the corporate entity with significant control details being requested."
+              },
+              {
+                "name": "notification_id",
+                "value": "",
+                "type": "path",
+                "description": "The notification id of the corporate entity with significant control notification being requested."
+              }
+            ]
+          },
+          "docs": "Get details of a corporate entity with significant control notification"
+        },
+        {
+          "info": {
+            "name": "Get the corporate entity beneficial owner notification",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.company-information.service.gov.uk/company/:company_number/persons-with-significant-control/corporate-entity-beneficial-owner/:notification_id",
+            "params": [
+              {
+                "name": "company_number",
+                "value": "",
+                "type": "path",
+                "description": "The company number of the corporate entity beneficial owner details being requested."
+              },
+              {
+                "name": "notification_id",
+                "value": "",
+                "type": "path",
+                "description": "The notification id of the corporate entity beneficial owner notification being requested."
+              }
+            ]
+          },
+          "docs": "Get details of the corporate entity beneficial owner notification"
+        },
+        {
+          "info": {
+            "name": "Get the legal person with significant control notification",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.company-information.service.gov.uk/company/:company_number/persons-with-significant-control/legal-person/:notification_id",
+            "params": [
+              {
+                "name": "company_number",
+                "value": "",
+                "type": "path",
+                "description": "The company number of the legal person with significant control details being requested."
+              },
+              {
+                "name": "notification_id",
+                "value": "",
+                "type": "path",
+                "description": "The notification id of the legal person with significant control notification being requested."
+              }
+            ]
+          },
+          "docs": "Get details of the legal person with significant control notification"
+        },
+        {
+          "info": {
+            "name": "Get the legal person beneficial owner notification",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.company-information.service.gov.uk/company/:company_number/persons-with-significant-control/legal-person-beneficial-owner/:notification_id",
+            "params": [
+              {
+                "name": "company_number",
+                "value": "",
+                "type": "path",
+                "description": "The company number of the legal person beneficial owner details being requested."
+              },
+              {
+                "name": "notification_id",
+                "value": "",
+                "type": "path",
+                "description": "The notification id of the legal person beneficial owner notification being requested."
+              }
+            ]
+          },
+          "docs": "Get details of the legal person beneficial owner notification"
+        },
+        {
+          "info": {
+            "name": "List the company persons with significant control statements",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.company-information.service.gov.uk/company/:company_number/persons-with-significant-control-statements",
+            "params": [
+              {
+                "name": "company_number",
+                "value": "",
+                "type": "path",
+                "description": "The company number of the persons with significant control statements list being requested."
+              },
+              {
+                "name": "items_per_page",
+                "value": "",
+                "type": "query",
+                "description": "The id of the legal person with significant control details being requested."
+              },
+              {
+                "name": "start_index",
+                "value": "",
+                "type": "query",
+                "description": "The offset into the entire result set that this page starts."
+              },
+              {
+                "name": "register_view",
+                "value": "",
+                "type": "query",
+                "description": "Display register specific information. If register is held at Companies House and register_view is set to true, only statements which are active or were withdrawn during election period are shown. Accepted values are: -`true`  \n -`false`  \n Defaults to false."
+              }
+            ]
+          },
+          "docs": "List of all persons with significant control statements"
+        },
+        {
+          "info": {
+            "name": "Get the person with significant control statement",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.company-information.service.gov.uk/company/:company_number/persons-with-significant-control-statements/:statement_id",
+            "params": [
+              {
+                "name": "company_number",
+                "value": "",
+                "type": "path",
+                "description": "The company number of the persons with significant control statements list being requested."
+              },
+              {
+                "name": "statement_id",
+                "value": "",
+                "type": "path",
+                "description": "The id of the person with significant control statement details being requested."
+              }
+            ]
+          },
+          "docs": "Get details of a person with significant control statement"
+        },
+        {
+          "info": {
+            "name": "Get the super secure person with significant control",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.company-information.service.gov.uk/company/:company_number/persons-with-significant-control/super-secure/:super_secure_id",
+            "params": [
+              {
+                "name": "company_number",
+                "value": "",
+                "type": "path",
+                "description": "The company number of the super secure person with significant control details being requested."
+              },
+              {
+                "name": "super_secure_id",
+                "value": "",
+                "type": "path",
+                "description": "The id of the super secure person with significant control details being requested."
+              }
+            ]
+          },
+          "docs": "Get details of a super secure person with significant control"
+        },
+        {
+          "info": {
+            "name": "Get the super secure beneficial owner",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.company-information.service.gov.uk/company/:company_number/persons-with-significant-control/super-secure-beneficial-owner/:super_secure_id",
+            "params": [
+              {
+                "name": "company_number",
+                "value": "",
+                "type": "path",
+                "description": "The company number of the super secure beneficial owner details being requested."
+              },
+              {
+                "name": "super_secure_id",
+                "value": "",
+                "type": "path",
+                "description": "The id of the super secure beneficial owner details being requested."
+              }
+            ]
+          },
+          "docs": "Get details of a super secure beneficial owner"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

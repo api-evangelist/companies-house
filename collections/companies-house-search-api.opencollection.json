@@ -1,0 +1,333 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Companies House Public Data charges search API",
+    "version": "1.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "api_key",
+      "value": "{{api_key}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "search",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Search All",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.company-information.service.gov.uk/search",
+            "params": [
+              {
+                "name": "q",
+                "value": "",
+                "type": "query",
+                "description": "The term being searched for."
+              },
+              {
+                "name": "items_per_page",
+                "value": "",
+                "type": "query",
+                "description": "The number of search results to return per page."
+              },
+              {
+                "name": "start_index",
+                "value": "",
+                "type": "query",
+                "description": "The index of the first result item to return."
+              }
+            ]
+          },
+          "docs": "Search companies, officers and disqualified officers"
+        },
+        {
+          "info": {
+            "name": "Search companies",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.company-information.service.gov.uk/search/companies",
+            "params": [
+              {
+                "name": "q",
+                "value": "",
+                "type": "query",
+                "description": "The term being searched for."
+              },
+              {
+                "name": "items_per_page",
+                "value": "",
+                "type": "query",
+                "description": "The number of search results to return per page."
+              },
+              {
+                "name": "start_index",
+                "value": "",
+                "type": "query",
+                "description": "The index of the first result item to return."
+              },
+              {
+                "name": "restrictions",
+                "value": "",
+                "type": "query",
+                "description": "Enumerable options to restrict search results. Space separate multiple restriction options to combine functionality. For a \"company name availability\" search use \"active-companies legally-equivalent-company-name\" together."
+              }
+            ]
+          },
+          "docs": "Search company information"
+        },
+        {
+          "info": {
+            "name": "Search company officers",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.company-information.service.gov.uk/search/officers",
+            "params": [
+              {
+                "name": "q",
+                "value": "",
+                "type": "query",
+                "description": "The term being searched for."
+              },
+              {
+                "name": "items_per_page",
+                "value": "",
+                "type": "query",
+                "description": "The number of search results to return per page."
+              },
+              {
+                "name": "start_index",
+                "value": "",
+                "type": "query",
+                "description": "The index of the first result item to return."
+              }
+            ]
+          },
+          "docs": "Search for officer information"
+        },
+        {
+          "info": {
+            "name": "Search disqualified officers",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.company-information.service.gov.uk/search/disqualified-officers",
+            "params": [
+              {
+                "name": "q",
+                "value": "",
+                "type": "query",
+                "description": "The term being searched for."
+              },
+              {
+                "name": "items_per_page",
+                "value": "",
+                "type": "query",
+                "description": "The number of search results to return per page."
+              },
+              {
+                "name": "start_index",
+                "value": "",
+                "type": "query",
+                "description": "The index of the first result item to return."
+              }
+            ]
+          },
+          "docs": "Search for disqualified officer information"
+        },
+        {
+          "info": {
+            "name": "Search for a dissolved company",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.company-information.service.gov.uk/dissolved-search/companies",
+            "params": [
+              {
+                "name": "q",
+                "value": "",
+                "type": "query",
+                "description": "The company name being searched for"
+              },
+              {
+                "name": "search_type",
+                "value": "",
+                "type": "query",
+                "description": "Determines type of search. Options are alphabetical, best-match, previous-name-dissolved"
+              },
+              {
+                "name": "search_above",
+                "value": "",
+                "type": "query",
+                "description": "The ordered_alpha_key_with_id used for alphabetical paging"
+              },
+              {
+                "name": "search_below",
+                "value": "",
+                "type": "query",
+                "description": "The ordered_alpha_key_with_id used for alphabetical paging"
+              },
+              {
+                "name": "size",
+                "value": "",
+                "type": "query",
+                "description": "The maximum number of results matching the search term(s) to return with a range of 1 to 100"
+              },
+              {
+                "name": "start_index",
+                "value": "",
+                "type": "query",
+                "description": "Used in best-match and previous-name-dissolved search-type"
+              }
+            ]
+          },
+          "docs": "Search for a dissolved company"
+        },
+        {
+          "info": {
+            "name": "Search for a company",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.company-information.service.gov.uk/alphabetical-search/companies",
+            "params": [
+              {
+                "name": "q",
+                "value": "",
+                "type": "query",
+                "description": "The company name being searched for"
+              },
+              {
+                "name": "search_above",
+                "value": "",
+                "type": "query",
+                "description": "The ordered_alpha_key_with_id used for paging"
+              },
+              {
+                "name": "search_below",
+                "value": "",
+                "type": "query",
+                "description": "The ordered_alpha_key_with_id used for paging"
+              },
+              {
+                "name": "size",
+                "value": "",
+                "type": "query",
+                "description": "The maximum number of results matching the search term(s) to return with a range of 1 to 100"
+              }
+            ]
+          },
+          "docs": "Search for a company"
+        },
+        {
+          "info": {
+            "name": "Advanced search for a company",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.company-information.service.gov.uk/advanced-search/companies",
+            "params": [
+              {
+                "name": "company_name_includes",
+                "value": "",
+                "type": "query",
+                "description": "The company name includes advanced search filter"
+              },
+              {
+                "name": "company_name_excludes",
+                "value": "",
+                "type": "query",
+                "description": "The company name excludes advanced search filter"
+              },
+              {
+                "name": "company_status",
+                "value": "",
+                "type": "query",
+                "description": "The company status advanced search filter. To search using multiple values, use a comma delimited list or multiple of the same key i.e. company_status=xxx&company_status=yyy"
+              },
+              {
+                "name": "company_subtype",
+                "value": "",
+                "type": "query",
+                "description": "The company subtype advanced search filter. To search using multiple values, use a comma delimited list or multiple of the same key i.e. company_subtype=xxx&company_subtype=yyy"
+              },
+              {
+                "name": "company_type",
+                "value": "",
+                "type": "query",
+                "description": "The company type advanced search filter. To search using multiple values, use a comma delimited list or multiple of the same key i.e. company_type=xxx&company_type=yyy"
+              },
+              {
+                "name": "dissolved_from",
+                "value": "",
+                "type": "query",
+                "description": "The dissolved from date advanced search filter"
+              },
+              {
+                "name": "dissolved_to",
+                "value": "",
+                "type": "query",
+                "description": "The dissolved to date advanced search filter"
+              },
+              {
+                "name": "incorporated_from",
+                "value": "",
+                "type": "query",
+                "description": "The incorporated from date advanced search filter"
+              },
+              {
+                "name": "incorporated_to",
+                "value": "",
+                "type": "query",
+                "description": "The incorporated to date advanced search filter"
+              },
+              {
+                "name": "location",
+                "value": "",
+                "type": "query",
+                "description": "The location advanced search filter"
+              },
+              {
+                "name": "sic_codes",
+                "value": "",
+                "type": "query",
+                "description": "The SIC codes advanced search filter. To search using multiple values, use a comma delimited list or multiple of the same key i.e. sic_codes=xxx&sic_codes=yyy"
+              },
+              {
+                "name": "size",
+                "value": "",
+                "type": "query",
+                "description": "The maximum number of results matching the search term(s) to return with a range of 1 to 5000"
+              },
+              {
+                "name": "start_index",
+                "value": "",
+                "type": "query",
+                "description": "The point at which results will start from i.e show search results from result 20 (used for paging)"
+              }
+            ]
+          },
+          "docs": "Advanced search for a company"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

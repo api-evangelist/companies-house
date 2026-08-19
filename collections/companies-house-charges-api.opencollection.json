@@ -1,0 +1,56 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Companies House Public Data charges API",
+    "version": "1.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "api_key",
+      "value": "{{api_key}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "charges",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Charges",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.company-information.service.gov.uk/company/:company_number/charges",
+            "params": [
+              {
+                "name": "company_number",
+                "value": "",
+                "type": "path",
+                "description": "The company number that the charge list is required for."
+              }
+            ]
+          },
+          "docs": "List of charges for a company."
+        },
+        {
+          "info": {
+            "name": "GET /company/{company_number}/charges/{charge_id}",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.company-information.service.gov.uk/company/:company_number/charges/:charge_id"
+          },
+          "docs": "Individual charge information for company."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

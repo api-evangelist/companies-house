@@ -1,0 +1,100 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Companies House Public Data charges officers API",
+    "version": "1.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "api_key",
+      "value": "{{api_key}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "officers",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Company Officers",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.company-information.service.gov.uk/company/:company_number/officers",
+            "params": [
+              {
+                "name": "company_number",
+                "value": "",
+                "type": "path",
+                "description": "The company number of the officer list being requested."
+              },
+              {
+                "name": "items_per_page",
+                "value": "",
+                "type": "query",
+                "description": "The number of officers to return per page."
+              },
+              {
+                "name": "register_type",
+                "value": "",
+                "type": "query",
+                "description": "The register_type determines which officer type is returned for the registers view.The register_type field will only work if registers_view is set to true"
+              },
+              {
+                "name": "register_view",
+                "value": "",
+                "type": "query",
+                "description": "Display register specific information. If given register is held at Companies House, registers_view set to true and correct register_type specified, only active officers will be returned. Defaults to false"
+              },
+              {
+                "name": "start_index",
+                "value": "",
+                "type": "query",
+                "description": "The offset into the entire result set that this page starts."
+              },
+              {
+                "name": "order_by",
+                "value": "",
+                "type": "query",
+                "description": "The field by which to order the result set."
+              }
+            ]
+          },
+          "docs": "List of all company officers"
+        },
+        {
+          "info": {
+            "name": "Get a company officer appointment",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.company-information.service.gov.uk/company/:company_number/appointments/:appointment_id",
+            "params": [
+              {
+                "name": "company_number",
+                "value": "",
+                "type": "path",
+                "description": "The company number of the officer list being requested."
+              },
+              {
+                "name": "appointment_id",
+                "value": "",
+                "type": "path",
+                "description": "The appointment id of the company officer appointment being requested."
+              }
+            ]
+          },
+          "docs": "Get details of an individual company officer appointment"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

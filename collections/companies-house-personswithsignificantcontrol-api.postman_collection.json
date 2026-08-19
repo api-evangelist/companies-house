@@ -1,0 +1,2707 @@
+{
+  "item": [
+    {
+      "id": "2bf858e8-9d07-46ba-b172-14bb15a35b13",
+      "name": "personsWithSignificantControl",
+      "description": {
+        "content": "Persons with significant control",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "547098ef-b444-400b-8dd6-28bd9a911f9b",
+          "name": "List the company persons with significant control",
+          "request": {
+            "name": "List the company persons with significant control",
+            "description": {
+              "content": "List of all persons with significant control (not statements)",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "company",
+                ":company_number",
+                "persons-with-significant-control"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "items_per_page",
+                  "value": "<string>",
+                  "description": "(Required) The number of persons with significant control to return per page."
+                },
+                {
+                  "disabled": false,
+                  "key": "start_index",
+                  "value": "<string>",
+                  "description": "(Required) The offset into the entire result set that this page starts."
+                },
+                {
+                  "disabled": false,
+                  "key": "register_view",
+                  "value": "<string>",
+                  "description": "(Required) Display register specific information. If register is held at Companies House and register_view is set to true, only PSCs which are active or were terminated during election period are shown. Accepted values are: -`true`  \n -`false`  \n Defaults to false."
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "company_number",
+                  "description": "(Required) The company number of the persons with significant control list being requested."
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "adbad688-21f0-4589-b04b-a416a3d8faf8",
+              "name": "readCompanyProfile",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "company",
+                    ":company_number",
+                    "persons-with-significant-control"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "items_per_page",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "start_index",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "register_view",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "company_number",
+                      "description": "(Required) The company number of the persons with significant control list being requested."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "api_key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "disabled": false,
+                  "description": "The ETag of the resource.",
+                  "key": "ETag",
+                  "value": "string"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "57ef1a1e-4179-46eb-80a6-7b1104f019ee",
+              "name": "Unauthorised",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "company",
+                    ":company_number",
+                    "persons-with-significant-control"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "items_per_page",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "start_index",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "register_view",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "company_number",
+                      "description": "(Required) The company number of the persons with significant control list being requested."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "api_key",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "064fcce6-7763-4dc0-89aa-94c2b4e47f69",
+              "name": "Resource not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "company",
+                    ":company_number",
+                    "persons-with-significant-control"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "items_per_page",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "start_index",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "register_view",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "company_number",
+                      "description": "(Required) The company number of the persons with significant control list being requested."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "api_key",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "f53ad4c9-5ef3-4b02-ac67-867872c5f03d",
+          "name": "Get the individual person with significant control notification",
+          "request": {
+            "name": "Get the individual person with significant control notification",
+            "description": {
+              "content": "Get details of the individual person with significant control notification",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "company",
+                ":company_number",
+                "persons-with-significant-control",
+                "individual",
+                ":notification_id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "company_number",
+                  "description": "(Required) The company number of the person with significant control details being requested."
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "notification_id",
+                  "description": "(Required) The notification id of the person with significant control notification being requested."
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "4d6938c9-e904-44d2-b4bd-083a11a05a50",
+              "name": "IndividualPSC resource returned",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "company",
+                    ":company_number",
+                    "persons-with-significant-control",
+                    "individual",
+                    ":notification_id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "company_number",
+                      "description": "(Required) The company number of the person with significant control details being requested."
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "notification_id",
+                      "description": "(Required) The notification id of the person with significant control notification being requested."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "api_key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "disabled": false,
+                  "description": "The ETag of the resource.",
+                  "key": "ETag",
+                  "value": "string"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "4076d0b7-14a2-407a-a459-f70be0761624",
+              "name": "Unauthorised",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "company",
+                    ":company_number",
+                    "persons-with-significant-control",
+                    "individual",
+                    ":notification_id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "company_number",
+                      "description": "(Required) The company number of the person with significant control details being requested."
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "notification_id",
+                      "description": "(Required) The notification id of the person with significant control notification being requested."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "api_key",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "6c43a11d-a356-44c0-8ed5-94fe3bb66610",
+              "name": "Resource not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "company",
+                    ":company_number",
+                    "persons-with-significant-control",
+                    "individual",
+                    ":notification_id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "company_number",
+                      "description": "(Required) The company number of the person with significant control details being requested."
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "notification_id",
+                      "description": "(Required) The notification id of the person with significant control notification being requested."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "api_key",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "e9cd4c68-bd60-43bd-aa3a-73c60d689729",
+          "name": "Get the individual beneficial owner notification",
+          "request": {
+            "name": "Get the individual beneficial owner notification",
+            "description": {
+              "content": "Get details of an individual beneficial owner notification",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "company",
+                ":company_number",
+                "persons-with-significant-control",
+                "individual-beneficial-owner",
+                ":notification_id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "company_number",
+                  "description": "(Required) The company number of the individual beneficial owner details being requested."
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "notification_id",
+                  "description": "(Required) The notification id of the individual beneficial owner notification being requested."
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "3e9019b2-eca4-4c8c-9d7f-7edd2d423068",
+              "name": "IndividualBO resource returned",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "company",
+                    ":company_number",
+                    "persons-with-significant-control",
+                    "individual-beneficial-owner",
+                    ":notification_id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "company_number",
+                      "description": "(Required) The company number of the individual beneficial owner details being requested."
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "notification_id",
+                      "description": "(Required) The notification id of the individual beneficial owner notification being requested."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "api_key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "disabled": false,
+                  "description": "The ETag of the resource.",
+                  "key": "ETag",
+                  "value": "string"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "748d235d-6377-4fcc-a5b0-f062f30ab130",
+              "name": "Unauthorised",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "company",
+                    ":company_number",
+                    "persons-with-significant-control",
+                    "individual-beneficial-owner",
+                    ":notification_id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "company_number",
+                      "description": "(Required) The company number of the individual beneficial owner details being requested."
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "notification_id",
+                      "description": "(Required) The notification id of the individual beneficial owner notification being requested."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "api_key",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "d95769f5-5c86-4f3b-a29a-471715da4340",
+              "name": "Resource not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "company",
+                    ":company_number",
+                    "persons-with-significant-control",
+                    "individual-beneficial-owner",
+                    ":notification_id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "company_number",
+                      "description": "(Required) The company number of the individual beneficial owner details being requested."
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "notification_id",
+                      "description": "(Required) The notification id of the individual beneficial owner notification being requested."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "api_key",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "ae79ff6e-fb12-459e-82bd-fd08999e3d68",
+          "name": "Get the corporate entity with significant control notification",
+          "request": {
+            "name": "Get the corporate entity with significant control notification",
+            "description": {
+              "content": "Get details of a corporate entity with significant control notification",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "company",
+                ":company_number",
+                "persons-with-significant-control",
+                "corporate-entity",
+                ":notification_id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "company_number",
+                  "description": "(Required) The company number of the corporate entity with significant control details being requested."
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "notification_id",
+                  "description": "(Required) The notification id of the corporate entity with significant control notification being requested."
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "5600336e-8897-41f0-bd54-7e4c73f33630",
+              "name": "CorporateEntityPSC resource returned",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "company",
+                    ":company_number",
+                    "persons-with-significant-control",
+                    "corporate-entity",
+                    ":notification_id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "company_number",
+                      "description": "(Required) The company number of the corporate entity with significant control details being requested."
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "notification_id",
+                      "description": "(Required) The notification id of the corporate entity with significant control notification being requested."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "api_key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "disabled": false,
+                  "description": "The ETag of the resource.",
+                  "key": "ETag",
+                  "value": "string"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "9b16eba9-36bc-4d83-a58d-32259f9cdb4d",
+              "name": "Unauthorised",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "company",
+                    ":company_number",
+                    "persons-with-significant-control",
+                    "corporate-entity",
+                    ":notification_id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "company_number",
+                      "description": "(Required) The company number of the corporate entity with significant control details being requested."
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "notification_id",
+                      "description": "(Required) The notification id of the corporate entity with significant control notification being requested."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "api_key",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "3ba4fbad-bc5a-4e42-aa08-c0d7a0b527ab",
+              "name": "Resource not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "company",
+                    ":company_number",
+                    "persons-with-significant-control",
+                    "corporate-entity",
+                    ":notification_id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "company_number",
+                      "description": "(Required) The company number of the corporate entity with significant control details being requested."
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "notification_id",
+                      "description": "(Required) The notification id of the corporate entity with significant control notification being requested."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "api_key",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "38b03be7-0b2a-469e-b39f-0866a4fa13bd",
+          "name": "Get the corporate entity beneficial owner notification",
+          "request": {
+            "name": "Get the corporate entity beneficial owner notification",
+            "description": {
+              "content": "Get details of the corporate entity beneficial owner notification",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "company",
+                ":company_number",
+                "persons-with-significant-control",
+                "corporate-entity-beneficial-owner",
+                ":notification_id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "company_number",
+                  "description": "(Required) The company number of the corporate entity beneficial owner details being requested."
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "notification_id",
+                  "description": "(Required) The notification id of the corporate entity beneficial owner notification being requested."
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "c302d7a6-475e-4f68-9366-ea60c4fb1e47",
+              "name": "CorporateEntityBO resource returned",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "company",
+                    ":company_number",
+                    "persons-with-significant-control",
+                    "corporate-entity-beneficial-owner",
+                    ":notification_id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "company_number",
+                      "description": "(Required) The company number of the corporate entity beneficial owner details being requested."
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "notification_id",
+                      "description": "(Required) The notification id of the corporate entity beneficial owner notification being requested."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "api_key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "disabled": false,
+                  "description": "The ETag of the resource.",
+                  "key": "ETag",
+                  "value": "string"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "a84cd295-0357-43c7-8a4f-92f58d65f84e",
+              "name": "Unauthorised",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "company",
+                    ":company_number",
+                    "persons-with-significant-control",
+                    "corporate-entity-beneficial-owner",
+                    ":notification_id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "company_number",
+                      "description": "(Required) The company number of the corporate entity beneficial owner details being requested."
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "notification_id",
+                      "description": "(Required) The notification id of the corporate entity beneficial owner notification being requested."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "api_key",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "1bd2678f-dc92-404b-a699-8bd832c40782",
+              "name": "Resource not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "company",
+                    ":company_number",
+                    "persons-with-significant-control",
+                    "corporate-entity-beneficial-owner",
+                    ":notification_id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "company_number",
+                      "description": "(Required) The company number of the corporate entity beneficial owner details being requested."
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "notification_id",
+                      "description": "(Required) The notification id of the corporate entity beneficial owner notification being requested."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "api_key",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "a53a55c3-1b4d-45d8-943b-c07d5ae88dd0",
+          "name": "Get the legal person with significant control notification",
+          "request": {
+            "name": "Get the legal person with significant control notification",
+            "description": {
+              "content": "Get details of the legal person with significant control notification",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "company",
+                ":company_number",
+                "persons-with-significant-control",
+                "legal-person",
+                ":notification_id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "company_number",
+                  "description": "(Required) The company number of the legal person with significant control details being requested."
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "notification_id",
+                  "description": "(Required) The notification id of the legal person with significant control notification being requested."
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "9168bb69-f3cb-445c-a362-664595e20eef",
+              "name": "LegalPersonPSC resource returned",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "company",
+                    ":company_number",
+                    "persons-with-significant-control",
+                    "legal-person",
+                    ":notification_id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "company_number",
+                      "description": "(Required) The company number of the legal person with significant control details being requested."
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "notification_id",
+                      "description": "(Required) The notification id of the legal person with significant control notification being requested."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "api_key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "disabled": false,
+                  "description": "The ETag of the resource.",
+                  "key": "ETag",
+                  "value": "string"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "5d63b871-a59f-43a1-904f-f163283bd5a5",
+              "name": "Unauthorised",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "company",
+                    ":company_number",
+                    "persons-with-significant-control",
+                    "legal-person",
+                    ":notification_id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "company_number",
+                      "description": "(Required) The company number of the legal person with significant control details being requested."
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "notification_id",
+                      "description": "(Required) The notification id of the legal person with significant control notification being requested."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "api_key",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "ae11982d-034f-4857-a6d2-7b0722a94ff0",
+              "name": "Resource not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "company",
+                    ":company_number",
+                    "persons-with-significant-control",
+                    "legal-person",
+                    ":notification_id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "company_number",
+                      "description": "(Required) The company number of the legal person with significant control details being requested."
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "notification_id",
+                      "description": "(Required) The notification id of the legal person with significant control notification being requested."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "api_key",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "6e6f2a30-c96a-467b-b7bf-77560e8d3ca4",
+          "name": "Get the legal person beneficial owner notification",
+          "request": {
+            "name": "Get the legal person beneficial owner notification",
+            "description": {
+              "content": "Get details of the legal person beneficial owner notification",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "company",
+                ":company_number",
+                "persons-with-significant-control",
+                "legal-person-beneficial-owner",
+                ":notification_id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "company_number",
+                  "description": "(Required) The company number of the legal person beneficial owner details being requested."
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "notification_id",
+                  "description": "(Required) The notification id of the legal person beneficial owner notification being requested."
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "237ffc34-4e75-4c8c-adef-a981f51b10f5",
+              "name": "LegalPersonBO resource returned",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "company",
+                    ":company_number",
+                    "persons-with-significant-control",
+                    "legal-person-beneficial-owner",
+                    ":notification_id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "company_number",
+                      "description": "(Required) The company number of the legal person beneficial owner details being requested."
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "notification_id",
+                      "description": "(Required) The notification id of the legal person beneficial owner notification being requested."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "api_key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "disabled": false,
+                  "description": "The ETag of the resource.",
+                  "key": "ETag",
+                  "value": "string"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "a2485803-64f3-435f-99d9-563e61562f4c",
+              "name": "Unauthorised",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "company",
+                    ":company_number",
+                    "persons-with-significant-control",
+                    "legal-person-beneficial-owner",
+                    ":notification_id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "company_number",
+                      "description": "(Required) The company number of the legal person beneficial owner details being requested."
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "notification_id",
+                      "description": "(Required) The notification id of the legal person beneficial owner notification being requested."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "api_key",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "2b57f1ab-bb57-4df1-acbf-6838a8abc392",
+              "name": "Resource not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "company",
+                    ":company_number",
+                    "persons-with-significant-control",
+                    "legal-person-beneficial-owner",
+                    ":notification_id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "company_number",
+                      "description": "(Required) The company number of the legal person beneficial owner details being requested."
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "notification_id",
+                      "description": "(Required) The notification id of the legal person beneficial owner notification being requested."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "api_key",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "be3aee35-8e77-4d99-8af7-24e5b2adeae2",
+          "name": "List the company persons with significant control statements",
+          "request": {
+            "name": "List the company persons with significant control statements",
+            "description": {
+              "content": "List of all persons with significant control statements",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "company",
+                ":company_number",
+                "persons-with-significant-control-statements"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "items_per_page",
+                  "value": "<integer>",
+                  "description": "(Required) The id of the legal person with significant control details being requested."
+                },
+                {
+                  "disabled": false,
+                  "key": "start_index",
+                  "value": "<integer>",
+                  "description": "(Required) The offset into the entire result set that this page starts."
+                },
+                {
+                  "disabled": false,
+                  "key": "register_view",
+                  "value": "<query>",
+                  "description": "(Required) Display register specific information. If register is held at Companies House and register_view is set to true, only statements which are active or were withdrawn during election period are shown. Accepted values are: -`true`  \n -`false`  \n Defaults to false."
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "company_number",
+                  "description": "(Required) The company number of the persons with significant control statements list being requested."
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "c62aecbf-57cc-44f2-b3b9-f7b3ee968960",
+              "name": "CompanyPSCStatements resource returned",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "company",
+                    ":company_number",
+                    "persons-with-significant-control-statements"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "items_per_page",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "start_index",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "register_view",
+                      "value": "<query>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "company_number",
+                      "description": "(Required) The company number of the persons with significant control statements list being requested."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "api_key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "disabled": false,
+                  "description": "The ETag of the resource.",
+                  "key": "ETag",
+                  "value": "string"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "a4ba6789-321e-4da0-8e6f-2ca442e0544c",
+              "name": "Unauthorised",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "company",
+                    ":company_number",
+                    "persons-with-significant-control-statements"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "items_per_page",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "start_index",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "register_view",
+                      "value": "<query>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "company_number",
+                      "description": "(Required) The company number of the persons with significant control statements list being requested."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "api_key",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "18673c0e-6331-484f-8889-5276fd4d8515",
+              "name": "Resource not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "company",
+                    ":company_number",
+                    "persons-with-significant-control-statements"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "items_per_page",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "start_index",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "register_view",
+                      "value": "<query>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "company_number",
+                      "description": "(Required) The company number of the persons with significant control statements list being requested."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "api_key",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "9afba619-8fd4-4335-b0f9-d28c3c015c2b",
+          "name": "Get the person with significant control statement",
+          "request": {
+            "name": "Get the person with significant control statement",
+            "description": {
+              "content": "Get details of a person with significant control statement",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "company",
+                ":company_number",
+                "persons-with-significant-control-statements",
+                ":statement_id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "company_number",
+                  "description": "(Required) The company number of the persons with significant control statements list being requested."
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "statement_id",
+                  "description": "(Required) The id of the person with significant control statement details being requested."
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "ab26c695-eb58-481c-a69a-3b9f4897c4ce",
+              "name": "PSCStatement resource returned",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "company",
+                    ":company_number",
+                    "persons-with-significant-control-statements",
+                    ":statement_id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "company_number",
+                      "description": "(Required) The company number of the persons with significant control statements list being requested."
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "statement_id",
+                      "description": "(Required) The id of the person with significant control statement details being requested."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "api_key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "disabled": false,
+                  "description": "The ETag of the resource.",
+                  "key": "ETag",
+                  "value": "string"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "f6b0fc5e-2432-49ee-ae4f-5529a5f7a0e8",
+              "name": "Unauthorised",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "company",
+                    ":company_number",
+                    "persons-with-significant-control-statements",
+                    ":statement_id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "company_number",
+                      "description": "(Required) The company number of the persons with significant control statements list being requested."
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "statement_id",
+                      "description": "(Required) The id of the person with significant control statement details being requested."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "api_key",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "de9bf888-6c75-4b56-8b85-d453354c0ffc",
+              "name": "Resource not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "company",
+                    ":company_number",
+                    "persons-with-significant-control-statements",
+                    ":statement_id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "company_number",
+                      "description": "(Required) The company number of the persons with significant control statements list being requested."
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "statement_id",
+                      "description": "(Required) The id of the person with significant control statement details being requested."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "api_key",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "be7c6009-0e35-403c-8c22-2aa6b8215389",
+          "name": "Get the super secure person with significant control",
+          "request": {
+            "name": "Get the super secure person with significant control",
+            "description": {
+              "content": "Get details of a super secure person with significant control",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "company",
+                ":company_number",
+                "persons-with-significant-control",
+                "super-secure",
+                ":super_secure_id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "company_number",
+                  "description": "(Required) The company number of the super secure person with significant control details being requested."
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "super_secure_id",
+                  "description": "(Required) The id of the super secure person with significant control details being requested."
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "ef88343e-0912-4bc3-8cd0-5b51715a94e9",
+              "name": "SuperSecurePSC resource returned",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "company",
+                    ":company_number",
+                    "persons-with-significant-control",
+                    "super-secure",
+                    ":super_secure_id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "company_number",
+                      "description": "(Required) The company number of the super secure person with significant control details being requested."
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "super_secure_id",
+                      "description": "(Required) The id of the super secure person with significant control details being requested."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "api_key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "disabled": false,
+                  "description": "The ETag of the resource.",
+                  "key": "ETag",
+                  "value": "string"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "e463e71f-d1a2-461d-bb0d-f6e7e72eb6e1",
+              "name": "Unauthorised",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "company",
+                    ":company_number",
+                    "persons-with-significant-control",
+                    "super-secure",
+                    ":super_secure_id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "company_number",
+                      "description": "(Required) The company number of the super secure person with significant control details being requested."
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "super_secure_id",
+                      "description": "(Required) The id of the super secure person with significant control details being requested."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "api_key",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "b9cffea0-6785-4e2b-b6a4-81325d502d0d",
+              "name": "Resource not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "company",
+                    ":company_number",
+                    "persons-with-significant-control",
+                    "super-secure",
+                    ":super_secure_id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "company_number",
+                      "description": "(Required) The company number of the super secure person with significant control details being requested."
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "super_secure_id",
+                      "description": "(Required) The id of the super secure person with significant control details being requested."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "api_key",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "f1bff7d6-0241-4f69-bc18-9e1398cd93f6",
+          "name": "Get the super secure beneficial owner",
+          "request": {
+            "name": "Get the super secure beneficial owner",
+            "description": {
+              "content": "Get details of a super secure beneficial owner",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "company",
+                ":company_number",
+                "persons-with-significant-control",
+                "super-secure-beneficial-owner",
+                ":super_secure_id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "company_number",
+                  "description": "(Required) The company number of the super secure beneficial owner details being requested."
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "super_secure_id",
+                  "description": "(Required) The id of the super secure beneficial owner details being requested."
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "8241fa8b-029e-4583-8f2a-8217f9b07e59",
+              "name": "SuperSecureBO resource returned",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "company",
+                    ":company_number",
+                    "persons-with-significant-control",
+                    "super-secure-beneficial-owner",
+                    ":super_secure_id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "company_number",
+                      "description": "(Required) The company number of the super secure beneficial owner details being requested."
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "super_secure_id",
+                      "description": "(Required) The id of the super secure beneficial owner details being requested."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "api_key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "disabled": false,
+                  "description": "The ETag of the resource.",
+                  "key": "ETag",
+                  "value": "string"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "37fb0efc-b4f0-4876-b111-a8ba07d01807",
+              "name": "Unauthorised",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "company",
+                    ":company_number",
+                    "persons-with-significant-control",
+                    "super-secure-beneficial-owner",
+                    ":super_secure_id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "company_number",
+                      "description": "(Required) The company number of the super secure beneficial owner details being requested."
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "super_secure_id",
+                      "description": "(Required) The id of the super secure beneficial owner details being requested."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "api_key",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "afaefe3d-18bb-45af-bd3b-656e3e6e074f",
+              "name": "Resource not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "company",
+                    ":company_number",
+                    "persons-with-significant-control",
+                    "super-secure-beneficial-owner",
+                    ":super_secure_id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "company_number",
+                      "description": "(Required) The company number of the super secure beneficial owner details being requested."
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "super_secure_id",
+                      "description": "(Required) The id of the super secure beneficial owner details being requested."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "api_key",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.company-information.service.gov.uk",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "api_key"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "header"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "c41e3452-b293-42d5-9fb1-82692f3880cf",
+    "name": "Companies House Public Data charges personsWithSignificantControl API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "An API suite providing read only access to search and retrieve public company data",
+      "type": "text/plain"
+    }
+  }
+}

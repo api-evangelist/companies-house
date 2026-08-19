@@ -1,0 +1,45 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Companies House Public Data charges registeredOfficeAddress API",
+    "version": "1.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "api_key",
+      "value": "{{api_key}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "registeredOfficeAddress",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Registered Office Address",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.company-information.service.gov.uk/company/:companyNumber/registered-office-address",
+            "params": [
+              {
+                "name": "company_number",
+                "value": "",
+                "type": "path",
+                "description": "Company number for registered office address"
+              }
+            ]
+          },
+          "docs": "Get the current address of a company"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

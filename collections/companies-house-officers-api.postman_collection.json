@@ -1,0 +1,587 @@
+{
+  "item": [
+    {
+      "id": "510a863a-c6da-4456-a2d1-ec6fa297b1fe",
+      "name": "officers",
+      "description": {
+        "content": "Officers",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "f6ccb83d-b289-47d3-98d1-2af008ebc3e7",
+          "name": "Company Officers",
+          "request": {
+            "name": "Company Officers",
+            "description": {
+              "content": "List of all company officers",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "company",
+                ":company_number",
+                "officers"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "items_per_page",
+                  "value": "<integer>",
+                  "description": "The number of officers to return per page."
+                },
+                {
+                  "disabled": false,
+                  "key": "register_type",
+                  "value": "<string>",
+                  "description": "The register_type determines which officer type is returned for the registers view.The register_type field will only work if registers_view is set to true"
+                },
+                {
+                  "disabled": false,
+                  "key": "register_view",
+                  "value": "<string>",
+                  "description": "Display register specific information. If given register is held at Companies House, registers_view set to true and correct register_type specified, only active officers will be returned. Defaults to false"
+                },
+                {
+                  "disabled": false,
+                  "key": "start_index",
+                  "value": "<integer>",
+                  "description": "The offset into the entire result set that this page starts."
+                },
+                {
+                  "disabled": false,
+                  "key": "order_by",
+                  "value": "<string>",
+                  "description": "The field by which to order the result set."
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "company_number",
+                  "description": "(Required) The company number of the officer list being requested."
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "ac491014-08d6-4fec-8288-16d5f2f2f7c7",
+              "name": "List the company officers",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "company",
+                    ":company_number",
+                    "officers"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "items_per_page",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "register_type",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "register_view",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "start_index",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "order_by",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "company_number",
+                      "description": "(Required) The company number of the officer list being requested."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "api_key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "disabled": false,
+                  "description": "The ETag of the resource.",
+                  "key": "ETag",
+                  "value": "string"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "00427ad8-48ac-4294-9c1e-2ed960570c83",
+              "name": "Bad request",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "company",
+                    ":company_number",
+                    "officers"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "items_per_page",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "register_type",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "register_view",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "start_index",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "order_by",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "company_number",
+                      "description": "(Required) The company number of the officer list being requested."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "api_key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "ad160640-561a-4a69-882c-748772f1c96e",
+              "name": "Unauthorised",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "company",
+                    ":company_number",
+                    "officers"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "items_per_page",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "register_type",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "register_view",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "start_index",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "order_by",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "company_number",
+                      "description": "(Required) The company number of the officer list being requested."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "api_key",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "9df7c069-dcd8-4ebb-a04d-469852f56895",
+          "name": "Get a company officer appointment",
+          "request": {
+            "name": "Get a company officer appointment",
+            "description": {
+              "content": "Get details of an individual company officer appointment",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "company",
+                ":company_number",
+                "appointments",
+                ":appointment_id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "company_number",
+                  "description": "(Required) The company number of the officer list being requested."
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "appointment_id",
+                  "description": "(Required) The appointment id of the company officer appointment being requested."
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "326848c9-eb0f-4d9b-8988-a94ff191ff2b",
+              "name": "Get a company officer appointment",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "company",
+                    ":company_number",
+                    "appointments",
+                    ":appointment_id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "company_number",
+                      "description": "(Required) The company number of the officer list being requested."
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "appointment_id",
+                      "description": "(Required) The appointment id of the company officer appointment being requested."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "api_key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "disabled": false,
+                  "description": "The ETag of the resource.",
+                  "key": "ETag",
+                  "value": "string"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "d1aaccd7-ee78-413e-8bd9-4b3934abce3b",
+              "name": "Bad request",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "company",
+                    ":company_number",
+                    "appointments",
+                    ":appointment_id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "company_number",
+                      "description": "(Required) The company number of the officer list being requested."
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "appointment_id",
+                      "description": "(Required) The appointment id of the company officer appointment being requested."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "api_key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "257d317b-87ad-4c64-855e-57960d328c67",
+              "name": "Unauthorised",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "company",
+                    ":company_number",
+                    "appointments",
+                    ":appointment_id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "company_number",
+                      "description": "(Required) The company number of the officer list being requested."
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "appointment_id",
+                      "description": "(Required) The appointment id of the company officer appointment being requested."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "api_key",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.company-information.service.gov.uk",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "api_key"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "header"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "8276867b-f3e4-486d-9af4-fe06df81cf2a",
+    "name": "Companies House Public Data charges officers API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "An API suite providing read only access to search and retrieve public company data",
+      "type": "text/plain"
+    }
+  }
+}

@@ -1,0 +1,1626 @@
+{
+  "item": [
+    {
+      "id": "b63577c6-9ea0-4859-b4ac-8838a47fa10b",
+      "name": "search",
+      "description": {
+        "content": "Search",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "8afd62e1-d4b4-47a1-a6bb-4adf00912ff2",
+          "name": "Search All",
+          "request": {
+            "name": "Search All",
+            "description": {
+              "content": "Search companies, officers and disqualified officers",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "search"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "q",
+                  "value": "<string>",
+                  "description": "(Required) The term being searched for."
+                },
+                {
+                  "disabled": false,
+                  "key": "items_per_page",
+                  "value": "<integer>",
+                  "description": "The number of search results to return per page."
+                },
+                {
+                  "disabled": false,
+                  "key": "start_index",
+                  "value": "<integer>",
+                  "description": "The index of the first result item to return."
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "31f6bccb-1945-4b7b-b29e-99c8279b81e1",
+              "name": "Search all",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "search"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "q",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "items_per_page",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "start_index",
+                      "value": "<integer>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "api_key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "82112a5e-a536-4d16-a531-36e61de00fea",
+              "name": "Not authorised",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "search"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "q",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "items_per_page",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "start_index",
+                      "value": "<integer>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "api_key",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "ec551c8f-2d68-4786-bf0d-0ab853cec14c",
+          "name": "Search companies",
+          "request": {
+            "name": "Search companies",
+            "description": {
+              "content": "Search company information",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "search",
+                "companies"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "q",
+                  "value": "<string>",
+                  "description": "(Required) The term being searched for."
+                },
+                {
+                  "disabled": false,
+                  "key": "items_per_page",
+                  "value": "<integer>",
+                  "description": "The number of search results to return per page."
+                },
+                {
+                  "disabled": false,
+                  "key": "start_index",
+                  "value": "<integer>",
+                  "description": "The index of the first result item to return."
+                },
+                {
+                  "disabled": false,
+                  "key": "restrictions",
+                  "value": "<string>",
+                  "description": "Enumerable options to restrict search results. Space separate multiple restriction options to combine functionality. For a \"company name availability\" search use \"active-companies legally-equivalent-company-name\" together."
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "5337c52b-3892-48a6-a83c-fceb45eb60ba",
+              "name": "Search company",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "search",
+                    "companies"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "q",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "items_per_page",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "start_index",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "restrictions",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "api_key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "7b4ff068-68e8-4604-8df0-d4bc2ce683b4",
+              "name": "Not authorised",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "search",
+                    "companies"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "q",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "items_per_page",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "start_index",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "restrictions",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "api_key",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "25161be9-ad4a-4b75-9450-c5db8d90c61f",
+          "name": "Search company officers",
+          "request": {
+            "name": "Search company officers",
+            "description": {
+              "content": "Search for officer information",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "search",
+                "officers"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "q",
+                  "value": "<string>",
+                  "description": "(Required) The term being searched for."
+                },
+                {
+                  "disabled": false,
+                  "key": "items_per_page",
+                  "value": "<integer>",
+                  "description": "The number of search results to return per page."
+                },
+                {
+                  "disabled": false,
+                  "key": "start_index",
+                  "value": "<integer>",
+                  "description": "The index of the first result item to return."
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "d812af36-2c0e-412a-9adc-c7b606752a6e",
+              "name": "Search officer",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "search",
+                    "officers"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "q",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "items_per_page",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "start_index",
+                      "value": "<integer>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "api_key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "d7aa346a-a4a5-4373-b4aa-179e0c62774d",
+              "name": "Not authorised",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "search",
+                    "officers"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "q",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "items_per_page",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "start_index",
+                      "value": "<integer>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "api_key",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "0ab2d291-f10f-4e5d-b7a1-2d85e7372420",
+          "name": "Search disqualified officers",
+          "request": {
+            "name": "Search disqualified officers",
+            "description": {
+              "content": "Search for disqualified officer information",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "search",
+                "disqualified-officers"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "q",
+                  "value": "<string>",
+                  "description": "(Required) The term being searched for."
+                },
+                {
+                  "disabled": false,
+                  "key": "items_per_page",
+                  "value": "<integer>",
+                  "description": "The number of search results to return per page."
+                },
+                {
+                  "disabled": false,
+                  "key": "start_index",
+                  "value": "<integer>",
+                  "description": "The index of the first result item to return."
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "ec712df7-3b6e-4a70-b2d6-945bd2a0a0b0",
+              "name": "Search all",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "search",
+                    "disqualified-officers"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "q",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "items_per_page",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "start_index",
+                      "value": "<integer>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "api_key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "1bb822c5-6d82-4818-908f-0df689e8aa33",
+              "name": "Not authorised",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "search",
+                    "disqualified-officers"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "q",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "items_per_page",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "start_index",
+                      "value": "<integer>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "api_key",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "c4f57d9b-42e3-4c18-9c83-e9858e198753",
+          "name": "Search for a dissolved company",
+          "request": {
+            "name": "Search for a dissolved company",
+            "description": {
+              "content": "Search for a dissolved company",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "dissolved-search",
+                "companies"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "q",
+                  "value": "<string>",
+                  "description": "(Required) The company name being searched for"
+                },
+                {
+                  "disabled": false,
+                  "key": "search_type",
+                  "value": "<string>",
+                  "description": "(Required) Determines type of search. Options are alphabetical, best-match, previous-name-dissolved"
+                },
+                {
+                  "disabled": false,
+                  "key": "search_above",
+                  "value": "<string>",
+                  "description": "The ordered_alpha_key_with_id used for alphabetical paging"
+                },
+                {
+                  "disabled": false,
+                  "key": "search_below",
+                  "value": "<string>",
+                  "description": "The ordered_alpha_key_with_id used for alphabetical paging"
+                },
+                {
+                  "disabled": false,
+                  "key": "size",
+                  "value": "<string>",
+                  "description": "The maximum number of results matching the search term(s) to return with a range of 1 to 100"
+                },
+                {
+                  "disabled": false,
+                  "key": "start_index",
+                  "value": "<string>",
+                  "description": "Used in best-match and previous-name-dissolved search-type"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "8e81382d-32d1-44fa-bca5-35283e70fb68",
+              "name": "A list of dissolved companies",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "dissolved-search",
+                    "companies"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "q",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "search_type",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "search_above",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "search_below",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "size",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "start_index",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "api_key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "8534fe5a-9263-4a28-9714-9d5b9575a717",
+              "name": "No companies found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "dissolved-search",
+                    "companies"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "q",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "search_type",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "search_above",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "search_below",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "size",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "start_index",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "api_key",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "e9670f5d-f6a6-4bd7-a615-b17ddf4ff88c",
+              "name": "Invalid size parameter, size must be greater than zero and not greater than 100",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "dissolved-search",
+                    "companies"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "q",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "search_type",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "search_above",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "search_below",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "size",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "start_index",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "api_key",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+              "code": 422,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "cd87ff24-87ff-41a1-9645-5e1e11fe0f55",
+          "name": "Search for a company",
+          "request": {
+            "name": "Search for a company",
+            "description": {
+              "content": "Search for a company",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "alphabetical-search",
+                "companies"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "q",
+                  "value": "<string>",
+                  "description": "(Required) The company name being searched for"
+                },
+                {
+                  "disabled": false,
+                  "key": "search_above",
+                  "value": "<string>",
+                  "description": "The ordered_alpha_key_with_id used for paging"
+                },
+                {
+                  "disabled": false,
+                  "key": "search_below",
+                  "value": "<string>",
+                  "description": "The ordered_alpha_key_with_id used for paging"
+                },
+                {
+                  "disabled": false,
+                  "key": "size",
+                  "value": "<string>",
+                  "description": "The maximum number of results matching the search term(s) to return with a range of 1 to 100"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "7208e7e6-1747-4e28-ad10-15229293873e",
+              "name": "A list of companies",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "alphabetical-search",
+                    "companies"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "q",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "search_above",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "search_below",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "size",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "api_key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "d32284e1-e756-4d08-8f85-0592a52b8eaf",
+              "name": "No companies found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "alphabetical-search",
+                    "companies"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "q",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "search_above",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "search_below",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "size",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "api_key",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "bbf0cee2-1011-47c0-83c6-a50f86bcec13",
+              "name": "Invalid size parameter, size must be greater than zero and not greater than 100",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "alphabetical-search",
+                    "companies"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "q",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "search_above",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "search_below",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "size",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "api_key",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+              "code": 422,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "959b6ee9-809e-4879-a0e3-a917311bc0a2",
+          "name": "Advanced search for a company",
+          "request": {
+            "name": "Advanced search for a company",
+            "description": {
+              "content": "Advanced search for a company",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "advanced-search",
+                "companies"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "company_name_includes",
+                  "value": "<string>",
+                  "description": "The company name includes advanced search filter"
+                },
+                {
+                  "disabled": false,
+                  "key": "company_name_excludes",
+                  "value": "<string>",
+                  "description": "The company name excludes advanced search filter"
+                },
+                {
+                  "disabled": false,
+                  "key": "company_status",
+                  "value": "<list>",
+                  "description": "The company status advanced search filter. To search using multiple values, use a comma delimited list or multiple of the same key i.e. company_status=xxx&company_status=yyy"
+                },
+                {
+                  "disabled": false,
+                  "key": "company_subtype",
+                  "value": "<string>",
+                  "description": "The company subtype advanced search filter. To search using multiple values, use a comma delimited list or multiple of the same key i.e. company_subtype=xxx&company_subtype=yyy"
+                },
+                {
+                  "disabled": false,
+                  "key": "company_type",
+                  "value": "<list>",
+                  "description": "The company type advanced search filter. To search using multiple values, use a comma delimited list or multiple of the same key i.e. company_type=xxx&company_type=yyy"
+                },
+                {
+                  "disabled": false,
+                  "key": "dissolved_from",
+                  "value": "<date>",
+                  "description": "The dissolved from date advanced search filter"
+                },
+                {
+                  "disabled": false,
+                  "key": "dissolved_to",
+                  "value": "<date>",
+                  "description": "The dissolved to date advanced search filter"
+                },
+                {
+                  "disabled": false,
+                  "key": "incorporated_from",
+                  "value": "<date>",
+                  "description": "The incorporated from date advanced search filter"
+                },
+                {
+                  "disabled": false,
+                  "key": "incorporated_to",
+                  "value": "<date>",
+                  "description": "The incorporated to date advanced search filter"
+                },
+                {
+                  "disabled": false,
+                  "key": "location",
+                  "value": "<string>",
+                  "description": "The location advanced search filter"
+                },
+                {
+                  "disabled": false,
+                  "key": "sic_codes",
+                  "value": "<list>",
+                  "description": "The SIC codes advanced search filter. To search using multiple values, use a comma delimited list or multiple of the same key i.e. sic_codes=xxx&sic_codes=yyy"
+                },
+                {
+                  "disabled": false,
+                  "key": "size",
+                  "value": "<string>",
+                  "description": "The maximum number of results matching the search term(s) to return with a range of 1 to 5000"
+                },
+                {
+                  "disabled": false,
+                  "key": "start_index",
+                  "value": "<string>",
+                  "description": "The point at which results will start from i.e show search results from result 20 (used for paging)"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "1fb60ce8-dc25-4e26-b8ff-c1e0f51d740a",
+              "name": "A list of companies",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "advanced-search",
+                    "companies"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "company_name_includes",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "company_name_excludes",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "company_status",
+                      "value": "<list>"
+                    },
+                    {
+                      "key": "company_subtype",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "company_type",
+                      "value": "<list>"
+                    },
+                    {
+                      "key": "dissolved_from",
+                      "value": "<date>"
+                    },
+                    {
+                      "key": "dissolved_to",
+                      "value": "<date>"
+                    },
+                    {
+                      "key": "incorporated_from",
+                      "value": "<date>"
+                    },
+                    {
+                      "key": "incorporated_to",
+                      "value": "<date>"
+                    },
+                    {
+                      "key": "location",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "sic_codes",
+                      "value": "<list>"
+                    },
+                    {
+                      "key": "size",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "start_index",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "api_key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "d9afb169-a16b-4913-b4d2-84b3702e2eb3",
+              "name": "Bad request",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "advanced-search",
+                    "companies"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "company_name_includes",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "company_name_excludes",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "company_status",
+                      "value": "<list>"
+                    },
+                    {
+                      "key": "company_subtype",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "company_type",
+                      "value": "<list>"
+                    },
+                    {
+                      "key": "dissolved_from",
+                      "value": "<date>"
+                    },
+                    {
+                      "key": "dissolved_to",
+                      "value": "<date>"
+                    },
+                    {
+                      "key": "incorporated_from",
+                      "value": "<date>"
+                    },
+                    {
+                      "key": "incorporated_to",
+                      "value": "<date>"
+                    },
+                    {
+                      "key": "location",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "sic_codes",
+                      "value": "<list>"
+                    },
+                    {
+                      "key": "size",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "start_index",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "api_key",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "4dd5d7c3-bd42-4e85-885c-2a378e11a4d6",
+              "name": "No companies found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "advanced-search",
+                    "companies"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "company_name_includes",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "company_name_excludes",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "company_status",
+                      "value": "<list>"
+                    },
+                    {
+                      "key": "company_subtype",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "company_type",
+                      "value": "<list>"
+                    },
+                    {
+                      "key": "dissolved_from",
+                      "value": "<date>"
+                    },
+                    {
+                      "key": "dissolved_to",
+                      "value": "<date>"
+                    },
+                    {
+                      "key": "incorporated_from",
+                      "value": "<date>"
+                    },
+                    {
+                      "key": "incorporated_to",
+                      "value": "<date>"
+                    },
+                    {
+                      "key": "location",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "sic_codes",
+                      "value": "<list>"
+                    },
+                    {
+                      "key": "size",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "start_index",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "api_key",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.company-information.service.gov.uk",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "api_key"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "header"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "57e19743-8822-47cf-b552-f41d50eacdec",
+    "name": "Companies House Public Data charges search API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "An API suite providing read only access to search and retrieve public company data",
+      "type": "text/plain"
+    }
+  }
+}
