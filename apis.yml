@@ -1,4 +1,4 @@
-aid: https://raw.githubusercontent.com/api-evangelist/companies-house/refs/heads/main/apis.yml
+aid: companies-house
 name: Companies House
 description: >
   Companies House is the UK government executive agency and trading fund responsible
@@ -28,7 +28,7 @@ image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/companies-
 url: https://raw.githubusercontent.com/api-evangelist/companies-house/refs/heads/main/apis.yml
 created: '2026-06-12'
 modified: '2026-06-12'
-specificationVersion: '0.19'
+specificationVersion: '0.23'
 tags:
   - Companies
   - UK Government
