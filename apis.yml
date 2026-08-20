@@ -69,6 +69,8 @@ apis:
   humanURL: https://developer.company-information.service.gov.uk/overview
   baseURL: https://api.company-information.service.gov.uk
   tags:
+  - Charges
+  tags_raw:
   - charges
   properties:
   - type: OpenAPI
@@ -86,6 +88,8 @@ apis:
   humanURL: https://developer.company-information.service.gov.uk/overview
   baseURL: https://api.company-information.service.gov.uk
   tags:
+  - Filing History
+  tags_raw:
   - filingHistory
   properties:
   - type: OpenAPI
@@ -103,6 +107,8 @@ apis:
   humanURL: https://developer.company-information.service.gov.uk/overview
   baseURL: https://api.company-information.service.gov.uk
   tags:
+  - Insolvency
+  tags_raw:
   - insolvency
   properties:
   - type: OpenAPI
@@ -119,7 +125,8 @@ apis:
   description: Officer disqualifications
   humanURL: https://developer.company-information.service.gov.uk/overview
   baseURL: https://api.company-information.service.gov.uk
-  tags:
+  tags: []
+  tags_raw:
   - officerDisqualifications
   properties:
   - type: OpenAPI
@@ -137,6 +144,8 @@ apis:
   humanURL: https://developer.company-information.service.gov.uk/overview
   baseURL: https://api.company-information.service.gov.uk
   tags:
+  - Officers
+  tags_raw:
   - officers
   properties:
   - type: OpenAPI
@@ -153,7 +162,8 @@ apis:
   description: Persons with significant control
   humanURL: https://developer.company-information.service.gov.uk/overview
   baseURL: https://api.company-information.service.gov.uk
-  tags:
+  tags: []
+  tags_raw:
   - personsWithSignificantControl
   properties:
   - type: OpenAPI
@@ -170,7 +180,8 @@ apis:
   description: Registered office address
   humanURL: https://developer.company-information.service.gov.uk/overview
   baseURL: https://api.company-information.service.gov.uk
-  tags:
+  tags: []
+  tags_raw:
   - registeredOfficeAddress
   properties:
   - type: OpenAPI
@@ -188,6 +199,8 @@ apis:
   humanURL: https://developer.company-information.service.gov.uk/overview
   baseURL: https://api.company-information.service.gov.uk
   tags:
+  - Search
+  tags_raw:
   - search
   properties:
   - type: OpenAPI
