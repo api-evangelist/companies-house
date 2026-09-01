@@ -81,7 +81,7 @@ apis:
   humanURL: https://developer.company-information.service.gov.uk/overview
   baseURL: https://api.company-information.service.gov.uk
   tags:
-  - charges
+  - Charges
   tags_raw:
   - charges
   properties:
@@ -99,7 +99,8 @@ apis:
   description: Filing history
   humanURL: https://developer.company-information.service.gov.uk/overview
   baseURL: https://api.company-information.service.gov.uk
-  tags: []
+  tags:
+  - Filing History
   tags_raw:
   - filingHistory
   properties:
@@ -118,7 +119,7 @@ apis:
   humanURL: https://developer.company-information.service.gov.uk/overview
   baseURL: https://api.company-information.service.gov.uk
   tags:
-  - insolvency
+  - Insolvency
   tags_raw:
   - insolvency
   properties:
@@ -155,7 +156,7 @@ apis:
   humanURL: https://developer.company-information.service.gov.uk/overview
   baseURL: https://api.company-information.service.gov.uk
   tags:
-  - officers
+  - Officers
   tags_raw:
   - officers
   properties:
