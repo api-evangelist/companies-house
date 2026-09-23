@@ -1,7 +1,7 @@
-openapi: 3.0.0
+openapi: 3.2.0
 info:
   version: 1.0.0
-  title: Companies House Public Data charges officerDisqualifications API
+  title: Companies House Public Data Officer Disqualifications API
   description: An API suite providing read only access to search and retrieve public company data
 servers:
 - url: https://api.company-information.service.gov.uk
@@ -42,6 +42,8 @@ paths:
           description: Unauthorised
         '404':
           description: Resource not found
+      operationId: getDisqualifiedOfficersNaturalByOfficerId
+      x-operation-id-source: derived
   /disqualified-officers/corporate/{officer_id}:
     get:
       summary: Get a corporate officers disqualifications
@@ -72,6 +74,8 @@ paths:
           description: Unauthorised
         '404':
           description: Resource not found
+      operationId: getDisqualifiedOfficersCorporateByOfficerId
+      x-operation-id-source: derived
 components:
   securitySchemes:
     api_key:

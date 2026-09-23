@@ -1,14 +1,7 @@
 {
   "provider": "companies-house",
   "sources": [
-    "companies-house-charges-api-openapi.yml",
-    "companies-house-filinghistory-api-openapi.yml",
-    "companies-house-insolvency-api-openapi.yml",
-    "companies-house-officerdisqualifications-api-openapi.yml",
-    "companies-house-officers-api-openapi.yml",
-    "companies-house-personswithsignificantcontrol-api-openapi.yml",
-    "companies-house-registeredofficeaddress-api-openapi.yml",
-    "companies-house-search-api-openapi.yml"
+    "_original/companies-house-public-data-openapi.yml"
   ],
   "outputs": [
     "companies-house-charges-api-openapi.yml",
@@ -23,6 +16,19 @@
   "archived": [],
   "errors": [],
   "warnings": [],
-  "notes": [],
-  "skipped": []
+  "notes": [
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "companies-house-public-data-openapi.yml: upgraded openapi 3.0.0 -> OpenAPI 3.2.0",
+    "apis.yml register: already-registered"
+  ],
+  "skipped": [
+    "companies-house-charges-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "companies-house-filinghistory-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "companies-house-insolvency-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "companies-house-officerdisqualifications-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "companies-house-officers-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "companies-house-personswithsignificantcontrol-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "companies-house-registeredofficeaddress-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "companies-house-search-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }

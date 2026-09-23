@@ -1,7 +1,7 @@
-openapi: 3.0.0
+openapi: 3.2.0
 info:
   version: 1.0.0
-  title: Companies House Public Data charges API
+  title: Companies House Public Data Charges API
   description: An API suite providing read only access to search and retrieve public company data
 servers:
 - url: https://api.company-information.service.gov.uk
@@ -9,7 +9,7 @@ servers:
 security:
 - api_key: []
 tags:
-- name: charges
+- name: Charges
   description: Charges
 paths:
   /company/{company_number}/charges:
@@ -18,7 +18,7 @@ paths:
       description: List of charges for a company.
       x-operationName: list
       tags:
-      - charges
+      - Charges
       parameters:
       - name: company_number
         in: path
@@ -46,11 +46,13 @@ paths:
           description: Unauthorised
         '404':
           description: Resource not found
+      operationId: getCompanyByCompanyNumberCharges
+      x-operation-id-source: derived
   /company/{company_number}/charges/{charge_id}:
     get:
       description: Individual charge information for company.
       tags:
-      - charges
+      - Charges
       parameters:
       - name: company_number
         description: The company number that the charge is required for.
@@ -75,6 +77,10 @@ paths:
           description: Unauthorised
         '404':
           description: Resource not found
+      summary: Get company by company number charges by charge id
+      x-summary-source: derived
+      operationId: getCompanyByCompanyNumberChargesByChargeId
+      x-operation-id-source: derived
 components:
   securitySchemes:
     api_key:
