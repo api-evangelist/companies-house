@@ -76,7 +76,7 @@ apis:
   - FN: Companies House Developer Forum
     url: https://forum.companieshouse.gov.uk/
 - aid: companies-house:companies-house-charges-api
-  name: Companies House charges API
+  name: Companies House Charges API
   description: Charges
   humanURL: https://developer.company-information.service.gov.uk/overview
   baseURL: https://api.company-information.service.gov.uk
@@ -95,7 +95,7 @@ apis:
   - type: Examples
     url: examples/companies-house-examples.json
 - aid: companies-house:companies-house-filinghistory-api
-  name: Companies House filingHistory API
+  name: Companies House Filing History API
   description: Filing history
   humanURL: https://developer.company-information.service.gov.uk/overview
   baseURL: https://api.company-information.service.gov.uk
@@ -114,7 +114,7 @@ apis:
   - type: Examples
     url: examples/companies-house-examples.json
 - aid: companies-house:companies-house-insolvency-api
-  name: Companies House insolvency API
+  name: Companies House Insolvency API
   description: Insolvency
   humanURL: https://developer.company-information.service.gov.uk/overview
   baseURL: https://api.company-information.service.gov.uk
@@ -133,7 +133,7 @@ apis:
   - type: Examples
     url: examples/companies-house-examples.json
 - aid: companies-house:companies-house-officerdisqualifications-api
-  name: Companies House officerDisqualifications API
+  name: Companies House Officer Disqualifications API
   description: Officer disqualifications
   humanURL: https://developer.company-information.service.gov.uk/overview
   baseURL: https://api.company-information.service.gov.uk
@@ -151,7 +151,7 @@ apis:
   - type: Examples
     url: examples/companies-house-examples.json
 - aid: companies-house:companies-house-officers-api
-  name: Companies House officers API
+  name: Companies House Officers API
   description: Officers
   humanURL: https://developer.company-information.service.gov.uk/overview
   baseURL: https://api.company-information.service.gov.uk
@@ -170,7 +170,7 @@ apis:
   - type: Examples
     url: examples/companies-house-examples.json
 - aid: companies-house:companies-house-personswithsignificantcontrol-api
-  name: Companies House personsWithSignificantControl API
+  name: Companies House Persons With Significant Control API
   description: Persons with significant control
   humanURL: https://developer.company-information.service.gov.uk/overview
   baseURL: https://api.company-information.service.gov.uk
@@ -188,7 +188,7 @@ apis:
   - type: Examples
     url: examples/companies-house-examples.json
 - aid: companies-house:companies-house-registeredofficeaddress-api
-  name: Companies House registeredOfficeAddress API
+  name: Companies House Registered Office Address API
   description: Registered office address
   humanURL: https://developer.company-information.service.gov.uk/overview
   baseURL: https://api.company-information.service.gov.uk
@@ -206,7 +206,7 @@ apis:
   - type: Examples
     url: examples/companies-house-examples.json
 - aid: companies-house:companies-house-search-api
-  name: Companies House search API
+  name: Companies House Search API
   description: Search
   humanURL: https://developer.company-information.service.gov.uk/overview
   baseURL: https://api.company-information.service.gov.uk
