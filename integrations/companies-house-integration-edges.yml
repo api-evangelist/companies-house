@@ -1,0 +1,47 @@
+edges:
+- partner_name: UK Government API Catalogue (CDDO)
+  partner: null
+  partner_match: register
+  type: register
+  direction: partner-built
+  channel: standard-directory
+  relationship: standard-participant
+  evidence: https://raw.githubusercontent.com/co-cddo/api-catalogue/main/data/catalogue.csv
+  match:
+    method: domain+verified
+    domains:
+    - companieshouse.gov.uk
+  register_listing:
+    publisher: companies-house
+    apis:
+    - name: Companies House
+      url: https://api.companieshouse.gov.uk/
+      documentation: https://developer.companieshouse.gov.uk/api/docs/
+      license: null
+      date_updated: '2020-08-24'
+      matched_on: url
+    - name: Companies House Streaming
+      url: https://stream.companieshouse.gov.uk/
+      documentation: https://developer-specs.companieshouse.gov.uk/streaming-api/guides/overview
+      license: null
+      date_updated: '2020-08-24'
+      matched_on: url
+  contract_reference:
+    register: co-cddo/api-catalogue (UK Government API Catalogue, CDDO)
+    spec_file: null
+    role: public-sector-api-publisher
+    registered_name: companies-house
+    register_id: companies-house
+    matched_domain: companieshouse.gov.uk
+    detected_by: sweep-gov-open-data.py
+    detected: '2026-10-15'
+  detected_by: sweep-gov-open-data.py
+  first_seen: '2026-10-15'
+generated: '2026-10-15'
+method: searched
+checked:
+- 'https://api.gouv.fr/api/v1/apis (200 text/html: not machine-readable)'
+- 'https://catalog.data.gov/api/3/action/package_search (404; GSA mirror keyed: 403 API_KEY_MISSING)'
+- https://raw.githubusercontent.com/co-cddo/api-catalogue/main/data/catalogue.csv
+source:
+- https://raw.githubusercontent.com/co-cddo/api-catalogue/main/data/catalogue.csv
