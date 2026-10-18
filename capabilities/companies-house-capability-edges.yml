@@ -1,0 +1,83 @@
+slug: companies-house
+provider: Companies House
+generated_by: planning/capability-mapping/scripts/classify_capabilities.py
+model: claude-opus-5
+frame:
+- Public Sector & Government
+min_confidence: 0.7
+capability_model:
+  source: https://github.com/vincentmakes/turbo-ea-capabilities
+  license: CC-BY-4.0
+  attribution: Turbo EA Capabilities by Vincent Verdet — Turbo EA, https://github.com/vincentmakes/turbo-ea-capabilities,
+    CC BY 4.0
+  notice: NOTICE
+edge_count: 7
+edges:
+- tag: personsWithSignificantControl
+  spec_file: companies-house-personswithsignificantcontrol-api-openapi.yml
+  capability_id: BC-3290.30
+  capability_id_l1: BC-3290
+  capability_name: Business and Entity Registry Management
+  confidence: 0.82
+  evidence: List the company persons with significant control; Get the corporate entity beneficial owner
+    notification
+  reason: PSC/beneficial ownership notifications are statutory registry records held on the company register,
+    so this realises authoritative business and entity registry management.
+- tag: officers
+  spec_file: companies-house-officers-api-openapi.yml
+  capability_id: BC-3290.30
+  capability_id_l1: BC-3290
+  capability_name: Business and Entity Registry Management
+  confidence: 0.8
+  evidence: GET /company/{company_number}/officers  Company Officers; Get a company officer appointment
+  reason: Officer appointments recorded against registered legal entities are core statutory registry
+    content maintained by the registrar; not HR data about the caller's employees.
+- tag: Charges
+  spec_file: companies-house-charges-api-openapi.yml
+  capability_id: BC-3290.30
+  capability_id_l1: BC-3290
+  capability_name: Business and Entity Registry Management
+  confidence: 0.78
+  evidence: GET /company/{company_number}/charges — part of "read only access to search and retrieve public
+    company data"
+  reason: Charges (mortgages/securities registered against a UK company) are an element of the statutory
+    company register maintained by Companies House; retrieving them realises business and entity registry
+    management (disclosure of authoritative registry records).
+- tag: filingHistory
+  spec_file: companies-house-filinghistory-api-openapi.yml
+  capability_id: BC-3290.30
+  capability_id_l1: BC-3290
+  capability_name: Business and Entity Registry Management
+  confidence: 0.75
+  evidence: GET /company/{company_number}/filing-history  filingHistoryList resource
+  reason: Statutory filings lodged by registered companies and held on the public register; maintaining
+    and exposing these is part of business/entity registry management by the registrar.
+- tag: registeredOfficeAddress
+  spec_file: companies-house-registeredofficeaddress-api-openapi.yml
+  capability_id: BC-3290.30
+  capability_id_l1: BC-3290
+  capability_name: Business and Entity Registry Management
+  confidence: 0.75
+  evidence: GET /company/{companyNumber}/registered-office-address  Registered Office Address
+  reason: Registered office address is a mandatory registry attribute of an incorporated entity, retrieved
+    from the authoritative company register.
+- tag: Search
+  spec_file: companies-house-search-api-openapi.yml
+  capability_id: BC-3290.30
+  capability_id_l1: BC-3290
+  capability_name: Business and Entity Registry Management
+  confidence: 0.72
+  evidence: GET /search/companies  Search companies; GET /search/officers  Search company officers; GET
+    /dissolved-search/companies
+  reason: Search over the authoritative company and officer register; it is registry lookup/disclosure
+    rather than a generic technical search feature, since the indexed objects are the statutory entity
+    records.
+- tag: insolvency
+  spec_file: companies-house-insolvency-api-openapi.yml
+  capability_id: BC-3290.30
+  capability_id_l1: BC-3290
+  capability_name: Business and Entity Registry Management
+  confidence: 0.7
+  evidence: GET /company/{company_number}/insolvency  Get company by company number insolvency
+  reason: Insolvency status recorded against the registered entity on the public company register; a registry
+    attribute, not a corporate finance process of the caller.
