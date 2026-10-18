@@ -18,11 +18,20 @@ edges:
   capability_id: BC-3290.30
   capability_id_l1: BC-3290
   capability_name: Business and Entity Registry Management
-  confidence: 0.82
-  evidence: List the company persons with significant control; Get the corporate entity beneficial owner
-    notification
-  reason: PSC/beneficial ownership notifications are statutory registry records held on the company register,
-    so this realises authoritative business and entity registry management.
+  confidence: 0.85
+  evidence: GET /company/{company_number}/persons-with-significant-control 'List the company persons with
+    significant control'; 'Get the corporate entity beneficial owner notification'
+  reason: The PSC/beneficial-ownership register is a statutory component of the UK companies register;
+    these operations retrieve those authoritative entity-registry records.
+- tag: filingHistory
+  spec_file: companies-house-filinghistory-api-openapi.yml
+  capability_id: BC-3290.30
+  capability_id_l1: BC-3290
+  capability_name: Business and Entity Registry Management
+  confidence: 0.8
+  evidence: GET /company/{company_number}/filing-history 'filingHistoryList resource'
+  reason: Exposes the statutory filing history held on the company register, i.e. maintenance and disclosure
+    of authoritative legal-entity records by the registrar.
 - tag: officers
   spec_file: companies-house-officers-api-openapi.yml
   capability_id: BC-3290.30
@@ -43,15 +52,6 @@ edges:
   reason: Charges (mortgages/securities registered against a UK company) are an element of the statutory
     company register maintained by Companies House; retrieving them realises business and entity registry
     management (disclosure of authoritative registry records).
-- tag: filingHistory
-  spec_file: companies-house-filinghistory-api-openapi.yml
-  capability_id: BC-3290.30
-  capability_id_l1: BC-3290
-  capability_name: Business and Entity Registry Management
-  confidence: 0.75
-  evidence: GET /company/{company_number}/filing-history  filingHistoryList resource
-  reason: Statutory filings lodged by registered companies and held on the public register; maintaining
-    and exposing these is part of business/entity registry management by the registrar.
 - tag: registeredOfficeAddress
   spec_file: companies-house-registeredofficeaddress-api-openapi.yml
   capability_id: BC-3290.30
