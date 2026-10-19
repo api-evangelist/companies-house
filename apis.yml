@@ -85,8 +85,6 @@ apis:
   tags_raw:
   - charges
   properties:
-  - type: OpenAPI
-    url: openapi/companies-house-charges-api-openapi.yml
   - type: Documentation
     url: >-
       https://developer-specs.company-information.service.gov.uk/companies-house-public-data-api/reference
@@ -104,8 +102,6 @@ apis:
   tags_raw:
   - filingHistory
   properties:
-  - type: OpenAPI
-    url: openapi/companies-house-filinghistory-api-openapi.yml
   - type: Documentation
     url: >-
       https://developer-specs.company-information.service.gov.uk/companies-house-public-data-api/reference
@@ -123,8 +119,6 @@ apis:
   tags_raw:
   - insolvency
   properties:
-  - type: OpenAPI
-    url: openapi/companies-house-insolvency-api-openapi.yml
   - type: Documentation
     url: >-
       https://developer-specs.company-information.service.gov.uk/companies-house-public-data-api/reference
@@ -141,8 +135,6 @@ apis:
   tags_raw:
   - officerDisqualifications
   properties:
-  - type: OpenAPI
-    url: openapi/companies-house-officerdisqualifications-api-openapi.yml
   - type: Documentation
     url: >-
       https://developer-specs.company-information.service.gov.uk/companies-house-public-data-api/reference
@@ -160,8 +152,6 @@ apis:
   tags_raw:
   - officers
   properties:
-  - type: OpenAPI
-    url: openapi/companies-house-officers-api-openapi.yml
   - type: Documentation
     url: >-
       https://developer-specs.company-information.service.gov.uk/companies-house-public-data-api/reference
@@ -178,8 +168,6 @@ apis:
   tags_raw:
   - personsWithSignificantControl
   properties:
-  - type: OpenAPI
-    url: openapi/companies-house-personswithsignificantcontrol-api-openapi.yml
   - type: Documentation
     url: >-
       https://developer-specs.company-information.service.gov.uk/companies-house-public-data-api/reference
@@ -196,8 +184,6 @@ apis:
   tags_raw:
   - registeredOfficeAddress
   properties:
-  - type: OpenAPI
-    url: openapi/companies-house-registeredofficeaddress-api-openapi.yml
   - type: Documentation
     url: >-
       https://developer-specs.company-information.service.gov.uk/companies-house-public-data-api/reference
@@ -215,8 +201,6 @@ apis:
   tags_raw:
   - search
   properties:
-  - type: OpenAPI
-    url: openapi/companies-house-search-api-openapi.yml
   - type: Documentation
     url: >-
       https://developer-specs.company-information.service.gov.uk/companies-house-public-data-api/reference
@@ -225,6 +209,9 @@ apis:
   - type: Examples
     url: examples/companies-house-examples.json
 common:
+  - type: CapabilityMap
+    url: capabilities/companies-house-capability-edges.yml
+    name: Companies House Business Capability Map
   - type: AgenticAccess
     url: agentic-access/companies-house-agentic-access.yml
   - type: VulnerabilityDisclosure
