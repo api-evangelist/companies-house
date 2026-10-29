@@ -1,4 +1,4 @@
-# Companies House (companies-house)
+# Companies House
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,68 +64,189 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Companies House is the UK government executive agency responsible for incorporating and dissolving limited companies and registering company information in Great Britain. The Companies House REST API provides a free, open, and standardised way for developers to search and retrieve company registration data, including company profiles, officer appointments, persons of significant control, filing history, charges, and insolvency records. A real-time Streaming API is also available, delivering changes to Companies House data as they happen. All access is provided free of charge and requires only an API key obtained from the Companies House Developer Hub. Authentication uses HTTP Basic Auth with the API key as the username.
+Companies House is the UK government executive agency and trading fund responsible for incorporating and dissolving limited companies and registering company information in Great Britain. The Companies House REST API provides a free, open, and standardised way to search and retrieve company registration data, including company profiles, officer appointments, persons of significant control, filing history, charges, and insolvency records. Developers can also access a real-time Streaming API that delivers changes to Companies House data as they happen, enabling applications to stay up-to-date without polling. Authentication is handled via API key using HTTP Basic Auth, and all access is provided free of charge with a generous rate limit.
 
-APIs.json: https://raw.githubusercontent.com/api-evangelist/companies-house/refs/heads/main/apis.yml
+**Areas:** Companies · UK Government · Business Registration · Company Search · Officers · Filing History · Insolvency · Charges · Persons of Significant Control · Open Data
 
-Naftiko: https://github.com/naftiko/fleet?utm_source=api-evangelist&utm_medium=readme&utm_campaign=companies-house-api-evangelist&utm_content=repo
+## Companies House on APIs.io
 
-## Tags
+Everything profiled for Companies House is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/companies-house/](https://apis.io/providers/companies-house/)** — or go straight to one of the APIs or properties below.
 
-- Companies
-- UK Government
-- Business Registration
-- Company Search
-- Officers
-- Filing History
-- Insolvency
-- Charges
-- Persons of Significant Control
-- Open Data
+### APIs (9)
 
-## APIs
+- [Companies House Streaming API](https://apis.io/apis/companies-house/companies-house-streaming-api/) — The Companies House Streaming API delivers real-time changes to Companies House data via long-running HTTP connections. It streams updates across nine data…
+- [Companies House Charges API](https://apis.io/apis/companies-house/companies-house-charges-api/) — Charges
+- [Companies House Filing History API](https://apis.io/apis/companies-house/companies-house-filinghistory-api/) — Filing history
+- [Companies House Insolvency API](https://apis.io/apis/companies-house/companies-house-insolvency-api/) — Insolvency
+- [Companies House Officer Disqualifications API](https://apis.io/apis/companies-house/companies-house-officerdisqualifications-api/) — Officer disqualifications
+- [Companies House Officers API](https://apis.io/apis/companies-house/companies-house-officers-api/) — Officers
+- [Companies House Persons With Significant Control API](https://apis.io/apis/companies-house/companies-house-personswithsignificantcontrol-api/) — Persons with significant control
+- [Companies House Registered Office Address API](https://apis.io/apis/companies-house/companies-house-registeredofficeaddress-api/) — Registered office address
+- [Companies House Search API](https://apis.io/apis/companies-house/companies-house-search-api/) — Search
 
-| API | Description |
-|-----|-------------|
-| Companies House Public Data API | Read access to all publicly available UK company data including profiles, officers, filing history, charges, insolvency, and PSC information |
-| Companies House Streaming API | Real-time streaming of Companies House data changes via long-running HTTP connections across nine data categories |
+### Published properties
 
-## Plans, Rate Limits, and FinOps
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-| Resource | File |
-|----------|------|
-| Plans and Pricing | [plans/companies-house-plans-pricing.yml](plans/companies-house-plans-pricing.yml) |
-| Rate Limits | [rate-limits/companies-house-rate-limits.yml](rate-limits/companies-house-rate-limits.yml) |
-| FinOps | [finops/companies-house-finops.yml](finops/companies-house-finops.yml) |
+#### Agentic access (1)
 
-**Pricing:** Free — no charges for API access. A single free tier with 600 requests per 5-minute window is available to all registered developers. Higher limits available by contacting Companies House directly.
+Which operations an agent can call, which act, and which need a human in the loop.
 
-**Rate Limits:**
-- Public Data API: 600 requests per 5-minute window per API key (HTTP 429 on breach)
-- Streaming API: 2 concurrent connections per account
+- [Companies House Agentic Access](https://apis.io/agentic-access/companies-house/companies-house-agentic-access/)
 
-## Timestamps
+#### JSON Schema (127)
 
-- Created: 2026-06-12
-- Modified: 2026-06-12
+The data models the API reads and writes.
 
-## Common
+- [accountInformation](https://apis.io/schemas/companies-house/accountinformation/)
+- [accountingReferenceDate](https://apis.io/schemas/companies-house/accountingreferencedate/)
+- [accountPeriodFrom](https://apis.io/schemas/companies-house/accountperiodfrom/)
+- [accountPeriodTo](https://apis.io/schemas/companies-house/accountperiodto/)
+- [accountsInformation](https://apis.io/schemas/companies-house/accountsinformation/)
+- [accountsRequired](https://apis.io/schemas/companies-house/accountsrequired/)
+- [address](https://apis.io/schemas/companies-house/address/)
+- [Registered Office Address](https://apis.io/schemas/companies-house/advanced_company_registered_office_address/)
+- [advanced_top_hit](https://apis.io/schemas/companies-house/advanced_top_hit/)
+- [advancedCompany](https://apis.io/schemas/companies-house/advancedcompany/)
+- [A list of companies](https://apis.io/schemas/companies-house/advancedcompanysearch/)
+- [alphabetical_top_hit](https://apis.io/schemas/companies-house/alphabetical_top_hit/)
+- [Alphabetical company](https://apis.io/schemas/companies-house/alphabeticalcompany/)
+- [List of companies](https://apis.io/schemas/companies-house/alphabeticalcompanysearch/)
+- [alterationsDesc](https://apis.io/schemas/companies-house/alterationsdesc/)
+- [annotation](https://apis.io/schemas/companies-house/annotation/)
+- [annualReturnInformation](https://apis.io/schemas/companies-house/annualreturninformation/)
+- [appointedTo](https://apis.io/schemas/companies-house/appointedto/)
+- [appointmentLinkTypes](https://apis.io/schemas/companies-house/appointmentlinktypes/)
+- [appointmentList](https://apis.io/schemas/companies-house/appointmentlist/)
+- [associatedFiling](https://apis.io/schemas/companies-house/associatedfiling/)
+- [branchCompanyDetails](https://apis.io/schemas/companies-house/branchcompanydetails/)
+- [case](https://apis.io/schemas/companies-house/case/)
+- [caseDates](https://apis.io/schemas/companies-house/casedates/)
+- [charge_links](https://apis.io/schemas/companies-house/charge_links/)
+- …and 102 more published on APIs.io
 
-| Type | URL |
-|------|-----|
-| Website | https://www.gov.uk/government/organisations/companies-house |
-| Documentation | https://developer.company-information.service.gov.uk/overview |
-| GitHub Org | https://github.com/companieshouse |
-| LinkedIn | https://www.linkedin.com/company/companies-house |
-| Blog | https://companieshouse.blog.gov.uk |
-| Pricing | https://developer.company-information.service.gov.uk/overview |
-| Status Page | https://forum.companieshouse.gov.uk/c/api-changes/7 |
-| X | https://x.com/CompaniesHouse |
-| Forum | https://forum.companieshouse.gov.uk |
-| Authentication | https://developer-specs.company-information.service.gov.uk/guides/authorisation |
+#### JSON-LD (1)
 
-## Maintainers
+Linked-data contexts for the provider's vocabulary.
 
-| Name | Email |
-|------|-------|
-| Kin Lane | kin@apievangelist.com |
+- [Companies House Context](https://apis.io/jsonld/companies-house/companies-house-context/)
+
+#### Vocabulary (1)
+
+The provider's domain terms, defined.
+
+- [Companies House Vocabulary](https://apis.io/vocabularies/companies-house/companies-house-vocabulary/)
+
+#### Examples (1)
+
+Example requests and responses.
+
+- [Companies House Examples](https://apis.io/examples/companies-house/companies-house-examples/)
+
+#### Collections (8)
+
+Postman and Open Collection request collections.
+
+- [Companies House Public Data charges API](https://apis.io/collections/companies-house/open-companies-house-charges-api/)
+- [Companies House Public Data charges filingHistory API](https://apis.io/collections/companies-house/open-companies-house-filinghistory-api/)
+- [Companies House Public Data charges insolvency API](https://apis.io/collections/companies-house/open-companies-house-insolvency-api/)
+- [Companies House Public Data charges officerDisqualifications API](https://apis.io/collections/companies-house/open-companies-house-officerdisqualifications-api/)
+- [Companies House Public Data charges officers API](https://apis.io/collections/companies-house/open-companies-house-officers-api/)
+- [Companies House Public Data charges personsWithSignificantControl API](https://apis.io/collections/companies-house/open-companies-house-personswithsignificantcontrol-api/)
+- [Companies House Public Data charges registeredOfficeAddress API](https://apis.io/collections/companies-house/open-companies-house-registeredofficeaddress-api/)
+- [Companies House Public Data charges search API](https://apis.io/collections/companies-house/open-companies-house-search-api/)
+
+#### Governance rules (1)
+
+Spectral rulesets for the provider's contracts.
+
+- [Companies House — jsonschema rules](https://apis.io/rules/companies-house/companies-house-jsonschema-spectral-rules/)
+
+#### Security (3)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Companies House Authentication](https://apis.io/security/companies-house/companies-house-authentication/)
+- [Companies House Domain Security](https://apis.io/security/companies-house/companies-house-domain-security/)
+- [Companies House Vulnerability Disclosure](https://apis.io/security/companies-house/companies-house-vulnerability-disclosure/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Companies House Plans Pricing](https://apis.io/plans/companies-house/companies-house-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Companies House Rate Limits](https://apis.io/rate-limits/companies-house/companies-house-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Companies House Finops](https://apis.io/finops/companies-house/companies-house-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.gov.uk/government/organisations/companies-house)
+- [Documentation](https://developer.company-information.service.gov.uk/overview)
+- [Pricing](https://developer.company-information.service.gov.uk/overview)
+- [Blog](https://companieshouse.blog.gov.uk)
+- [Status](https://forum.companieshouse.gov.uk/c/api-changes/7)
+
+## API Evangelist rating
+
+**Kin Score 38.0** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 66.1 |
+| Contract quality | 59.7 |
+| Contract governance | 23.5 |
+| Operational transparency | 26.3 |
+| Developer ergonomics | 28.6 |
+| Access clarity | 15.8 |
+
+**Agent readiness 28.9** — agent-ready
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | na |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | na |
+| Error Semantics | verified |
+| OpenAPI Examples | documented (partial credit) |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | na |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 22.5** — Government & Public Sector
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/companies-house/](https://apis.io/providers/companies-house/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Companies House: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/companies-house/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
